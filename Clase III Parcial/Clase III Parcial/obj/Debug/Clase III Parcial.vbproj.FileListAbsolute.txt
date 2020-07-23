@@ -1,0 +1,22 @@
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe.config
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.pdb
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.xml
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbprojAssemblyReference.cache
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Resources.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.ChargeScreen.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Login.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Main.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.GenerateResource.cache
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.CoreCompileInputs.cache
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.exe
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.xml
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.pdb
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Categorias.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Estudiantes.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Libros.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.LibrosPrestados.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Prestatarios.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Reporte.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Retornos.resources
+C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Vencidos.resources

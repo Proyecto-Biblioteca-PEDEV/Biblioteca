@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFE1511A-DFEF-4EC9-BE08-97C22BFFFBC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Clase_III_Parcial.My.MyApplication</StartupObject>
+    <RootNamespace>Clase_III_Parcial</RootNamespace>
+    <AssemblyName>Clase III Parcial</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Clase III Parcial.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Clase III Parcial.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Proyecto\Categorias.Designer.vb">
+      <DependentUpon>Categorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Categorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\ChargeScreen.Designer.vb">
+      <DependentUpon>ChargeScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\ChargeScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Estudiantes.Designer.vb">
+      <DependentUpon>Estudiantes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Estudiantes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Libros.Designer.vb">
+      <DependentUpon>Libros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Libros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\LibrosPrestados.Designer.vb">
+      <DependentUpon>LibrosPrestados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\LibrosPrestados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Prestatarios.Designer.vb">
+      <DependentUpon>Prestatarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Prestatarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Reporte.Designer.vb">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Reporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Retornos.Designer.vb">
+      <DependentUpon>Retornos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Retornos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Vencidos.Designer.vb">
+      <DependentUpon>Vencidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Vencidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Categorias.resx">
+      <DependentUpon>Categorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\ChargeScreen.resx">
+      <DependentUpon>ChargeScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Estudiantes.resx">
+      <DependentUpon>Estudiantes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Libros.resx">
+      <DependentUpon>Libros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\LibrosPrestados.resx">
+      <DependentUpon>LibrosPrestados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Prestatarios.resx">
+      <DependentUpon>Prestatarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Reporte.resx">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Retornos.resx">
+      <DependentUpon>Retornos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Vencidos.resx">
+      <DependentUpon>Vencidos.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono cerrar FN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_619bffaeff48dcaec1f90141532ea4ac_7ee4dae5_500.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_465577f9eabff154b858945c4f4796de_cce4b558_640.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_1280.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_12801.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDO MAIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo gui.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo negro png super ultra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prestatarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retorno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vencidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
