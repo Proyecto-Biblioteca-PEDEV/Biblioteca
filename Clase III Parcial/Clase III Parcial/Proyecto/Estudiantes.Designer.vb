@@ -34,18 +34,10 @@ Partial Class Estudiantes
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtEdad = New System.Windows.Forms.TextBox()
-        Me.txtEstado = New System.Windows.Forms.TextBox()
-        Me.txtIdEstado = New System.Windows.Forms.TextBox()
-        Me.txtMultas = New System.Windows.Forms.TextBox()
-        Me.txtIdFacultad = New System.Windows.Forms.TextBox()
         Me.txtFacultad = New System.Windows.Forms.TextBox()
         Me.txtIdAlumno = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
@@ -84,25 +76,17 @@ Partial Class Estudiantes
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.txtApellido)
         Me.GroupBox1.Controls.Add(Me.txtEdad)
-        Me.GroupBox1.Controls.Add(Me.txtEstado)
-        Me.GroupBox1.Controls.Add(Me.txtIdEstado)
-        Me.GroupBox1.Controls.Add(Me.txtMultas)
-        Me.GroupBox1.Controls.Add(Me.txtIdFacultad)
         Me.GroupBox1.Controls.Add(Me.txtFacultad)
         Me.GroupBox1.Controls.Add(Me.txtIdAlumno)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(302, 369)
+        Me.GroupBox1.Size = New System.Drawing.Size(302, 293)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Estudiante"
@@ -198,42 +182,6 @@ Partial Class Estudiantes
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Facultad"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 203)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(84, 25)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Id Facultad"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 236)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 25)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Estado"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 269)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 25)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Id Estado"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 302)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 25)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Multas"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -266,38 +214,6 @@ Partial Class Estudiantes
         Me.txtEdad.Name = "txtEdad"
         Me.txtEdad.Size = New System.Drawing.Size(133, 27)
         Me.txtEdad.TabIndex = 6
-        '
-        'txtEstado
-        '
-        Me.txtEstado.Location = New System.Drawing.Point(105, 233)
-        Me.txtEstado.Multiline = True
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(133, 27)
-        Me.txtEstado.TabIndex = 5
-        '
-        'txtIdEstado
-        '
-        Me.txtIdEstado.Location = New System.Drawing.Point(105, 266)
-        Me.txtIdEstado.Multiline = True
-        Me.txtIdEstado.Name = "txtIdEstado"
-        Me.txtIdEstado.Size = New System.Drawing.Size(133, 27)
-        Me.txtIdEstado.TabIndex = 4
-        '
-        'txtMultas
-        '
-        Me.txtMultas.Location = New System.Drawing.Point(105, 300)
-        Me.txtMultas.Multiline = True
-        Me.txtMultas.Name = "txtMultas"
-        Me.txtMultas.Size = New System.Drawing.Size(133, 27)
-        Me.txtMultas.TabIndex = 3
-        '
-        'txtIdFacultad
-        '
-        Me.txtIdFacultad.Location = New System.Drawing.Point(105, 200)
-        Me.txtIdFacultad.Multiline = True
-        Me.txtIdFacultad.Name = "txtIdFacultad"
-        Me.txtIdFacultad.Size = New System.Drawing.Size(133, 27)
-        Me.txtIdFacultad.TabIndex = 2
         '
         'txtFacultad
         '
@@ -347,18 +263,10 @@ Partial Class Estudiantes
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtApellido As TextBox
     Friend WithEvents txtEdad As TextBox
-    Friend WithEvents txtEstado As TextBox
-    Friend WithEvents txtIdEstado As TextBox
-    Friend WithEvents txtMultas As TextBox
-    Friend WithEvents txtIdFacultad As TextBox
     Friend WithEvents txtFacultad As TextBox
     Friend WithEvents txtIdAlumno As TextBox
 End Class

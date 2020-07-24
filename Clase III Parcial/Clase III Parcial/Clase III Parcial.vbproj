@@ -89,18 +89,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Proyecto\Categorias.Designer.vb">
-      <DependentUpon>Categorias.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Proyecto\Categorias.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Proyecto\ChargeScreen.Designer.vb">
       <DependentUpon>ChargeScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="Proyecto\ChargeScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proyecto\conexion.vb" />
     <Compile Include="Proyecto\Estudiantes.Designer.vb">
       <DependentUpon>Estudiantes.vb</DependentUpon>
     </Compile>
@@ -149,6 +144,12 @@
     <Compile Include="Proyecto\Retornos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proyecto\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Proyecto\Vencidos.Designer.vb">
       <DependentUpon>Vencidos.vb</DependentUpon>
     </Compile>
@@ -162,9 +163,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Proyecto\Categorias.resx">
-      <DependentUpon>Categorias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\ChargeScreen.resx">
       <DependentUpon>ChargeScreen.vb</DependentUpon>
@@ -192,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Retornos.resx">
       <DependentUpon>Retornos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Vencidos.resx">
       <DependentUpon>Vencidos.vb</DependentUpon>

@@ -36,10 +36,6 @@ Partial Class Reporte
         Me.txtFechaRetorno = New System.Windows.Forms.TextBox()
         Me.txtIdRetorno = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -68,10 +64,6 @@ Partial Class Reporte
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
-        Me.GroupBox1.Controls.Add(Me.btnEditar)
-        Me.GroupBox1.Controls.Add(Me.btnIngresar)
-        Me.GroupBox1.Controls.Add(Me.btnLimpiar)
-        Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -86,7 +78,7 @@ Partial Class Reporte
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(323, 299)
+        Me.GroupBox1.Size = New System.Drawing.Size(323, 225)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Reporte"
@@ -181,55 +173,11 @@ Partial Class Reporte
         Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
-        Me.btnBuscar.Location = New System.Drawing.Point(272, 137)
+        Me.btnBuscar.Location = New System.Drawing.Point(272, 35)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(45, 45)
         Me.btnBuscar.TabIndex = 43
         Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnEditar
-        '
-        Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnEditar.Image = Global.Clase_III_Parcial.My.Resources.Resources.editar
-        Me.btnEditar.Location = New System.Drawing.Point(272, 86)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(45, 45)
-        Me.btnEditar.TabIndex = 42
-        Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'btnIngresar
-        '
-        Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnIngresar.Image = Global.Clase_III_Parcial.My.Resources.Resources.agregar
-        Me.btnIngresar.Location = New System.Drawing.Point(272, 35)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(45, 45)
-        Me.btnIngresar.TabIndex = 41
-        Me.btnIngresar.UseVisualStyleBackColor = True
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
-        Me.btnLimpiar.Location = New System.Drawing.Point(272, 239)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
-        Me.btnLimpiar.TabIndex = 40
-        Me.btnLimpiar.UseVisualStyleBackColor = True
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnEliminar.Image = Global.Clase_III_Parcial.My.Resources.Resources.eliminar
-        Me.btnEliminar.Location = New System.Drawing.Point(272, 188)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(45, 45)
-        Me.btnEliminar.TabIndex = 39
-        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Reporte
         '
@@ -254,11 +202,6 @@ Partial Class Reporte
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DGlibros As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents btnEditar As Button
-    Friend WithEvents btnIngresar As Button
-    Friend WithEvents btnLimpiar As Button
-    Friend WithEvents btnEliminar As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -269,4 +212,5 @@ Partial Class Reporte
     Friend WithEvents txtIdPrestamo As TextBox
     Friend WithEvents txtFechaRetorno As TextBox
     Friend WithEvents txtIdRetorno As TextBox
+    Friend WithEvents btnBuscar As Button
 End Class

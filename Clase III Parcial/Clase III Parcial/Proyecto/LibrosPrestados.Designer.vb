@@ -31,20 +31,17 @@ Partial Class LibrosPrestados
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNombreLibro = New System.Windows.Forms.TextBox()
         Me.TxtAutor = New System.Windows.Forms.TextBox()
         Me.txtEditorial = New System.Windows.Forms.TextBox()
         Me.txtAlumno = New System.Windows.Forms.TextBox()
-        Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.txtFechaPrestamo = New System.Windows.Forms.TextBox()
         Me.txtGenero = New System.Windows.Forms.TextBox()
         Me.txtIdLibro = New System.Windows.Forms.TextBox()
@@ -81,20 +78,17 @@ Partial Class LibrosPrestados
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
         Me.GroupBox1.Controls.Add(Me.btnLimpiar)
-        Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNombreLibro)
         Me.GroupBox1.Controls.Add(Me.TxtAutor)
         Me.GroupBox1.Controls.Add(Me.txtEditorial)
         Me.GroupBox1.Controls.Add(Me.txtAlumno)
-        Me.GroupBox1.Controls.Add(Me.txtEstado)
         Me.GroupBox1.Controls.Add(Me.txtFechaPrestamo)
         Me.GroupBox1.Controls.Add(Me.txtGenero)
         Me.GroupBox1.Controls.Add(Me.txtIdLibro)
@@ -102,7 +96,7 @@ Partial Class LibrosPrestados
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(320, 376)
+        Me.GroupBox1.Size = New System.Drawing.Size(320, 322)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Libros Prestados"
@@ -162,22 +156,11 @@ Partial Class LibrosPrestados
         Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
-        Me.btnLimpiar.Location = New System.Drawing.Point(269, 239)
+        Me.btnLimpiar.Location = New System.Drawing.Point(269, 188)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
         Me.btnLimpiar.TabIndex = 40
         Me.btnLimpiar.UseVisualStyleBackColor = True
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnEliminar.Image = Global.Clase_III_Parcial.My.Resources.Resources.eliminar
-        Me.btnEliminar.Location = New System.Drawing.Point(269, 188)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(45, 45)
-        Me.btnEliminar.TabIndex = 39
-        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -233,15 +216,6 @@ Partial Class LibrosPrestados
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Alumno"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(11, 305)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 25)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Estado"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -282,14 +256,6 @@ Partial Class LibrosPrestados
         Me.txtAlumno.Name = "txtAlumno"
         Me.txtAlumno.Size = New System.Drawing.Size(133, 27)
         Me.txtAlumno.TabIndex = 4
-        '
-        'txtEstado
-        '
-        Me.txtEstado.Location = New System.Drawing.Point(130, 302)
-        Me.txtEstado.Multiline = True
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(133, 27)
-        Me.txtEstado.TabIndex = 3
         '
         'txtFechaPrestamo
         '
@@ -342,20 +308,17 @@ Partial Class LibrosPrestados
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnIngresar As Button
     Friend WithEvents btnLimpiar As Button
-    Friend WithEvents btnEliminar As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtNombreLibro As TextBox
     Friend WithEvents TxtAutor As TextBox
     Friend WithEvents txtEditorial As TextBox
     Friend WithEvents txtAlumno As TextBox
-    Friend WithEvents txtEstado As TextBox
     Friend WithEvents txtFechaPrestamo As TextBox
     Friend WithEvents txtGenero As TextBox
     Friend WithEvents txtIdLibro As TextBox

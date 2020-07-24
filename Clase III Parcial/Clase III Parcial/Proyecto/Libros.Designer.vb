@@ -30,16 +30,13 @@ Partial Class Libros
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNombreLibro = New System.Windows.Forms.TextBox()
         Me.TxtAutor = New System.Windows.Forms.TextBox()
         Me.txtEditorial = New System.Windows.Forms.TextBox()
         Me.txtPais = New System.Windows.Forms.TextBox()
         Me.txtIdioma = New System.Windows.Forms.TextBox()
-        Me.tstEstado = New System.Windows.Forms.TextBox()
         Me.txtPublicacion = New System.Windows.Forms.TextBox()
-        Me.txtGenero = New System.Windows.Forms.TextBox()
         Me.txtIdLibro = New System.Windows.Forms.TextBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -50,6 +47,7 @@ Partial Class Libros
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,6 +56,7 @@ Partial Class Libros
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
@@ -70,16 +69,13 @@ Partial Class Libros
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNombreLibro)
         Me.GroupBox1.Controls.Add(Me.TxtAutor)
         Me.GroupBox1.Controls.Add(Me.txtEditorial)
         Me.GroupBox1.Controls.Add(Me.txtPais)
         Me.GroupBox1.Controls.Add(Me.txtIdioma)
-        Me.GroupBox1.Controls.Add(Me.tstEstado)
         Me.GroupBox1.Controls.Add(Me.txtPublicacion)
-        Me.GroupBox1.Controls.Add(Me.txtGenero)
         Me.GroupBox1.Controls.Add(Me.txtIdLibro)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -153,15 +149,6 @@ Partial Class Libros
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Idioma"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 302)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 25)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Estado"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -197,7 +184,7 @@ Partial Class Libros
         '
         'txtPais
         '
-        Me.txtPais.Location = New System.Drawing.Point(105, 233)
+        Me.txtPais.Location = New System.Drawing.Point(105, 239)
         Me.txtPais.Multiline = True
         Me.txtPais.Name = "txtPais"
         Me.txtPais.Size = New System.Drawing.Size(133, 27)
@@ -205,35 +192,19 @@ Partial Class Libros
         '
         'txtIdioma
         '
-        Me.txtIdioma.Location = New System.Drawing.Point(105, 266)
+        Me.txtIdioma.Location = New System.Drawing.Point(105, 272)
         Me.txtIdioma.Multiline = True
         Me.txtIdioma.Name = "txtIdioma"
         Me.txtIdioma.Size = New System.Drawing.Size(133, 27)
         Me.txtIdioma.TabIndex = 4
         '
-        'tstEstado
-        '
-        Me.tstEstado.Location = New System.Drawing.Point(105, 300)
-        Me.tstEstado.Multiline = True
-        Me.tstEstado.Name = "tstEstado"
-        Me.tstEstado.Size = New System.Drawing.Size(133, 27)
-        Me.tstEstado.TabIndex = 3
-        '
         'txtPublicacion
         '
-        Me.txtPublicacion.Location = New System.Drawing.Point(105, 200)
+        Me.txtPublicacion.Location = New System.Drawing.Point(105, 206)
         Me.txtPublicacion.Multiline = True
         Me.txtPublicacion.Name = "txtPublicacion"
         Me.txtPublicacion.Size = New System.Drawing.Size(133, 27)
         Me.txtPublicacion.TabIndex = 2
-        '
-        'txtGenero
-        '
-        Me.txtGenero.Location = New System.Drawing.Point(105, 167)
-        Me.txtGenero.Multiline = True
-        Me.txtGenero.Name = "txtGenero"
-        Me.txtGenero.Size = New System.Drawing.Size(133, 27)
-        Me.txtGenero.TabIndex = 1
         '
         'txtIdLibro
         '
@@ -317,6 +288,14 @@ Partial Class Libros
         Me.btnEliminar.TabIndex = 39
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(105, 167)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 33)
+        Me.ComboBox1.TabIndex = 44
+        '
         'Libros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 25.0!)
@@ -344,9 +323,7 @@ Partial Class Libros
     Friend WithEvents txtEditorial As TextBox
     Friend WithEvents txtPais As TextBox
     Friend WithEvents txtIdioma As TextBox
-    Friend WithEvents tstEstado As TextBox
     Friend WithEvents txtPublicacion As TextBox
-    Friend WithEvents txtGenero As TextBox
     Friend WithEvents txtIdLibro As TextBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents btnBuscar As Button
@@ -361,9 +338,9 @@ Partial Class Libros
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DGlibros As DataGridView
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

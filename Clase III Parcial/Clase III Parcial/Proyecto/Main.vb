@@ -93,4 +93,8 @@ Public Class Main
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         AbrirFormulario(New Reporte)
     End Sub
+
+    Private Sub panelCentral_Paint_1(sender As Object, e As PaintEventArgs) Handles panelCentral.Paint
+
+    End Sub
 End Class

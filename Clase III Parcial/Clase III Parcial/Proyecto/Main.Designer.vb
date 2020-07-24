@@ -23,7 +23,10 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
+        Me.panelCentral = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -40,15 +43,12 @@ Partial Class Main
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.panelCentral = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelSuperior.SuspendLayout()
+        Me.panelCentral.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelCentral.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
@@ -64,6 +64,30 @@ Partial Class Main
         Me.PanelSuperior.Name = "PanelSuperior"
         Me.PanelSuperior.Size = New System.Drawing.Size(1377, 32)
         Me.PanelSuperior.TabIndex = 2
+        '
+        'panelCentral
+        '
+        Me.panelCentral.BackColor = System.Drawing.SystemColors.Window
+        Me.panelCentral.BackgroundImage = Global.Clase_III_Parcial.My.Resources.Resources.FONDO_MAIN
+        Me.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelCentral.Controls.Add(Me.PictureBox2)
+        Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelCentral.Location = New System.Drawing.Point(184, 32)
+        Me.panelCentral.Name = "panelCentral"
+        Me.panelCentral.Size = New System.Drawing.Size(1193, 571)
+        Me.panelCentral.TabIndex = 17
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra
+        Me.PictureBox2.Location = New System.Drawing.Point(482, 131)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(243, 208)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
         '
         'Panel1
         '
@@ -88,6 +112,14 @@ Partial Class Main
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(184, 571)
         Me.Panel1.TabIndex = 10
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 529)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(182, 40)
+        Me.Panel2.TabIndex = 20
         '
         'Label1
         '
@@ -162,7 +194,7 @@ Partial Class Main
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(182, 35)
         Me.Button6.TabIndex = 16
-        Me.Button6.Text = "Categoria "
+        Me.Button6.Text = "Usuario"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button6.UseVisualStyleBackColor = False
         '
@@ -250,7 +282,7 @@ Partial Class Main
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(182, 35)
         Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Prestatarios"
+        Me.Button1.Text = "Prestamos"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -379,38 +411,6 @@ Partial Class Main
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'Panel2
-        '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 529)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(182, 40)
-        Me.Panel2.TabIndex = 20
-        '
-        'panelCentral
-        '
-        Me.panelCentral.BackColor = System.Drawing.SystemColors.Window
-        Me.panelCentral.BackgroundImage = Global.Clase_III_Parcial.My.Resources.Resources.FONDO_MAIN
-        Me.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelCentral.Controls.Add(Me.PictureBox2)
-        Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelCentral.Location = New System.Drawing.Point(184, 32)
-        Me.panelCentral.Name = "panelCentral"
-        Me.panelCentral.Size = New System.Drawing.Size(1193, 571)
-        Me.panelCentral.TabIndex = 17
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra
-        Me.PictureBox2.Location = New System.Drawing.Point(482, 131)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(243, 208)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -424,12 +424,12 @@ Partial Class Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.PanelSuperior.ResumeLayout(False)
+        Me.panelCentral.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelCentral.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
