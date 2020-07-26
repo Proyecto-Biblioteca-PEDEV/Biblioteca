@@ -167,8 +167,6 @@ alter procedure eliminarLibro(
 as begin 
   if exists(select idLibro from proyecto.libros where idLibro=@idLibro and estadoId=7)
    raiserror('Este codigo ya fue eliminado eliminar,Accion denegada',16,1)
-  else if exists(select idLibro from proyecto.libros where idLibro<>@idLibro)
-   raiserror('Este codigo no existe,Accion denegada',16,1)
   else
   update proyecto.libros set estadoId = 7 where idLibro=@idLibro 
 end
@@ -184,12 +182,12 @@ end
 execute BuscarLibro
 
 -- buscar 1 libro
-create procedure BuscarLibrouno(
+alter procedure BuscarLibrouno(
 @idLibro int
 ) 
 as begin 
 if exists(select @idLibro from proyecto.libros where idLibro=@idLibro)
-select * from proyecto.libros where idLibro=@idLibro
+select idLibro as Codigo, nombre as NombreLibro, autor as NombreAutor, editorial as Editorial, generoId as Genero, publicacion as AñoPublicacion, pais as Pais, idioma as Idioma from proyecto.libros where idLibro=@idLibro
 else
   raiserror('Este codigo No existe,Accion denegada',16,1)
 end
