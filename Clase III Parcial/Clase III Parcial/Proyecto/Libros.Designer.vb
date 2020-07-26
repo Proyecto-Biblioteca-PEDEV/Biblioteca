@@ -82,19 +82,20 @@ Partial Class Libros
         Me.GroupBox1.Controls.Add(Me.txtIdioma)
         Me.GroupBox1.Controls.Add(Me.txtPublicacion)
         Me.GroupBox1.Controls.Add(Me.txtIdLibro)
-        Me.GroupBox1.Location = New System.Drawing.Point(96, 13)
+        Me.GroupBox1.Location = New System.Drawing.Point(96, 6)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(822, 248)
+        Me.GroupBox1.Size = New System.Drawing.Size(822, 228)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Libros "
         '
         'cmbGenero
         '
+        Me.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGenero.FormattingEnabled = True
-        Me.cmbGenero.Location = New System.Drawing.Point(455, 101)
+        Me.cmbGenero.Location = New System.Drawing.Point(455, 83)
         Me.cmbGenero.Name = "cmbGenero"
         Me.cmbGenero.Size = New System.Drawing.Size(196, 32)
         Me.cmbGenero.TabIndex = 44
@@ -104,7 +105,7 @@ Partial Class Libros
         Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
-        Me.btnBuscar.Location = New System.Drawing.Point(295, 28)
+        Me.btnBuscar.Location = New System.Drawing.Point(295, 16)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(45, 45)
         Me.btnBuscar.TabIndex = 43
@@ -115,7 +116,7 @@ Partial Class Libros
         Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEditar.Image = Global.Clase_III_Parcial.My.Resources.Resources.editar
-        Me.btnEditar.Location = New System.Drawing.Point(737, 86)
+        Me.btnEditar.Location = New System.Drawing.Point(736, 72)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(45, 45)
         Me.btnEditar.TabIndex = 42
@@ -126,7 +127,7 @@ Partial Class Libros
         Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnIngresar.Image = Global.Clase_III_Parcial.My.Resources.Resources.agregar
-        Me.btnIngresar.Location = New System.Drawing.Point(737, 31)
+        Me.btnIngresar.Location = New System.Drawing.Point(736, 17)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(45, 45)
         Me.btnIngresar.TabIndex = 41
@@ -137,7 +138,7 @@ Partial Class Libros
         Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
-        Me.btnLimpiar.Location = New System.Drawing.Point(737, 188)
+        Me.btnLimpiar.Location = New System.Drawing.Point(736, 170)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
         Me.btnLimpiar.TabIndex = 40
@@ -148,7 +149,7 @@ Partial Class Libros
         Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEliminar.Image = Global.Clase_III_Parcial.My.Resources.Resources.eliminar
-        Me.btnEliminar.Location = New System.Drawing.Point(737, 135)
+        Me.btnEliminar.Location = New System.Drawing.Point(736, 121)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(45, 45)
         Me.btnEliminar.TabIndex = 39
@@ -157,7 +158,7 @@ Partial Class Libros
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 71)
+        Me.Label9.Location = New System.Drawing.Point(6, 53)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(79, 24)
         Me.Label9.TabIndex = 17
@@ -166,7 +167,7 @@ Partial Class Libros
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(339, 71)
+        Me.Label8.Location = New System.Drawing.Point(339, 53)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(55, 24)
         Me.Label8.TabIndex = 16
@@ -175,7 +176,7 @@ Partial Class Libros
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 107)
+        Me.Label7.Location = New System.Drawing.Point(6, 89)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 24)
         Me.Label7.TabIndex = 15
@@ -184,7 +185,7 @@ Partial Class Libros
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(339, 104)
+        Me.Label6.Location = New System.Drawing.Point(339, 86)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 24)
         Me.Label6.TabIndex = 14
@@ -193,7 +194,7 @@ Partial Class Libros
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 142)
+        Me.Label5.Location = New System.Drawing.Point(8, 124)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(108, 24)
         Me.Label5.TabIndex = 13
@@ -202,7 +203,7 @@ Partial Class Libros
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(342, 139)
+        Me.Label4.Location = New System.Drawing.Point(342, 121)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 24)
         Me.Label4.TabIndex = 12
@@ -211,7 +212,7 @@ Partial Class Libros
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 185)
+        Me.Label3.Location = New System.Drawing.Point(9, 167)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 24)
         Me.Label3.TabIndex = 11
@@ -220,7 +221,7 @@ Partial Class Libros
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 41)
+        Me.Label1.Location = New System.Drawing.Point(6, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 24)
         Me.Label1.TabIndex = 9
@@ -228,7 +229,7 @@ Partial Class Libros
         '
         'txtNombreLibro
         '
-        Me.txtNombreLibro.Location = New System.Drawing.Point(122, 68)
+        Me.txtNombreLibro.Location = New System.Drawing.Point(122, 50)
         Me.txtNombreLibro.Multiline = True
         Me.txtNombreLibro.Name = "txtNombreLibro"
         Me.txtNombreLibro.Size = New System.Drawing.Size(205, 27)
@@ -236,7 +237,7 @@ Partial Class Libros
         '
         'TxtAutor
         '
-        Me.TxtAutor.Location = New System.Drawing.Point(455, 68)
+        Me.TxtAutor.Location = New System.Drawing.Point(455, 50)
         Me.TxtAutor.Multiline = True
         Me.TxtAutor.Name = "TxtAutor"
         Me.TxtAutor.Size = New System.Drawing.Size(205, 27)
@@ -244,7 +245,7 @@ Partial Class Libros
         '
         'txtEditorial
         '
-        Me.txtEditorial.Location = New System.Drawing.Point(122, 104)
+        Me.txtEditorial.Location = New System.Drawing.Point(122, 86)
         Me.txtEditorial.Multiline = True
         Me.txtEditorial.Name = "txtEditorial"
         Me.txtEditorial.Size = New System.Drawing.Size(205, 27)
@@ -252,7 +253,7 @@ Partial Class Libros
         '
         'txtPais
         '
-        Me.txtPais.Location = New System.Drawing.Point(455, 142)
+        Me.txtPais.Location = New System.Drawing.Point(455, 124)
         Me.txtPais.Multiline = True
         Me.txtPais.Name = "txtPais"
         Me.txtPais.Size = New System.Drawing.Size(208, 27)
@@ -260,7 +261,7 @@ Partial Class Libros
         '
         'txtIdioma
         '
-        Me.txtIdioma.Location = New System.Drawing.Point(122, 188)
+        Me.txtIdioma.Location = New System.Drawing.Point(122, 170)
         Me.txtIdioma.Multiline = True
         Me.txtIdioma.Name = "txtIdioma"
         Me.txtIdioma.Size = New System.Drawing.Size(208, 27)
@@ -268,7 +269,7 @@ Partial Class Libros
         '
         'txtPublicacion
         '
-        Me.txtPublicacion.Location = New System.Drawing.Point(122, 144)
+        Me.txtPublicacion.Location = New System.Drawing.Point(122, 126)
         Me.txtPublicacion.Multiline = True
         Me.txtPublicacion.Name = "txtPublicacion"
         Me.txtPublicacion.Size = New System.Drawing.Size(133, 27)
@@ -276,7 +277,7 @@ Partial Class Libros
         '
         'txtIdLibro
         '
-        Me.txtIdLibro.Location = New System.Drawing.Point(122, 35)
+        Me.txtIdLibro.Location = New System.Drawing.Point(122, 17)
         Me.txtIdLibro.Multiline = True
         Me.txtIdLibro.Name = "txtIdLibro"
         Me.txtIdLibro.Size = New System.Drawing.Size(133, 27)
@@ -289,9 +290,9 @@ Partial Class Libros
         Me.GroupBox2.Controls.Add(Me.txtbuscar)
         Me.GroupBox2.Controls.Add(Me.DGlibros)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 268)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 243)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(983, 410)
+        Me.GroupBox2.Size = New System.Drawing.Size(983, 388)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos"
@@ -299,9 +300,9 @@ Partial Class Libros
         'DGlibros
         '
         Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGlibros.Location = New System.Drawing.Point(6, 83)
+        Me.DGlibros.Location = New System.Drawing.Point(6, 66)
         Me.DGlibros.Name = "DGlibros"
-        Me.DGlibros.Size = New System.Drawing.Size(971, 321)
+        Me.DGlibros.Size = New System.Drawing.Size(971, 307)
         Me.DGlibros.TabIndex = 0
         '
         'ErrorValidacion
@@ -311,7 +312,7 @@ Partial Class Libros
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 38)
+        Me.Label2.Location = New System.Drawing.Point(25, 26)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(71, 24)
         Me.Label2.TabIndex = 45
@@ -319,7 +320,7 @@ Partial Class Libros
         '
         'txtbuscar
         '
-        Me.txtbuscar.Location = New System.Drawing.Point(134, 35)
+        Me.txtbuscar.Location = New System.Drawing.Point(134, 23)
         Me.txtbuscar.Multiline = True
         Me.txtbuscar.Name = "txtbuscar"
         Me.txtbuscar.Size = New System.Drawing.Size(133, 27)
@@ -330,7 +331,7 @@ Partial Class Libros
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1019, 677)
+        Me.ClientSize = New System.Drawing.Size(1008, 645)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

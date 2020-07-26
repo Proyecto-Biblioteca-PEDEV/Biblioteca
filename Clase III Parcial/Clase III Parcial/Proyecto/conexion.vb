@@ -19,7 +19,8 @@ Public Class conexion
         End Try
     End Sub
 
-
+    '---------------------------------------------------------Inicio FUNCIONES FORMULARIO LIBROS -------------------------------------------
+    '---------------------------------------------------------SANDRA JACKELIN CALDERON RAMIREZ -------------------------------------------
     'Inserta un nuevo libro
     Public Function insertarLibro(idLibro As Integer, nombre As String, autor As String, editorial As String,
                                     genero As Integer, publicacion As String, pais As String, idioma As String, estado As Integer)
@@ -139,7 +140,7 @@ Public Class conexion
         End Try
     End Function
 
-
+    '---------------------------------------------------------FINAL FUNCIONES FORMULARIO LIBROS -------------------------------------------
 
 
 End Class

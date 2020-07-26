@@ -23,6 +23,11 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.btnRestaurar = New System.Windows.Forms.Button()
+        Me.btnMinimizar = New System.Windows.Forms.Button()
+        Me.btnMaximizar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.panelCentral = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -38,17 +43,12 @@ Partial Class Main
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.btnRestaurar = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnMaximizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.PanelSuperior.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelCentral.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
@@ -62,8 +62,80 @@ Partial Class Main
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
         Me.PanelSuperior.Name = "PanelSuperior"
-        Me.PanelSuperior.Size = New System.Drawing.Size(1377, 32)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1339, 32)
         Me.PanelSuperior.TabIndex = 2
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox3.Image = Global.Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 32)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
+        '
+        'btnRestaurar
+        '
+        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRestaurar.FlatAppearance.BorderSize = 0
+        Me.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestaurar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_Maximizar
+        Me.btnRestaurar.Location = New System.Drawing.Point(1273, 0)
+        Me.btnRestaurar.Name = "btnRestaurar"
+        Me.btnRestaurar.Size = New System.Drawing.Size(30, 33)
+        Me.btnRestaurar.TabIndex = 2
+        Me.btnRestaurar.UseVisualStyleBackColor = True
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimizar.FlatAppearance.BorderSize = 0
+        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimizar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_Minimizar
+        Me.btnMinimizar.Location = New System.Drawing.Point(1237, 0)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(30, 33)
+        Me.btnMinimizar.TabIndex = 2
+        Me.btnMinimizar.UseVisualStyleBackColor = True
+        '
+        'btnMaximizar
+        '
+        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMaximizar.FlatAppearance.BorderSize = 0
+        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMaximizar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_Restaurar
+        Me.btnMaximizar.Location = New System.Drawing.Point(1273, 0)
+        Me.btnMaximizar.Name = "btnMaximizar"
+        Me.btnMaximizar.Size = New System.Drawing.Size(30, 33)
+        Me.btnMaximizar.TabIndex = 1
+        Me.btnMaximizar.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_cerrar_FN
+        Me.btnCerrar.Location = New System.Drawing.Point(1309, 0)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(30, 33)
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'panelCentral
         '
@@ -75,14 +147,14 @@ Partial Class Main
         Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelCentral.Location = New System.Drawing.Point(184, 32)
         Me.panelCentral.Name = "panelCentral"
-        Me.panelCentral.Size = New System.Drawing.Size(1193, 571)
+        Me.panelCentral.Size = New System.Drawing.Size(1155, 648)
         Me.panelCentral.TabIndex = 17
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra
-        Me.PictureBox2.Location = New System.Drawing.Point(482, 131)
+        Me.PictureBox2.Location = New System.Drawing.Point(467, 131)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(243, 208)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -110,13 +182,13 @@ Partial Class Main
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(184, 571)
+        Me.Panel1.Size = New System.Drawing.Size(184, 648)
         Me.Panel1.TabIndex = 10
         '
         'Panel2
         '
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 529)
+        Me.Panel2.Location = New System.Drawing.Point(0, 606)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(182, 40)
         Me.Panel2.TabIndex = 20
@@ -124,11 +196,11 @@ Partial Class Main
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Window
         Me.Label1.Location = New System.Drawing.Point(25, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 29)
+        Me.Label1.Size = New System.Drawing.Size(167, 26)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Menu Biblioteca"
         '
@@ -142,7 +214,7 @@ Partial Class Main
         Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button8.Image = Global.Clase_III_Parcial.My.Resources.Resources.registro
         Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -164,7 +236,7 @@ Partial Class Main
         Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button7.Image = Global.Clase_III_Parcial.My.Resources.Resources.usuario
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -186,7 +258,7 @@ Partial Class Main
         Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button6.Image = Global.Clase_III_Parcial.My.Resources.Resources.categorias
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -208,7 +280,7 @@ Partial Class Main
         Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button5.Image = Global.Clase_III_Parcial.My.Resources.Resources.vencidos
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -230,7 +302,7 @@ Partial Class Main
         Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button4.Image = Global.Clase_III_Parcial.My.Resources.Resources.retorno
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -252,7 +324,7 @@ Partial Class Main
         Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button3.Image = Global.Clase_III_Parcial.My.Resources.Resources.registro2
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -274,7 +346,7 @@ Partial Class Main
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button1.Image = Global.Clase_III_Parcial.My.Resources.Resources.prestatarios
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -296,7 +368,7 @@ Partial Class Main
         Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button2.Image = Global.Clase_III_Parcial.My.Resources.Resources.libro
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -317,11 +389,11 @@ Partial Class Main
         Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.DodgerBlue
         Me.btnSalir.Image = Global.Clase_III_Parcial.My.Resources.Resources.salir
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSalir.Location = New System.Drawing.Point(-5, 488)
+        Me.btnSalir.Location = New System.Drawing.Point(-1, 339)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(188, 35)
         Me.btnSalir.TabIndex = 9
@@ -339,83 +411,11 @@ Partial Class Main
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox3.Image = Global.Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(28, 32)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
-        '
-        'btnRestaurar
-        '
-        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRestaurar.FlatAppearance.BorderSize = 0
-        Me.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestaurar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_Maximizar
-        Me.btnRestaurar.Location = New System.Drawing.Point(1311, 0)
-        Me.btnRestaurar.Name = "btnRestaurar"
-        Me.btnRestaurar.Size = New System.Drawing.Size(30, 33)
-        Me.btnRestaurar.TabIndex = 2
-        Me.btnRestaurar.UseVisualStyleBackColor = True
-        '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_Minimizar
-        Me.btnMinimizar.Location = New System.Drawing.Point(1275, 0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(30, 33)
-        Me.btnMinimizar.TabIndex = 2
-        Me.btnMinimizar.UseVisualStyleBackColor = True
-        '
-        'btnMaximizar
-        '
-        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMaximizar.FlatAppearance.BorderSize = 0
-        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaximizar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_Restaurar
-        Me.btnMaximizar.Location = New System.Drawing.Point(1311, 0)
-        Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(30, 33)
-        Me.btnMaximizar.TabIndex = 1
-        Me.btnMaximizar.UseVisualStyleBackColor = True
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Clase_III_Parcial.My.Resources.Resources.Icono_cerrar_FN
-        Me.btnCerrar.Location = New System.Drawing.Point(1347, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(30, 33)
-        Me.btnCerrar.TabIndex = 0
-        Me.btnCerrar.UseVisualStyleBackColor = True
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1377, 603)
+        Me.ClientSize = New System.Drawing.Size(1339, 680)
         Me.Controls.Add(Me.panelCentral)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelSuperior)
@@ -424,12 +424,12 @@ Partial Class Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.PanelSuperior.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelCentral.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -300,7 +300,7 @@ Public Class Libros
     'ToolTip de Autor
     Private Sub TxtAutor_MouseHover(sender As Object, e As EventArgs) Handles TxtAutor.MouseHover
         ToolTip.SetToolTip(TxtAutor, "Ejemplo: J.K Rowling")
-        ToolTip.ToolTipTitle = "nombre Autor"
+        ToolTip.ToolTipTitle = "Nombre Autor"
         ToolTip.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
@@ -314,7 +314,7 @@ Public Class Libros
     'ToolTip de publicacion
     Private Sub txtPublicacion_MouseHover(sender As Object, e As EventArgs) Handles txtPublicacion.MouseHover
         ToolTip.SetToolTip(txtPublicacion, "Ejemplo: 2004")
-        ToolTip.ToolTipTitle = "Año publicacion"
+        ToolTip.ToolTipTitle = "Año de publicacion"
         ToolTip.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
