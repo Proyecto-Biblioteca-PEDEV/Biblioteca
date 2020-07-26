@@ -22,7 +22,14 @@ Partial Class Libros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbGenero = New System.Windows.Forms.ComboBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,22 +49,20 @@ Partial Class Libros
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGlibros = New System.Windows.Forms.DataGridView()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.btnBuscar)
+        Me.GroupBox1.Controls.Add(Me.cmbGenero)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
         Me.GroupBox1.Controls.Add(Me.btnLimpiar)
@@ -77,168 +82,29 @@ Partial Class Libros
         Me.GroupBox1.Controls.Add(Me.txtIdioma)
         Me.GroupBox1.Controls.Add(Me.txtPublicacion)
         Me.GroupBox1.Controls.Add(Me.txtIdLibro)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 13)
+        Me.GroupBox1.Location = New System.Drawing.Point(96, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(302, 369)
+        Me.GroupBox1.Size = New System.Drawing.Size(822, 248)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Libros "
         '
-        'Label9
+        'cmbGenero
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 71)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 25)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Nombre"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 104)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(51, 25)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Autor"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 137)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(73, 25)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Editorial"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 170)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 25)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "Genero"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 203)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 25)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Publicacion"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 236)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 25)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Pais"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 269)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 25)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Idioma"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 41)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(24, 25)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Id"
-        '
-        'txtNombreLibro
-        '
-        Me.txtNombreLibro.Location = New System.Drawing.Point(105, 68)
-        Me.txtNombreLibro.Multiline = True
-        Me.txtNombreLibro.Name = "txtNombreLibro"
-        Me.txtNombreLibro.Size = New System.Drawing.Size(133, 27)
-        Me.txtNombreLibro.TabIndex = 8
-        '
-        'TxtAutor
-        '
-        Me.TxtAutor.Location = New System.Drawing.Point(105, 101)
-        Me.TxtAutor.Multiline = True
-        Me.TxtAutor.Name = "TxtAutor"
-        Me.TxtAutor.Size = New System.Drawing.Size(133, 27)
-        Me.TxtAutor.TabIndex = 7
-        '
-        'txtEditorial
-        '
-        Me.txtEditorial.Location = New System.Drawing.Point(105, 134)
-        Me.txtEditorial.Multiline = True
-        Me.txtEditorial.Name = "txtEditorial"
-        Me.txtEditorial.Size = New System.Drawing.Size(133, 27)
-        Me.txtEditorial.TabIndex = 6
-        '
-        'txtPais
-        '
-        Me.txtPais.Location = New System.Drawing.Point(105, 239)
-        Me.txtPais.Multiline = True
-        Me.txtPais.Name = "txtPais"
-        Me.txtPais.Size = New System.Drawing.Size(133, 27)
-        Me.txtPais.TabIndex = 5
-        '
-        'txtIdioma
-        '
-        Me.txtIdioma.Location = New System.Drawing.Point(105, 272)
-        Me.txtIdioma.Multiline = True
-        Me.txtIdioma.Name = "txtIdioma"
-        Me.txtIdioma.Size = New System.Drawing.Size(133, 27)
-        Me.txtIdioma.TabIndex = 4
-        '
-        'txtPublicacion
-        '
-        Me.txtPublicacion.Location = New System.Drawing.Point(105, 206)
-        Me.txtPublicacion.Multiline = True
-        Me.txtPublicacion.Name = "txtPublicacion"
-        Me.txtPublicacion.Size = New System.Drawing.Size(133, 27)
-        Me.txtPublicacion.TabIndex = 2
-        '
-        'txtIdLibro
-        '
-        Me.txtIdLibro.Location = New System.Drawing.Point(105, 35)
-        Me.txtIdLibro.Multiline = True
-        Me.txtIdLibro.Name = "txtIdLibro"
-        Me.txtIdLibro.Size = New System.Drawing.Size(133, 27)
-        Me.txtIdLibro.TabIndex = 0
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.GroupBox2.Controls.Add(Me.DGlibros)
-        Me.GroupBox2.Location = New System.Drawing.Point(320, 13)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(848, 369)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Datos"
-        '
-        'DGlibros
-        '
-        Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGlibros.Location = New System.Drawing.Point(6, 31)
-        Me.DGlibros.Name = "DGlibros"
-        Me.DGlibros.Size = New System.Drawing.Size(825, 321)
-        Me.DGlibros.TabIndex = 0
+        Me.cmbGenero.FormattingEnabled = True
+        Me.cmbGenero.Location = New System.Drawing.Point(455, 101)
+        Me.cmbGenero.Name = "cmbGenero"
+        Me.cmbGenero.Size = New System.Drawing.Size(196, 32)
+        Me.cmbGenero.TabIndex = 44
         '
         'btnBuscar
         '
         Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
-        Me.btnBuscar.Location = New System.Drawing.Point(244, 137)
+        Me.btnBuscar.Location = New System.Drawing.Point(295, 28)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(45, 45)
         Me.btnBuscar.TabIndex = 43
@@ -249,7 +115,7 @@ Partial Class Libros
         Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEditar.Image = Global.Clase_III_Parcial.My.Resources.Resources.editar
-        Me.btnEditar.Location = New System.Drawing.Point(244, 86)
+        Me.btnEditar.Location = New System.Drawing.Point(737, 86)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(45, 45)
         Me.btnEditar.TabIndex = 42
@@ -260,7 +126,7 @@ Partial Class Libros
         Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnIngresar.Image = Global.Clase_III_Parcial.My.Resources.Resources.agregar
-        Me.btnIngresar.Location = New System.Drawing.Point(244, 35)
+        Me.btnIngresar.Location = New System.Drawing.Point(737, 31)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(45, 45)
         Me.btnIngresar.TabIndex = 41
@@ -271,7 +137,7 @@ Partial Class Libros
         Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
-        Me.btnLimpiar.Location = New System.Drawing.Point(244, 239)
+        Me.btnLimpiar.Location = New System.Drawing.Point(737, 188)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
         Me.btnLimpiar.TabIndex = 40
@@ -282,29 +148,192 @@ Partial Class Libros
         Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEliminar.Image = Global.Clase_III_Parcial.My.Resources.Resources.eliminar
-        Me.btnEliminar.Location = New System.Drawing.Point(244, 188)
+        Me.btnEliminar.Location = New System.Drawing.Point(737, 135)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(45, 45)
         Me.btnEliminar.TabIndex = 39
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'Label9
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(105, 167)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 33)
-        Me.ComboBox1.TabIndex = 44
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 71)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(79, 24)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Nombre"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(339, 71)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(55, 24)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Autor"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 107)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 24)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Editorial"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(339, 104)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(74, 24)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Genero"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(8, 142)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(108, 24)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Publicacion"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(342, 139)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 24)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Pais"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 185)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 24)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Idioma"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 41)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(71, 24)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Codigo"
+        '
+        'txtNombreLibro
+        '
+        Me.txtNombreLibro.Location = New System.Drawing.Point(122, 68)
+        Me.txtNombreLibro.Multiline = True
+        Me.txtNombreLibro.Name = "txtNombreLibro"
+        Me.txtNombreLibro.Size = New System.Drawing.Size(205, 27)
+        Me.txtNombreLibro.TabIndex = 8
+        '
+        'TxtAutor
+        '
+        Me.TxtAutor.Location = New System.Drawing.Point(455, 68)
+        Me.TxtAutor.Multiline = True
+        Me.TxtAutor.Name = "TxtAutor"
+        Me.TxtAutor.Size = New System.Drawing.Size(205, 27)
+        Me.TxtAutor.TabIndex = 7
+        '
+        'txtEditorial
+        '
+        Me.txtEditorial.Location = New System.Drawing.Point(122, 104)
+        Me.txtEditorial.Multiline = True
+        Me.txtEditorial.Name = "txtEditorial"
+        Me.txtEditorial.Size = New System.Drawing.Size(205, 27)
+        Me.txtEditorial.TabIndex = 6
+        '
+        'txtPais
+        '
+        Me.txtPais.Location = New System.Drawing.Point(455, 142)
+        Me.txtPais.Multiline = True
+        Me.txtPais.Name = "txtPais"
+        Me.txtPais.Size = New System.Drawing.Size(208, 27)
+        Me.txtPais.TabIndex = 5
+        '
+        'txtIdioma
+        '
+        Me.txtIdioma.Location = New System.Drawing.Point(122, 188)
+        Me.txtIdioma.Multiline = True
+        Me.txtIdioma.Name = "txtIdioma"
+        Me.txtIdioma.Size = New System.Drawing.Size(208, 27)
+        Me.txtIdioma.TabIndex = 4
+        '
+        'txtPublicacion
+        '
+        Me.txtPublicacion.Location = New System.Drawing.Point(122, 144)
+        Me.txtPublicacion.Multiline = True
+        Me.txtPublicacion.Name = "txtPublicacion"
+        Me.txtPublicacion.Size = New System.Drawing.Size(133, 27)
+        Me.txtPublicacion.TabIndex = 2
+        '
+        'txtIdLibro
+        '
+        Me.txtIdLibro.Location = New System.Drawing.Point(122, 35)
+        Me.txtIdLibro.Multiline = True
+        Me.txtIdLibro.Name = "txtIdLibro"
+        Me.txtIdLibro.Size = New System.Drawing.Size(133, 27)
+        Me.txtIdLibro.TabIndex = 0
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.txtbuscar)
+        Me.GroupBox2.Controls.Add(Me.DGlibros)
+        Me.GroupBox2.Controls.Add(Me.btnBuscar)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 268)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(983, 410)
+        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Datos"
+        '
+        'DGlibros
+        '
+        Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGlibros.Location = New System.Drawing.Point(6, 83)
+        Me.DGlibros.Name = "DGlibros"
+        Me.DGlibros.Size = New System.Drawing.Size(971, 321)
+        Me.DGlibros.TabIndex = 0
+        '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(25, 38)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(71, 24)
+        Me.Label2.TabIndex = 45
+        Me.Label2.Text = "Codigo"
+        '
+        'txtbuscar
+        '
+        Me.txtbuscar.Location = New System.Drawing.Point(134, 35)
+        Me.txtbuscar.Multiline = True
+        Me.txtbuscar.Name = "txtbuscar"
+        Me.txtbuscar.Size = New System.Drawing.Size(133, 27)
+        Me.txtbuscar.TabIndex = 44
         '
         'Libros
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1180, 412)
+        Me.ClientSize = New System.Drawing.Size(1019, 677)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Font = New System.Drawing.Font("Bebas Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "Libros"
@@ -312,7 +341,9 @@ Partial Class Libros
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -342,5 +373,9 @@ Partial Class Libros
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DGlibros As DataGridView
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbGenero As ComboBox
+    Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtbuscar As TextBox
 End Class

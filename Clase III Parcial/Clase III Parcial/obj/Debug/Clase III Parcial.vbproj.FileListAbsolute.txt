@@ -20,3 +20,25 @@ C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\
 C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Reporte.resources
 C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Retornos.resources
 C:\Users\pcpf\source\repos\II-Parcial-PEDEV\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Vencidos.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbprojAssemblyReference.cache
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Resources.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.ChargeScreen.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Estudiantes.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Libros.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.LibrosPrestados.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Login.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Main.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Prestatarios.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Reporte.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Retornos.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Usuarios.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Vencidos.resources
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.GenerateResource.cache
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.CoreCompileInputs.cache
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.exe
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.xml
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.pdb
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe.config
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.pdb
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.xml
