@@ -113,7 +113,7 @@ Public Class conexion
 
     'Modifica el registro de un libro
     Public Function modificarLibros(ByVal idLibro As Integer, ByVal nombre As String, ByVal autor As String, ByVal editorial As String,
-                                    ByVal genero As Integer, ByVal publicacion As String, ByVal pais As String, ByVal idioma As String) As Boolean
+                                    ByVal genero As Integer, ByVal publicacion As String, ByVal pais As String, ByVal idioma As String, ByVal estadoId As Integer) As Boolean
         Try
             conexion.Open()
             cmb = New SqlCommand("ModificarLibros", conexion)
@@ -126,6 +126,7 @@ Public Class conexion
             cmb.Parameters.AddWithValue("@publicacion", publicacion)
             cmb.Parameters.AddWithValue("@pais", pais)
             cmb.Parameters.AddWithValue("@idioma", idioma)
+            cmb.Parameters.AddWithValue("@estadoId", estadoId)
 
             If cmb.ExecuteNonQuery Then
                 conexion.Close()

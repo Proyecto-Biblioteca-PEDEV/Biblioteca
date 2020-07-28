@@ -11,6 +11,7 @@ Public Class Libros
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.conectar()
         llenarGenero()
+        llenarEstado()
         desactivar()
         conexion.mostar(DGlibros)
         cmbGenero.SelectedIndex = -1
@@ -30,6 +31,9 @@ Public Class Libros
         txtIdLibro.Enabled = True
         cmbGenero.SelectedIndex = -1
         activarBotones()
+        llenarEstado()
+        cmbEstado.Visible = False
+        Label10.Visible = False
     End Sub
     'funcion que permite llenar el cmbGenero con los datos de la tabla Genero
     Private Sub llenarGenero()
@@ -49,6 +53,26 @@ Public Class Libros
         End Try
     End Sub
     'convierte la cadena de texto de idioma y pais en mayuscula y minusculas
+
+    'funcion que permite llenar el cmbEstado
+    Private Sub llenarEstado()
+        Dim DA As New SqlDataAdapter
+        Dim DT As New DataTable
+        Try
+            DA = New SqlDataAdapter("select * from proyecto.EstadoLibro", conexion.conexion)
+            DA.Fill(DT)
+            cmbEstado.DataSource = DT
+            cmbEstado.DisplayMember = "estado"
+            cmbEstado.ValueMember = "idEstado"
+
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+        Finally
+            conexion.conexion.Close()
+        End Try
+    End Sub
+
+    'funcion para convertir las cadena de texto en un formato: de jUaN a Juan
     Function cadenaTexto(ByVal text As String)
 
         Return StrConv(text, VbStrConv.ProperCase)
@@ -67,7 +91,7 @@ Public Class Libros
         publicacion = Val(txtPublicacion.Text)
         pais = cadenaTexto(txtPais.Text)
         idioma = cadenaTexto(txtIdioma.Text)
-        estado = 4
+        estado = 3
         Try
             If conexion.insertarLibro(idLibro, nombre, autor, editorial, genero, publicacion, pais, idioma, estado) Then
                 MessageBox.Show("Libro Guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -126,7 +150,7 @@ Public Class Libros
 
     'boton Modificar libros
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Dim idLibro, genero As Integer
+        Dim idLibro, genero, estado As Integer
         Dim nombre, autor, editorial, publicacion, pais, idioma As String
         txtIdLibro.Enabled = False
         idLibro = Val(txtIdLibro.Text)
@@ -137,17 +161,30 @@ Public Class Libros
         publicacion = Val(txtPublicacion.Text)
         pais = cadenaTexto(txtPais.Text)
         idioma = cadenaTexto(txtIdioma.Text)
+        estado = Val(cmbEstado.SelectedIndex)
 
         Try
-            If txtIdLibro.Text = "" Or txtNombreLibro.Text = "" Or TxtAutor.Text = "" Or txtEditorial.Text = "" Or cmbGenero.SelectedIndex = -1 Or txtPublicacion.Text = "" Or txtPais.Text = "" Or txtIdioma.Text = "" Then
+            If txtIdLibro.Text = "" Or txtNombreLibro.Text = "" Or TxtAutor.Text = "" Or txtEditorial.Text = "" Or cmbGenero.SelectedIndex = -1 Or txtPublicacion.Text = "" Or txtPais.Text = "" Or txtIdioma.Text = "" Or cmbEstado.SelectedIndex = -1 Then
                 MessageBox.Show("Debe de llenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
             End If
-            If Not IsNumeric(txtPublicacion.Text) Or txtPublicacion.Text <= 0 Or txtPublicacion.Text > 9999 Then
+            If Not IsNumeric(txtPublicacion.Text) Then
                 MessageBox.Show("Debe ingresar un año valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
+            ElseIf IsNumeric(txtPublicacion.Text) Then
+                Dim valor As Integer
+                valor = Val(txtPublicacion.Text)
+                If valor = 0 Then
+                    MessageBox.Show("Debe ingresar un año valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                ElseIf valor < 1 Then
+                    MessageBox.Show("Debe ingresar un año valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+
+                End If
+
             End If
-            If conexion.modificarLibros(idLibro, nombre, autor, editorial, genero, publicacion, pais, idioma) Then
+            If conexion.modificarLibros(idLibro, nombre, autor, editorial, genero, publicacion, pais, idioma, estado) Then
                 MessageBox.Show("Libro Modificado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 MessageBox.Show("Error al modificar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -199,7 +236,10 @@ Public Class Libros
             txtPublicacion.Text = dg1libros.Cells(5).Value.ToString()
             txtPais.Text = dg1libros.Cells(6).Value.ToString()
             txtIdioma.Text = dg1libros.Cells(7).Value.ToString()
+            cmbEstado.SelectedIndex = dg1libros.Cells(8).Value.ToString
             txtIdLibro.Enabled = False
+            Label10.Visible = True
+            cmbEstado.Visible = True
             activar()
             botones()
         Catch ex As Exception

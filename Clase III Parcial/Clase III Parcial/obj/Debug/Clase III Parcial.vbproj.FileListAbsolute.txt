@@ -42,3 +42,11 @@ C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\
 C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe
 C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.pdb
 C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.xml
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.Reporting.dll
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.ReportViewer.WinForms.dll
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.Reporting.pdb
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.Reporting.xml
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.exe.licenses
+C:\Users\Sandra\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.CopyComplete

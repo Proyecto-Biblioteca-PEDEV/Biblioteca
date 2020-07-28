@@ -25,7 +25,6 @@ Partial Class Libros
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmbGenero = New System.Windows.Forms.ComboBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
@@ -45,14 +44,17 @@ Partial Class Libros
         Me.txtIdioma = New System.Windows.Forms.TextBox()
         Me.txtPublicacion = New System.Windows.Forms.TextBox()
         Me.txtIdLibro = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.DGlibros = New System.Windows.Forms.DataGridView()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtbuscar = New System.Windows.Forms.TextBox()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +64,8 @@ Partial Class Libros
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.GroupBox1.Controls.Add(Me.cmbEstado)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.cmbGenero)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
@@ -99,17 +103,6 @@ Partial Class Libros
         Me.cmbGenero.Name = "cmbGenero"
         Me.cmbGenero.Size = New System.Drawing.Size(196, 32)
         Me.cmbGenero.TabIndex = 44
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
-        Me.btnBuscar.Location = New System.Drawing.Point(295, 16)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(45, 45)
-        Me.btnBuscar.TabIndex = 43
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnEditar
         '
@@ -283,6 +276,17 @@ Partial Class Libros
         Me.txtIdLibro.Size = New System.Drawing.Size(133, 27)
         Me.txtIdLibro.TabIndex = 0
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
+        Me.btnBuscar.Location = New System.Drawing.Point(295, 16)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(45, 45)
+        Me.btnBuscar.TabIndex = 43
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
@@ -296,18 +300,6 @@ Partial Class Libros
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos"
-        '
-        'DGlibros
-        '
-        Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGlibros.Location = New System.Drawing.Point(6, 66)
-        Me.DGlibros.Name = "DGlibros"
-        Me.DGlibros.Size = New System.Drawing.Size(971, 307)
-        Me.DGlibros.TabIndex = 0
-        '
-        'ErrorValidacion
-        '
-        Me.ErrorValidacion.ContainerControl = Me
         '
         'Label2
         '
@@ -325,6 +317,38 @@ Partial Class Libros
         Me.txtbuscar.Name = "txtbuscar"
         Me.txtbuscar.Size = New System.Drawing.Size(133, 27)
         Me.txtbuscar.TabIndex = 44
+        '
+        'DGlibros
+        '
+        Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGlibros.Location = New System.Drawing.Point(6, 66)
+        Me.DGlibros.Name = "DGlibros"
+        Me.DGlibros.Size = New System.Drawing.Size(971, 307)
+        Me.DGlibros.TabIndex = 0
+        '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
+        'cmbEstado
+        '
+        Me.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Location = New System.Drawing.Point(455, 164)
+        Me.cmbEstado.Name = "cmbEstado"
+        Me.cmbEstado.Size = New System.Drawing.Size(196, 32)
+        Me.cmbEstado.TabIndex = 46
+        Me.cmbEstado.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(339, 167)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(68, 24)
+        Me.Label10.TabIndex = 45
+        Me.Label10.Text = "Estado"
+        Me.Label10.Visible = False
         '
         'Libros
         '
@@ -379,4 +403,6 @@ Partial Class Libros
     Friend WithEvents ErrorValidacion As ErrorProvider
     Friend WithEvents Label2 As Label
     Friend WithEvents txtbuscar As TextBox
+    Friend WithEvents cmbEstado As ComboBox
+    Friend WithEvents Label10 As Label
 End Class
