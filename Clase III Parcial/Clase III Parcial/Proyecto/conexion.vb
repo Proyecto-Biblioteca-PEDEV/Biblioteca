@@ -144,6 +144,125 @@ Public Class conexion
     '---------------------------------------------------------FINAL FUNCIONES FORMULARIO LIBROS -------------------------------------------
 
 
+
+    '------------------------------------------------------------- Inicio Funciones Formulario Estudiantes -------------------------------------
+    '----------------------------------------------------------- OLMAN JOSUE GARCIA CABRERA -----------------------------------------------------------
+    Public Function insertarAlumno(idAlumno As String, nombre As String, apellido As String, edad As String,
+                                    facultadid As Integer, estadoid As Integer, multa As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("insertarAlumno", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@IdAlumno", idAlumno)
+            cmb.Parameters.AddWithValue("@Nombre", convertirMayusculas(nombre))
+            cmb.Parameters.AddWithValue("@Apellido", convertirMayusculas(apellido))
+            cmb.Parameters.AddWithValue("@Edad", edad)
+            cmb.Parameters.AddWithValue("@Facultadid", facultadid)
+            cmb.Parameters.AddWithValue("@Estadoid", estadoid)
+            cmb.Parameters.AddWithValue("@Multa", multa)
+            If cmb.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function modificarAlumno(idAlumno As String, nombre As String, apellido As String, edad As String,
+                                    facultadid As Integer)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("modificarAlumno", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@IdAlumno", idAlumno)
+            cmb.Parameters.AddWithValue("@Nombre", convertirMayusculas(nombre))
+            cmb.Parameters.AddWithValue("@Apellido", convertirMayusculas(apellido))
+            cmb.Parameters.AddWithValue("@Edad", edad)
+            cmb.Parameters.AddWithValue("@Facultadid", facultadid)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function buscarAlumno(idAlumno As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("buscarAlumno", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@idAlumno", idAlumno)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+            MsgBox(ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function eliminarAlumno(idAlumno As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("eliminarAlumno", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@idAlumno", idAlumno)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function mostrarAlumnos(DTGalumno As DataGridView)
+
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("llenarAlumno", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            da.Fill(dt)
+            DTGalumno.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function convertirMayusculas(ByVal Texto As String)
+        Return StrConv(Texto, VbStrConv.ProperCase)
+    End Function
+
+    Public Function convertirMinusculas(ByVal Texto As String)
+        Return StrConv(Texto, VbStrConv.Lowercase)
+        '---------------------------------------------------------FINAL FUNCIONES FORMULARIO ESTUDIANTES -------------------------------------------
+    End Function
+
 End Class
 
 
