@@ -244,7 +244,7 @@ Partial Class Main
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(182, 35)
         Me.Button7.TabIndex = 17
-        Me.Button7.Text = "Estudiantes"
+        Me.Button7.Text = "Alumnos"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button7.UseVisualStyleBackColor = False
         '

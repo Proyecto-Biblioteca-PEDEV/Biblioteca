@@ -40,7 +40,7 @@ Public Class Estudiantes
                 insertarAlumno()
 
                 conexion.mostrarAlumnos(DTGAlumno)
-                limpiar()
+
             End If
 
 
@@ -84,6 +84,7 @@ Public Class Estudiantes
             If conexion.insertarAlumno(idAlumno, nombre, apellido, edad, facultadid, estadoid, multa) Then
                 MessageBox.Show("Guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 conexion.conexion.Close()
+                limpiar()
             Else
                 MessageBox.Show("Error al guardar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 conexion.conexion.Close()
@@ -220,6 +221,7 @@ Public Class Estudiantes
         txtIdAlumno.Enabled = True
         cmbFacultad.SelectedIndex = -1
         txtBuscar.Clear()
+        btnIngresar.Enabled = True
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -283,6 +285,7 @@ Public Class Estudiantes
         btnEditar.Enabled = True
         btnEliminar.Enabled = True
         txtIdAlumno.Enabled = False
+        btnIngresar.Enabled = False
     End Sub
 
     Private Sub btnIngresar_MouseHover(sender As Object, e As EventArgs) Handles btnIngresar.MouseHover
