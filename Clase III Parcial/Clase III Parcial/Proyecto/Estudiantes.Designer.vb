@@ -32,7 +32,6 @@ Partial Class Estudiantes
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DTGAlumno = New System.Windows.Forms.DataGridView()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -43,9 +42,9 @@ Partial Class Estudiantes
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtEdad = New System.Windows.Forms.TextBox()
-        Me.txtIdAlumno = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MaskIdAlumno = New System.Windows.Forms.MaskedTextBox()
+        Me.txtIdAlumno = New System.Windows.Forms.MaskedTextBox()
+        Me.txtBuscar = New System.Windows.Forms.MaskedTextBox()
         CType(Me.errorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DTGAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,21 +129,13 @@ Partial Class Estudiantes
         Me.btnBuscar.TabIndex = 43
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'txtBuscar
-        '
-        Me.txtBuscar.Location = New System.Drawing.Point(158, 35)
-        Me.txtBuscar.Multiline = True
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(198, 27)
-        Me.txtBuscar.TabIndex = 1
-        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.GroupBox2.Controls.Add(Me.txtBuscar)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.DTGAlumno)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Controls.Add(Me.txtBuscar)
         Me.GroupBox2.Location = New System.Drawing.Point(368, 13)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(752, 408)
@@ -199,11 +190,11 @@ Partial Class Estudiantes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 41)
+        Me.Label1.Location = New System.Drawing.Point(6, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(25, 24)
+        Me.Label1.Size = New System.Drawing.Size(96, 24)
         Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Id"
+        Me.Label1.Text = "Id Alumno"
         '
         'txtNombre
         '
@@ -232,19 +223,10 @@ Partial Class Estudiantes
         Me.txtEdad.Size = New System.Drawing.Size(160, 27)
         Me.txtEdad.TabIndex = 6
         '
-        'txtIdAlumno
-        '
-        Me.txtIdAlumno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdAlumno.Location = New System.Drawing.Point(105, 35)
-        Me.txtIdAlumno.Multiline = True
-        Me.txtIdAlumno.Name = "txtIdAlumno"
-        Me.txtIdAlumno.Size = New System.Drawing.Size(160, 27)
-        Me.txtIdAlumno.TabIndex = 0
-        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.GroupBox1.Controls.Add(Me.MaskIdAlumno)
+        Me.GroupBox1.Controls.Add(Me.txtIdAlumno)
         Me.GroupBox1.Controls.Add(Me.cmbFacultad)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
@@ -258,7 +240,6 @@ Partial Class Estudiantes
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.txtApellido)
         Me.GroupBox1.Controls.Add(Me.txtEdad)
-        Me.GroupBox1.Controls.Add(Me.txtIdAlumno)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -268,14 +249,23 @@ Partial Class Estudiantes
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Estudiante"
         '
-        'MaskIdAlumno
+        'txtIdAlumno
         '
-        Me.MaskIdAlumno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskIdAlumno.Location = New System.Drawing.Point(105, 270)
-        Me.MaskIdAlumno.Mask = "0000-0000-00000"
-        Me.MaskIdAlumno.Name = "MaskIdAlumno"
-        Me.MaskIdAlumno.Size = New System.Drawing.Size(160, 26)
-        Me.MaskIdAlumno.TabIndex = 46
+        Me.txtIdAlumno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdAlumno.Location = New System.Drawing.Point(105, 33)
+        Me.txtIdAlumno.Mask = "0000-0000-00000"
+        Me.txtIdAlumno.Name = "txtIdAlumno"
+        Me.txtIdAlumno.Size = New System.Drawing.Size(145, 26)
+        Me.txtIdAlumno.TabIndex = 46
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(155, 33)
+        Me.txtBuscar.Mask = "0000-0000-00000"
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(145, 26)
+        Me.txtBuscar.TabIndex = 47
         '
         'Estudiantes
         '
@@ -304,7 +294,6 @@ Partial Class Estudiantes
     Friend WithEvents Label2 As Label
     Friend WithEvents DTGAlumno As DataGridView
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents txtBuscar As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents cmbFacultad As ComboBox
     Friend WithEvents btnEditar As Button
@@ -319,7 +308,7 @@ Partial Class Estudiantes
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtApellido As TextBox
     Friend WithEvents txtEdad As TextBox
-    Friend WithEvents txtIdAlumno As TextBox
     Friend WithEvents ToolTip As ToolTip
-    Friend WithEvents MaskIdAlumno As MaskedTextBox
+    Friend WithEvents txtIdAlumno As MaskedTextBox
+    Friend WithEvents txtBuscar As MaskedTextBox
 End Class

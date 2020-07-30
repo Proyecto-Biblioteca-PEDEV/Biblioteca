@@ -28,26 +28,22 @@ Public Class Estudiantes
                 End If
 
             End If
-            'Si las casillas estan sin ningun valor
-            If Me.ValidateChildren And txtNombre.Text <> String.Empty And txtApellido.Text <> String.Empty And txtEdad.Text <> String.Empty Then
-                MessageBox.Show("Datos Ingresados Correctamente", "Registro Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Ingrese correctamente algunos Datos remarcados", "Registro de Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            If txtIdAlumno.Text.Length <> 15 Then
+                MessageBox.Show("Debe ingresar una identidad valida", "incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
             End If
-            If txtIdAlumno.Text = "" Then
-                MessageBox.Show("El cuadro esta vacio o no esta lleno totalmente")
-            ElseIf txtNombre.Text = "" Then
-                MessageBox.Show("Ingrese el Nombre", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            ElseIf txtApellido.Text = "" Then
-                MessageBox.Show("Ingrese el Apellido", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            ElseIf txtEdad.Text = "" Then
-                MessageBox.Show("Ingrese la Edad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'Si las casillas estan sin ningun valor
+            If txtIdAlumno.Text = "" Or txtNombre.Text = "" Or txtApellido.Text = "" Or txtEdad.Text = "" Or cmbFacultad.SelectedIndex = -1 Then
+                MessageBox.Show("Debe llenar todos los datos que se le solicitan", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
             Else
                 insertarAlumno()
-                'mostrarDatos()
+
                 conexion.mostrarAlumnos(DTGAlumno)
                 limpiar()
             End If
+
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -84,6 +80,7 @@ Public Class Estudiantes
         estadoid = "1"
         multa = ""
         Try
+
             If conexion.insertarAlumno(idAlumno, nombre, apellido, edad, facultadid, estadoid, multa) Then
                 MessageBox.Show("Guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 conexion.conexion.Close()
@@ -177,6 +174,7 @@ Public Class Estudiantes
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
         If Not IsNumeric(txtEdad.Text) Then
             MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
@@ -191,10 +189,20 @@ Public Class Estudiantes
                 Exit Sub
             End If
         End If
-        modificarAlumno()
+        If txtIdAlumno.Text = "" Or txtNombre.Text = "" Or txtApellido.Text = "" Or txtEdad.Text = "" Or cmbFacultad.SelectedIndex = -1 Then
+            MessageBox.Show("Debe llenar todos los datos que se le solicitan", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+            modificarAlumno()
+        End If
+
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        If txtBuscar.Text.Length <> 15 Then
+            MessageBox.Show("Debe ingresar una identidad valida", "incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
         buscarAlumno()
     End Sub
 
@@ -211,6 +219,7 @@ Public Class Estudiantes
         btnEliminar.Enabled = False
         txtIdAlumno.Enabled = True
         cmbFacultad.SelectedIndex = -1
+        txtBuscar.Clear()
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -261,9 +270,7 @@ Public Class Estudiantes
         ToolTip.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
-    Private Sub MaskIdAlumno_MouseHover(sender As Object, e As EventArgs) Handles MaskIdAlumno.MouseHover
 
-    End Sub
 
     Private Sub DTGAlumno_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DTGAlumno.CellContentClick
         Dim dataAlumnos As DataGridViewRow = DTGAlumno.Rows(e.RowIndex)
@@ -278,5 +285,38 @@ Public Class Estudiantes
         txtIdAlumno.Enabled = False
     End Sub
 
+    Private Sub btnIngresar_MouseHover(sender As Object, e As EventArgs) Handles btnIngresar.MouseHover
+        ToolTip.SetToolTip(btnIngresar, "Ingresa un nuevo Alumno")
+        ToolTip.ToolTipTitle = "Ingresar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    'ToolTip de editar
+    Private Sub btnEditar_MouseHover(sender As Object, e As EventArgs) Handles btnEditar.MouseHover
+        ToolTip.SetToolTip(btnEditar, "Edita el registro del Alumno")
+        ToolTip.ToolTipTitle = "Editar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    'ToolTip de Buscar
+    Private Sub btnBuscar_MouseHover(sender As Object, e As EventArgs) Handles btnBuscar.MouseHover
+        ToolTip.SetToolTip(btnBuscar, "Realiza una busqueda de un Alumno")
+        ToolTip.ToolTipTitle = "Buscar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    'ToolTip de elimminar
+    Private Sub btnEliminar_MouseHover(sender As Object, e As EventArgs) Handles btnEliminar.MouseHover
+        ToolTip.SetToolTip(btnEliminar, "Elimina un Alumno")
+        ToolTip.ToolTipTitle = "Eliminar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    'ToolTip de limpiar
+    Private Sub btnLimpiar_MouseHover(sender As Object, e As EventArgs) Handles btnLimpiar.MouseHover
+        ToolTip.SetToolTip(btnLimpiar, "Permite ingresar nuevos datos en las cajas de texto")
+        ToolTip.ToolTipTitle = "Limpiar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 
 End Class
