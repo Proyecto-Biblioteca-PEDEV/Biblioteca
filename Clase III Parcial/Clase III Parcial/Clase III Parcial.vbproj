@@ -119,9 +119,7 @@
     <Compile Include="Proyecto\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Proyecto\Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Proyecto\Login.vb" />
     <Compile Include="Proyecto\Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -132,6 +130,12 @@
       <DependentUpon>Prestatarios.vb</DependentUpon>
     </Compile>
     <Compile Include="Proyecto\Prestatarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\recuperar.Designer.vb">
+      <DependentUpon>recuperar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\recuperar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proyecto\Reporte.Designer.vb">
@@ -187,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Prestatarios.resx">
       <DependentUpon>Prestatarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\recuperar.resx">
+      <DependentUpon>recuperar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Reporte.resx">
       <DependentUpon>Reporte.vb</DependentUpon>
@@ -293,6 +300,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Proyecto\mensajeCorreo.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
