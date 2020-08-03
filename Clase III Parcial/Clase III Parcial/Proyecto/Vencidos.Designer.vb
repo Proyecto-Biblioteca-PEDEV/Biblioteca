@@ -22,18 +22,24 @@ Partial Class Vencidos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGlibros = New System.Windows.Forms.DataGridView()
+        Me.txtIdLibro = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtIdLibro = New System.Windows.Forms.TextBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.errorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.errorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.DGlibros)
         Me.GroupBox2.Controls.Add(Me.txtIdLibro)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
@@ -48,30 +54,10 @@ Partial Class Vencidos
         'DGlibros
         '
         Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGlibros.Location = New System.Drawing.Point(6, 56)
+        Me.DGlibros.Location = New System.Drawing.Point(6, 78)
         Me.DGlibros.Name = "DGlibros"
-        Me.DGlibros.Size = New System.Drawing.Size(814, 397)
+        Me.DGlibros.Size = New System.Drawing.Size(814, 375)
         Me.DGlibros.TabIndex = 0
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
-        Me.btnBuscar.Location = New System.Drawing.Point(283, 18)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(40, 40)
-        Me.btnBuscar.TabIndex = 43
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(29, 26)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 25)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Id Libro"
         '
         'txtIdLibro
         '
@@ -81,13 +67,48 @@ Partial Class Vencidos
         Me.txtIdLibro.Size = New System.Drawing.Size(133, 27)
         Me.txtIdLibro.TabIndex = 7
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
+        Me.btnBuscar.Location = New System.Drawing.Point(283, 18)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(50, 43)
+        Me.btnBuscar.TabIndex = 43
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(29, 26)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(72, 24)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Id Libro"
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
+        Me.btnLimpiar.Location = New System.Drawing.Point(339, 16)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
+        Me.btnLimpiar.TabIndex = 44
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'errorValidacion
+        '
+        Me.errorValidacion.ContainerControl = Me
+        '
         'Vencidos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(871, 483)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Font = New System.Drawing.Font("Bebas Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "Vencidos"
@@ -95,6 +116,7 @@ Partial Class Vencidos
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.errorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -104,4 +126,7 @@ Partial Class Vencidos
     Friend WithEvents btnBuscar As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents txtIdLibro As TextBox
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents errorValidacion As ErrorProvider
 End Class

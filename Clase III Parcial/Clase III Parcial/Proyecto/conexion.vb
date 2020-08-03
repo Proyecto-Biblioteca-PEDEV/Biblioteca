@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class conexion
-    Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-I773KQU;Initial Catalog=Biblioteca;Integrated Security=True")
+    Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-HD05D0Q;Initial Catalog=Biblioteca;Integrated Security=True")
     'Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet()
     Public dt As DataTable
@@ -263,6 +263,48 @@ Public Class conexion
         '---------------------------------------------------------FINAL FUNCIONES FORMULARIO ESTUDIANTES -------------------------------------------
     End Function
 
+    '--------------------------------------------- Formulario Inicio Libros Prestados -------------------------------
+    '---------------------------------------------------- Olman Josue Garcia Cabrera -------------------------------
+
+    Public Function MostrarLibrosPrestados(DGLibrosPrestados As DataGridView)
+
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("MostrarLibrosPrestados", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            da.Fill(dt)
+            DGLibrosPrestados.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Sub BuscarLibrosPrestados(dgv As DataGridView, idPrestamo As Integer)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("BuscarLibrosPrestados", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            With cmb.Parameters
+                .Add(New SqlParameter("@idPrestamo", idPrestamo))
+            End With
+            da.Fill(dt)
+            dgv.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+    End Sub
+    '--------------------------------------------- Formulario Final Libros Prestados -------------------------------
 End Class
 
 
