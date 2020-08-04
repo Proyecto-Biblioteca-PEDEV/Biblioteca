@@ -25,6 +25,7 @@ Partial Class Usuarios
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGlibros = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
@@ -43,7 +44,6 @@ Partial Class Usuarios
         Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.txtIdUsuario = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -98,6 +98,14 @@ Partial Class Usuarios
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Usuarios "
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(105, 167)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 32)
+        Me.ComboBox1.TabIndex = 44
         '
         'btnBuscar
         '
@@ -159,7 +167,7 @@ Partial Class Usuarios
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(6, 71)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 25)
+        Me.Label9.Size = New System.Drawing.Size(79, 24)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Nombre"
         '
@@ -168,7 +176,7 @@ Partial Class Usuarios
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(6, 104)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(68, 25)
+        Me.Label8.Size = New System.Drawing.Size(79, 24)
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "Apellido"
         '
@@ -177,7 +185,7 @@ Partial Class Usuarios
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(6, 137)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(43, 25)
+        Me.Label7.Size = New System.Drawing.Size(55, 24)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Edad"
         '
@@ -186,7 +194,7 @@ Partial Class Usuarios
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(6, 170)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 25)
+        Me.Label6.Size = New System.Drawing.Size(68, 24)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Puesto"
         '
@@ -195,7 +203,7 @@ Partial Class Usuarios
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(6, 209)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 25)
+        Me.Label5.Size = New System.Drawing.Size(68, 24)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Correo"
         '
@@ -204,7 +212,7 @@ Partial Class Usuarios
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 241)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 25)
+        Me.Label2.Size = New System.Drawing.Size(103, 24)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "contraseña"
         '
@@ -213,7 +221,7 @@ Partial Class Usuarios
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(6, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(24, 25)
+        Me.Label1.Size = New System.Drawing.Size(25, 24)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Id"
         '
@@ -265,22 +273,14 @@ Partial Class Usuarios
         Me.txtIdUsuario.Size = New System.Drawing.Size(133, 27)
         Me.txtIdUsuario.TabIndex = 0
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(105, 167)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 33)
-        Me.ComboBox1.TabIndex = 44
-        '
         'Usuarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1191, 399)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Font = New System.Drawing.Font("Bebas Neue", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "Usuarios"
