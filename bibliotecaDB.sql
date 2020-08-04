@@ -531,6 +531,9 @@ end
 alter procedure insertarFactura
 @idretorno int, @alumnoid varchar(15), @montoFactura float, @fecha date
 as begin
+if exists (select idretorno from proyecto.Facturas as f where f.idretorno = @idretorno)
+raiserror ('Factura ya existente',16,1)
+else
 insert into proyecto.Facturas values (@idretorno, @alumnoid, @montoFactura, @fecha, 'Pago de Multa')
 end 
 
