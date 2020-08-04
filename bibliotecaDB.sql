@@ -422,7 +422,7 @@ create procedure mostrarUsuario
 as begin
 	
 	select id as Idusuario,Nombre, Apellido,edad as Edad,Puesto as 'Puesto', Correo as 'Correo',contrasena as Contraseña, UserName as 'NombreUsuario'
-	from proyecto.Usuarios
+	from proyecto.Usuarios where id != 3 and id != 4
 end
 
 execute mostrarUsuario
@@ -502,12 +502,16 @@ if exists (select idretorno, prestamoid from proyecto.Retornos where idretorno =
 insert into proyecto.Retornos values (@idretorno, @alumnoid, @libroid, @prestamoid, @fechaRetorno, @multa, @estadoMulta)
 update proyecto.libros set estadoId = 0 where idLibro = @libroid
 if (@multa > 0 and @estadoMulta = 'No Pagado')
-update proyecto.Alumno set estadoid = 7, multa = @multa
-else if (@multa = 0)
-update proyecto.Alumno set estadoid = 0, multa = 0
-else if (@multa > 0 and @estadoMulta = 'Pagado')
-update proyecto.Alumno set estadoid = 7, multa = 0
+begin
+update proyecto.Alumno set estadoid = 2, multa = @multa
+update proyecto.libros set estadoId = 7
 end
+else if (@multa = 0)
+update proyecto.Alumno set estadoid = 1, multa = 0
+else if (@multa > 0 and @estadoMulta = 'Pagado')
+update proyecto.Alumno set estadoid = 1, multa = 0
+end
+
 
 
 --------------------------------------------------------------------Procedimiento para buscar un retorno---------------------------------------------------------------------
