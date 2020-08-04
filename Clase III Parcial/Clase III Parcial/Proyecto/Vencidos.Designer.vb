@@ -24,24 +24,24 @@ Partial Class Vencidos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DGlibros = New System.Windows.Forms.DataGridView()
-        Me.txtIdLibro = New System.Windows.Forms.TextBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.DGVencidos = New System.Windows.Forms.DataGridView()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.errorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.txtIdAlumno = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVencidos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.errorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.GroupBox2.Controls.Add(Me.txtIdAlumno)
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
-        Me.GroupBox2.Controls.Add(Me.DGlibros)
-        Me.GroupBox2.Controls.Add(Me.txtIdLibro)
+        Me.GroupBox2.Controls.Add(Me.DGVencidos)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
@@ -51,28 +51,31 @@ Partial Class Vencidos
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos"
         '
-        'DGlibros
+        'btnLimpiar
         '
-        Me.DGlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGlibros.Location = New System.Drawing.Point(6, 78)
-        Me.DGlibros.Name = "DGlibros"
-        Me.DGlibros.Size = New System.Drawing.Size(814, 375)
-        Me.DGlibros.TabIndex = 0
+        Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
+        Me.btnLimpiar.Location = New System.Drawing.Point(444, 16)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
+        Me.btnLimpiar.TabIndex = 44
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'txtIdLibro
+        'DGVencidos
         '
-        Me.txtIdLibro.Location = New System.Drawing.Point(144, 23)
-        Me.txtIdLibro.Multiline = True
-        Me.txtIdLibro.Name = "txtIdLibro"
-        Me.txtIdLibro.Size = New System.Drawing.Size(133, 27)
-        Me.txtIdLibro.TabIndex = 7
+        Me.DGVencidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVencidos.Location = New System.Drawing.Point(6, 78)
+        Me.DGVencidos.Name = "DGVencidos"
+        Me.DGVencidos.Size = New System.Drawing.Size(814, 375)
+        Me.DGVencidos.TabIndex = 0
         '
         'btnBuscar
         '
         Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnBuscar.Image = Global.Clase_III_Parcial.My.Resources.Resources.buscar
-        Me.btnBuscar.Location = New System.Drawing.Point(283, 18)
+        Me.btnBuscar.Location = New System.Drawing.Point(388, 18)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(50, 43)
         Me.btnBuscar.TabIndex = 43
@@ -83,24 +86,21 @@ Partial Class Vencidos
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(29, 26)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(72, 24)
+        Me.Label8.Size = New System.Drawing.Size(96, 24)
         Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Id Libro"
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnLimpiar.Image = Global.Clase_III_Parcial.My.Resources.Resources.limpiar
-        Me.btnLimpiar.Location = New System.Drawing.Point(339, 16)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(45, 45)
-        Me.btnLimpiar.TabIndex = 44
-        Me.btnLimpiar.UseVisualStyleBackColor = True
+        Me.Label8.Text = "Id Alumno"
         '
         'errorValidacion
         '
         Me.errorValidacion.ContainerControl = Me
+        '
+        'txtIdAlumno
+        '
+        Me.txtIdAlumno.Location = New System.Drawing.Point(147, 23)
+        Me.txtIdAlumno.Mask = "9999-9999-99999"
+        Me.txtIdAlumno.Name = "txtIdAlumno"
+        Me.txtIdAlumno.Size = New System.Drawing.Size(158, 29)
+        Me.txtIdAlumno.TabIndex = 45
         '
         'Vencidos
         '
@@ -115,18 +115,18 @@ Partial Class Vencidos
         Me.Text = "Vencidos"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DGlibros, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVencidos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.errorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents DGlibros As DataGridView
+    Friend WithEvents DGVencidos As DataGridView
     Friend WithEvents btnBuscar As Button
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtIdLibro As TextBox
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents ToolTip As ToolTip
     Friend WithEvents errorValidacion As ErrorProvider
+    Friend WithEvents txtIdAlumno As MaskedTextBox
 End Class

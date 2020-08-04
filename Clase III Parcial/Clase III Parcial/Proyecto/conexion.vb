@@ -305,6 +305,49 @@ Public Class conexion
         End Try
     End Sub
     '--------------------------------------------- Formulario Final Libros Prestados -------------------------------
+
+    '--------------------------------------------- Formulario Inicio Libros Vencidos -------------------------------
+    '------------------------------------------------- Sandra Jackelin Calderon  -----------------------------------
+
+    Public Function mostrarLibrosVencidos(DGLibrosVencidos As DataGridView)
+
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("mostrarLibrosVencidos", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            da.Fill(dt)
+            DGLibrosVencidos.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Sub buscarLibrosVencidos(dgv As DataGridView, idAlumno As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("buscarLibrosVencidos", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            With cmb.Parameters
+                .Add(New SqlParameter("@idAlumno", idAlumno))
+            End With
+            da.Fill(dt)
+            dgv.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+    End Sub
+    '--------------------------------------------- Formulario Final Libros Vencidos -------------------------------
 End Class
 
 
