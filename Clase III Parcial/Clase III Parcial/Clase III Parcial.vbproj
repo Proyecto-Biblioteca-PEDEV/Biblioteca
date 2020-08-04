@@ -11,9 +11,10 @@
     <AssemblyName>Clase III Parcial</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -104,6 +105,12 @@
     <Compile Include="Proyecto\Estudiantes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proyecto\factura.Designer.vb">
+      <DependentUpon>factura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\factura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Proyecto\Libros.Designer.vb">
       <DependentUpon>Libros.vb</DependentUpon>
     </Compile>
@@ -119,7 +126,9 @@
     <Compile Include="Proyecto\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Proyecto\Login.vb" />
+    <Compile Include="Proyecto\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Proyecto\Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -176,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Estudiantes.resx">
       <DependentUpon>Estudiantes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\factura.resx">
+      <DependentUpon>factura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Libros.resx">
       <DependentUpon>Libros.vb</DependentUpon>
@@ -303,6 +315,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Proyecto\mensajeCorreo.html" />
+    <None Include="Resources\backleftarrowcurvesymbol_79785.ico" />
+    <None Include="Resources\2849806-copy-interface-multimedia-print-printer_107972.ico" />
+    <None Include="Resources\LogoBiblioteca.png" />
+    <None Include="Resources\ic-ad_97607.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
