@@ -96,7 +96,7 @@ Partial Class recuperar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Clase_III_Parcial.My.Resources.Resources.tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_12801
+        Me.BackgroundImage = Global.Clase_III_Parcial.My.Resources.Resources.WhatsApp_Image_2020_08_04_at_4_48_12_AM
         Me.ClientSize = New System.Drawing.Size(469, 191)
         Me.Controls.Add(Me.btnRecuperar)
         Me.Controls.Add(Me.rtxHtml)

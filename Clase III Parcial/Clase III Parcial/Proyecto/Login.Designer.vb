@@ -25,20 +25,20 @@ Partial Class Login
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnIniciar = New System.Windows.Forms.Button()
-        Me.btnMostrarContra = New System.Windows.Forms.Button()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.lblOlvideContra = New System.Windows.Forms.LinkLabel()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
-        Me.btnOcultarContra = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnMinimizar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnMostrarContra = New System.Windows.Forms.Button()
+        Me.btnOcultarContra = New System.Windows.Forms.Button()
         Me.PanelSuperior.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
@@ -52,6 +52,47 @@ Partial Class Login
         Me.PanelSuperior.Name = "PanelSuperior"
         Me.PanelSuperior.Size = New System.Drawing.Size(505, 41)
         Me.PanelSuperior.TabIndex = 26
+        '
+        'btnIniciar
+        '
+        Me.btnIniciar.Location = New System.Drawing.Point(189, 240)
+        Me.btnIniciar.Name = "btnIniciar"
+        Me.btnIniciar.Size = New System.Drawing.Size(96, 31)
+        Me.btnIniciar.TabIndex = 32
+        Me.btnIniciar.Text = "Iniciar Sesion"
+        Me.btnIniciar.UseVisualStyleBackColor = True
+        '
+        'txtContrasena
+        '
+        Me.txtContrasena.Location = New System.Drawing.Point(92, 196)
+        Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.Size = New System.Drawing.Size(275, 29)
+        Me.txtContrasena.TabIndex = 28
+        '
+        'lblOlvideContra
+        '
+        Me.lblOlvideContra.AutoSize = True
+        Me.lblOlvideContra.BackColor = System.Drawing.Color.Transparent
+        Me.lblOlvideContra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOlvideContra.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.lblOlvideContra.LinkColor = System.Drawing.Color.Black
+        Me.lblOlvideContra.Location = New System.Drawing.Point(174, 294)
+        Me.lblOlvideContra.Name = "lblOlvideContra"
+        Me.lblOlvideContra.Size = New System.Drawing.Size(134, 16)
+        Me.lblOlvideContra.TabIndex = 31
+        Me.lblOlvideContra.TabStop = True
+        Me.lblOlvideContra.Text = "Olvide mi contraseña"
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.Location = New System.Drawing.Point(92, 150)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(275, 29)
+        Me.txtUsuario.TabIndex = 27
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'btnMinimizar
         '
@@ -96,15 +137,6 @@ Partial Class Login
         Me.PictureBox2.TabIndex = 33
         Me.PictureBox2.TabStop = False
         '
-        'btnIniciar
-        '
-        Me.btnIniciar.Location = New System.Drawing.Point(189, 240)
-        Me.btnIniciar.Name = "btnIniciar"
-        Me.btnIniciar.Size = New System.Drawing.Size(96, 31)
-        Me.btnIniciar.TabIndex = 32
-        Me.btnIniciar.Text = "Iniciar Sesion"
-        Me.btnIniciar.UseVisualStyleBackColor = True
-        '
         'btnMostrarContra
         '
         Me.btnMostrarContra.BackColor = System.Drawing.Color.DimGray
@@ -118,34 +150,6 @@ Partial Class Login
         Me.btnMostrarContra.TabIndex = 29
         Me.btnMostrarContra.UseVisualStyleBackColor = False
         '
-        'txtContrasena
-        '
-        Me.txtContrasena.Location = New System.Drawing.Point(92, 196)
-        Me.txtContrasena.Name = "txtContrasena"
-        Me.txtContrasena.Size = New System.Drawing.Size(275, 29)
-        Me.txtContrasena.TabIndex = 28
-        '
-        'lblOlvideContra
-        '
-        Me.lblOlvideContra.AutoSize = True
-        Me.lblOlvideContra.BackColor = System.Drawing.Color.Transparent
-        Me.lblOlvideContra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOlvideContra.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.lblOlvideContra.LinkColor = System.Drawing.Color.Black
-        Me.lblOlvideContra.Location = New System.Drawing.Point(174, 294)
-        Me.lblOlvideContra.Name = "lblOlvideContra"
-        Me.lblOlvideContra.Size = New System.Drawing.Size(134, 16)
-        Me.lblOlvideContra.TabIndex = 31
-        Me.lblOlvideContra.TabStop = True
-        Me.lblOlvideContra.Text = "Olvide mi contraseña"
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.Location = New System.Drawing.Point(92, 150)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(275, 29)
-        Me.txtUsuario.TabIndex = 27
-        '
         'btnOcultarContra
         '
         Me.btnOcultarContra.BackColor = System.Drawing.SystemColors.ControlDarkDark
@@ -157,10 +161,6 @@ Partial Class Login
         Me.btnOcultarContra.Size = New System.Drawing.Size(29, 24)
         Me.btnOcultarContra.TabIndex = 30
         Me.btnOcultarContra.UseVisualStyleBackColor = False
-        '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
         '
         'Login
         '
@@ -182,8 +182,8 @@ Partial Class Login
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.PanelSuperior.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

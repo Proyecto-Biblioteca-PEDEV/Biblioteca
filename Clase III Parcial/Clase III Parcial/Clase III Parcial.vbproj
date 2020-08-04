@@ -350,6 +350,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Proyecto\mensajeCorreo.html" />
+    <None Include="Resources\WhatsApp Image 2020-08-04 at 4.47.55 AM.jpeg" />
+    <None Include="Resources\WhatsApp Image 2020-08-04 at 4.48.12 AM.jpeg" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

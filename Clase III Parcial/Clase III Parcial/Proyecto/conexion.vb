@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports System.Windows.Forms
+Imports System.Security.Cryptography
+Imports System.Text
 Public Class conexion
     Public conexion As SqlConnection = New SqlConnection("Data Source=localhost;Initial Catalog=Biblioteca;Integrated Security=True")
     'Private cmb As SqlCommandBuilder
@@ -10,6 +12,8 @@ Public Class conexion
     Public cmb As SqlCommand
     Public cmd As SqlCommand
     Public dr As SqlDataReader
+    Public comando As SqlCommand
+    Public lectorVariables As SqlDataReader
     'Conexion a la base de datos
     Public Sub conectar()
         Try
@@ -490,7 +494,6 @@ Public Class conexion
     Public scmb As SqlCommandBuilder
     Public cn As SqlConnection
     Public adaptador As SqlDataAdapter
-    Public comando As SqlCommand
     Public cmbP As SqlCommandBuilder
 
 
@@ -665,5 +668,274 @@ inner join proyecto.libros as lib on lib.idLibro = pres.libroid where idPrestamo
         Return respuesta
         conexion.Close()
     End Function
+
+    '--------------------------------------------- Formulario Final Libros Vencidos -------------------------------
+
+    '------------------------- FUNCION DE FORMULARIO USUARIO -------------------------------------------------------
+    '----------------------------- GLORIA MURILLO--------------------------------------------------------------
+    'Ingresar Un Usuario
+    Public Function insertarUsuarios(id As Integer, UserName As String, contrasena As String, Nombre As String,
+                                 Apellido As String, Edad As Integer, Puesto As String, Correo As String, estado As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("insertarUsuarios", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@id", id)
+            cmb.Parameters.AddWithValue("@UserName", UserName)
+            cmb.Parameters.AddWithValue("@contrasena", contrasena)
+            cmb.Parameters.AddWithValue("@Nombre", Nombre)
+            cmb.Parameters.AddWithValue("@Apellido", Apellido)
+            cmb.Parameters.AddWithValue("@Edad", Edad)
+            cmb.Parameters.AddWithValue("@Puesto", Puesto)
+            cmb.Parameters.AddWithValue("@Correo", Correo)
+            cmb.Parameters.AddWithValue("@estado", estado)
+            If cmb.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MessageBox.Show("No se por que" + ex.ToString)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+
+    End Function
+
+    'Buscar un Usuario por ID
+    Public Function buscarUsuarios(UserName As Integer) As DataTable
+        Try
+            conexion.Open()
+            Dim cmb As New SqlCommand("buscarUsuarios", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@UserName", UserName)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    'Eliminar Usuario
+    Public Function eliminarUsuarios(id As Integer, Puesto As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("eliminarUsuarios", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@id", id)
+            cmb.Parameters.AddWithValue("@Puesto", Puesto)
+            Return If(cmb.ExecuteNonQuery <> 0, True, False)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function editarUsuarios(id As Integer, UserName As String, contrasena As String, Nombre As String,
+                                 Apellido As String, Edad As Integer, Puesto As String, Correo As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("editarUsuarios", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@id", id)
+            cmb.Parameters.AddWithValue("@UserName", UserName)
+            cmb.Parameters.AddWithValue("@contrasena", contrasena)
+            cmb.Parameters.AddWithValue("@Nombre", Nombre)
+            cmb.Parameters.AddWithValue("@Apellido", Apellido)
+            cmb.Parameters.AddWithValue("@Edad", Edad)
+            cmb.Parameters.AddWithValue("@Puesto", Puesto)
+            cmb.Parameters.AddWithValue("@Correo", Correo)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+            conexion.Close()
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Function validarUsuarios(ByVal id As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select * from proyecto.Usuarios where id = '" + id + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+
+        Return respuesta
+    End Function
+
+    Public Function mostarUsuarios(dgv As DataGridView)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("mostrarUsuario", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+
+    Public Function Encriptar(ByVal Input As String) As String
+
+        Dim IV() As Byte = ASCIIEncoding.ASCII.GetBytes("qualityi")
+        Dim EncryptionKey() As Byte = Convert.FromBase64String("rpaSPvIvVLlrcmtzPU9/c67Gkj7yL1S5")
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(Input)
+        Dim des As TripleDESCryptoServiceProvider = New TripleDESCryptoServiceProvider
+        des.Key = EncryptionKey
+        des.IV = IV
+
+        Return Convert.ToBase64String(des.CreateEncryptor().TransformFinalBlock(buffer, 0, buffer.Length()))
+
+    End Function
+
+    Public Function Desencriptar(ByVal Input As String) As String
+
+        Dim IV() As Byte = ASCIIEncoding.ASCII.GetBytes("qualityi")
+        Dim EncryptionKey() As Byte = Convert.FromBase64String("rpaSPvIvVLlrcmtzPU9/c67Gkj7yL1S5")
+        Dim buffer() As Byte = Convert.FromBase64String(Input)
+        Dim des As TripleDESCryptoServiceProvider = New TripleDESCryptoServiceProvider
+        des.Key = EncryptionKey
+        des.IV = IV
+        Return Encoding.UTF8.GetString(des.CreateDecryptor().TransformFinalBlock(buffer, 0, buffer.Length()))
+
+    End Function
+
+    Public Sub buscarYLlenarUsuarios(dgv As DataGridView, UserName As String)
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("buscarUsuarios", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            da = New SqlDataAdapter(cmb)
+            dt = New DataTable
+            With cmb.Parameters
+                .Add(New SqlParameter("@UserName", UserName))
+            End With
+            da.Fill(dt)
+            dgv.DataSource = dt
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+    End Sub
+
+
+    '----------------------------------------------------------- Recuperar Contraseña ----------------------------------------------
+    '--------------------------------------------------------- Inicio Recuperar Contraseña -----------------------------------------
+    Public Function obtenerVariableEntera(ByVal instruccion As String, columnas As String) As Integer
+        Try
+            conexion.Open()
+            Dim valor As Integer
+            comando = New SqlCommand(instruccion, conexion)
+            lectorVariables = comando.ExecuteReader
+            While lectorVariables.Read
+                valor = Convert.ToInt16(lectorVariables(columnas))
+            End While
+            lectorVariables.Close()
+            conexion.Close()
+            Return valor
+        Catch ex As Exception
+            conexion.Close()
+            MessageBox.Show("Error de Base de datos! " & vbCrLf + ex.ToString)
+            Return -1
+        End Try
+    End Function
+
+    Public Function comprobarExistencias(ByVal instruccion As String) As Integer
+        Try
+            conexion.Open()
+            Dim comando As SqlCommand = conexion.CreateCommand()
+            comando.CommandText = instruccion
+            Dim existe As String = CStr(comando.ExecuteScalar())
+            If existe <> "" Then
+                conexion.Close()
+                Return 1
+            Else
+                conexion.Close()
+                Return 2
+            End If
+        Catch ex As Exception
+            conexion.Close()
+            MessageBox.Show("Error de Base de datos! " & vbCrLf + ex.ToString)
+            Return -1
+        End Try
+    End Function
+
+    Public Function comprobarUsuario(ByVal UserName As String, ByVal contra As String) As Boolean
+
+        conexion.Open()
+        Dim sqlcomando As String = "Select * from proyecto.Usuarios where UserName = '" & UserName & "' And contrasena ='" & contra & "' "
+        comando = conexion.CreateCommand
+        comando.CommandText = sqlcomando
+
+        Dim t As Object = CInt(comando.ExecuteScalar())
+
+        conexion.Close()
+        If t = 0 Then
+            Return False
+        End If
+
+        Return True
+
+    End Function
+    Public Function obtenerVariableCadena(ByVal instruccion As String, columnas As String) As String
+        Try
+            conexion.Open()
+            Dim valorS As String
+            comando = New SqlCommand(instruccion, conexion)
+            lectorVariables = comando.ExecuteReader
+            If lectorVariables.Read Then
+                valorS = Convert.ToString(lectorVariables(columnas))
+            Else
+                Return Nothing
+            End If
+            lectorVariables.Close()
+            conexion.Close()
+            Return valorS
+        Catch ex As Exception
+            conexion.Close()
+            MessageBox.Show("Error de Base de datos! " & vbCrLf + ex.ToString)
+            Return -1
+        End Try
+    End Function
+    '--------------------------------------------------------- Fin Recuperar Contraseña -----------------------------------------
+
 End Class
-'------------------------------ FINAL FORMULARIO PRESTAMOS ------------------------------------------'
+

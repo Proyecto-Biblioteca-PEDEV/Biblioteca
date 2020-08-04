@@ -1,36 +1,166 @@
 ﻿Imports System.Text.RegularExpressions
-Imports System.Data.Sql
-Imports System.Data.SqlClient
+Imports System.Globalization.CultureInfo
+Imports System.Security.Cryptography
+Imports System.Text
+Imports System
 Public Class Usuarios
     Dim conexion As New conexion()
-    Public adaptador As SqlDataAdapter
-    Public dt As DataTable
-    Public cn As SqlConnection
-
+    Dim cultureInfo As New System.Globalization.CultureInfo("es-MX")
 
     Private Sub frmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.conectar()
-        mostrarDatos()
-        llenarDataGrid(DGlibros)
+        conexion.mostarUsuarios(DGUsuarios)
     End Sub
 
-    Private Sub mostrarDatos()
-        conexion.Consulta("select * from proyecto.Usuarios", "proyecto.Usuarios")
-        DGlibros.DataSource = conexion.ds.Tables("proyecto.Usuarios")
-    End Sub
-
+    'username@midominio.com
     Private Function validarCorreo(ByVal isCorreo As String) As Boolean
         Return Regex.IsMatch(isCorreo, "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$")
     End Function
 
+    Private Sub botonesBlo()
+        btnEditar.Enabled = False
+        btnEliminar.Enabled = False
+    End Sub
+
+    Private Sub botonesdes()
+        btnEditar.Enabled = True
+        btnEliminar.Enabled = True
+    End Sub
+
+
     Private Sub limpiar()
         txtIdUsuario.Clear()
-        txtNombre.Clear()
+        txtUsername.Clear()
         txtApellido.Clear()
+        txtUsername.Clear()
         txtEdad.Clear()
-        cbPuesto.Text = String.Empty
+        txtContrasena.Clear()
         txtCorreo.Clear()
-        txtContraseña.Clear()
+        conexion.mostarUsuarios(DGUsuarios)
+        cbPuesto.SelectedIndex = -1
+        txtNombreUsuario.Clear()
+        botonesBlo()
+    End Sub
+
+
+    Private Sub insertarUsuaurio()
+        Dim id As Integer
+        Dim Nombre, Apellido, Correo, Puesto, contrasena As String
+        Dim Edad As Integer
+        Dim UserName, estado As String
+
+        If Not IsNumeric(txtEdad.Text) Then
+            MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        ElseIf IsNumeric(txtEdad.Text) Then
+            Dim valor As Integer
+            valor = Val(txtEdad.Text)
+            If valor = 0 Then
+                MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            ElseIf valor < 1 Then
+                MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+        End If
+
+        id = txtIdUsuario.Text
+        Nombre = txtUsername.Text
+        Apellido = txtApellido.Text
+        UserName = txtUsername.Text
+        contrasena = conexion.Encriptar(txtContrasena.Text)
+        Correo = txtCorreo.Text
+        Edad = txtEdad.Text
+        Puesto = cbPuesto.Text
+        estado = "activo"
+        Try
+
+            If conexion.insertarUsuarios(id, UserName, contrasena, fTCase(Nombre), fTCase(Apellido), Edad, Puesto, LCase(Correo), estado) Then
+                MessageBox.Show("Guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                limpiar()
+            Else
+                MessageBox.Show("Error al guardar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+
+
+    Function fTCase(str As String) As String
+        'Return cultureInfo.TextInfo.ToTitleCase(str)
+        Return StrConv(str, VbStrConv.ProperCase)
+    End Function
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        limpiar()
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim id As Integer
+        Dim puesto As String
+        id = Val(txtIdUsuario.Text)
+        puesto = cbPuesto.Text
+        If conexion.eliminarUsuarios(id, puesto) = True Then
+            MessageBox.Show("Usuario Eliminado Correctamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Function cadenaTexto(ByVal text As String)
+
+        Return StrConv(text, VbStrConv.ProperCase)
+
+    End Function
+
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Dim id As Integer
+        Dim Nombre, Apellido, Correo, Puesto, contrasena As String
+        Dim Edad As Integer
+        Dim UserName As String
+
+        If Not IsNumeric(txtEdad.Text) Then
+            MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        ElseIf IsNumeric(txtEdad.Text) Then
+            Dim valor As Integer
+            valor = Val(txtEdad.Text)
+            If valor = 0 Then
+                MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            ElseIf valor < 1 Then
+                MessageBox.Show("Debe ingresar una edad valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+        End If
+
+        id = txtIdUsuario.Text
+        Nombre = txtUsername.Text
+        Apellido = txtApellido.Text
+        UserName = txtUsername.Text
+        contrasena = conexion.Encriptar(txtContrasena.Text)
+        Correo = txtCorreo.Text
+        Edad = txtEdad.Text
+        Puesto = cbPuesto.Text
+
+        Try
+
+            If conexion.editarUsuarios(id, UserName, contrasena, Nombre, Apellido, Edad, Puesto, Correo) Then
+                MessageBox.Show("Modificado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                limpiar()
+            Else
+                MessageBox.Show("Error al modificar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+    End Sub
+
+
+    Private Sub DGUsuarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGUsuarios.CellContentClick
+
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -39,156 +169,21 @@ Public Class Usuarios
             txtCorreo.Focus()
             txtCorreo.SelectAll()
         Else
-            insertarUsuarios()
-            'MessageBox.Show("Correo valido", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            conexion.conexion.Close()
+            insertarUsuaurio()
+
         End If
-        mostrarDatos()
     End Sub
-
-    Private Sub insertarUsuarios()
-        Dim id As Integer
-        Dim Nombre, Apellido, Correo, Puesto, contrasena, estado As String
-        Dim Edad As Integer
-        Dim UserName As String
-
-        Select Case cbPuesto.SelectedIndex
-            Case 0
-                Puesto = "Admin"
-            Case 1
-                Puesto = "Invitado"
-        End Select
-
-        id = txtIdUsuario.Text
-        Nombre = txtNombre.Text
-        Apellido = txtApellido.Text
-        UserName = txtUserName.Text
-        contrasena = txtContraseña.Text
-        Correo = txtCorreo.Text
-
-        estado = txtEstado.Text
-
-        Try
-            If conexion.insertarUsuarios(id, UserName, contrasena, Nombre, Apellido, Edad, Puesto, Correo, estado) Then
-                MessageBox.Show("Guardado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                limpiar()
-            Else
-                MessageBox.Show("Error al guardar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                conexion.conexion.Close()
-            End If
-        Catch ex As Exception
-            MessageBox.Show("No se por que" + ex.ToString)
-        End Try
-        mostrarDatos()
-    End Sub
-
-
-    Private Sub eliminarUsuarios()
-        Dim id As Integer
-        Dim Puesto As String
-        id = txtIdUsuario.Text
-        Puesto = cbPuesto.Text
-        Try
-            If (conexion.eliminarUsuarios(id, Puesto)) Then
-                MsgBox("Dado de baja")
-                'conexion.conexion.Close()
-            Else
-                MsgBox("Error al dar de baja usuario")
-                'conexion.conexion.Close()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-
-    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        limpiar()
-        mostrarDatos()
-    End Sub
-
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        eliminarUsuarios()
-        mostrarDatos()
-    End Sub
-
-    Private Sub editarUsuarios()
-        Dim id As Integer
-        Dim Nombre, Apellido, Correo, Puesto, contrasena As String
-        Dim Edad As Integer
-        Dim UserName As String
-
-        Select Case cbPuesto.SelectedIndex
-            Case 0
-                Puesto = "Admin"
-            Case 1
-                Puesto = "Invitado"
-        End Select
-
-        id = txtIdUsuario.Text
-        Nombre = txtNombre.Text
-        Apellido = txtApellido.Text
-        UserName = txtUserName.Text
-        contrasena = txtContraseña.Text
-        Correo = txtCorreo.Text
-        Edad = txtEdad.Text
-
-        Try
-            If conexion.editarUsuarios(id, UserName, contrasena, Nombre, Apellido, Edad, Puesto, Correo) Then
-                MsgBox("Dado de baja")
-                conexion.conexion.Close()
-            Else
-                MsgBox("Error al dar de baja usuario")
-                conexion.conexion.Close()
-            End If
-        Catch ex As Exception
-            MessageBox.Show("No se por que" + ex.ToString)
-        End Try
-    End Sub
-
-    Sub llenarDataGrid(ByVal dgv As DataGridView)
-        Try
-            adaptador = New SqlDataAdapter("select * from proyecto.Usuarios", cn)
-            dt = New DataTable
-            adaptador.Fill(dt)
-            dgv.DataSource = dt
-        Catch ex As Exception
-            MessageBox.Show("no se lleno por: " + ex.ToString)
-        End Try
-    End Sub
-
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        editarUsuarios()
-        mostrarDatos()
-    End Sub
-
-    Sub abrirConexion()
-        Try
-            cn = New SqlConnection("Data Source=RK800\SQLEXPRESS;Initial Catalog=Biblioteca;Integrated Security=True")
-            cn.Open()
-        Catch ex As Exception
-            MessageBox.Show("No se pudo abrir" + ex.ToString)
-            cn.Close()
-        End Try
-    End Sub
-
-    Private Sub busquedaDeDatos()
-        conexion.Consulta("select * from proyecto.Usuarios where id = '" + txtIdUsuario.Text + "'", "proyecto.Usuarios")
-        DGlibros.DataSource = conexion.ds.Tables("proyecto.Usuarios")
-    End Sub
-
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        conexion.conectar()
-        abrirConexion()
-        conexion.Consulta("select * from proyecto.Usuarios where id = '" + txtIdUsuario.Text + "'", "proyecto.Usuarios")
-
-        If (conexion.validarUsuarios(txtIdUsuario.Text) = False) Then
-            MessageBox.Show("Error en la busqueda, el empleado no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            busquedaDeDatos()
+        If txtnombreUsuario.Text = "" Then
+            MessageBox.Show("Debe de escribir el nombre de usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
         End If
+        conexion.buscarYLlenarUsuarios(DGUsuarios, txtNombreUsuario.Text)
+
     End Sub
 
+    Private Sub DGlibros_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGUsuarios.CellContentClick
 
+    End Sub
 End Class
