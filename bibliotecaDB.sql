@@ -500,12 +500,15 @@ if exists (select idretorno, prestamoid from proyecto.Retornos where idretorno =
 		raiserror ('ID retorno o ID Préstamo ya existe. Ingrese un ID diferente',16,1)
 		else
 insert into proyecto.Retornos values (@idretorno, @alumnoid, @libroid, @prestamoid, @fechaRetorno, @multa, @estadoMulta)
-update proyecto.libros set estadoId = 1 where idLibro = @libroid
+update proyecto.libros set estadoId = 0 where idLibro = @libroid
 if (@multa > 0 and @estadoMulta = 'No Pagado')
-update proyecto.Alumno set estadoid = 2, multa = @multa
-else if (@multa = 0 or @estadoMulta = 'Pagado')
-update proyecto.Alumno set estadoid = 1, multa = 0
+update proyecto.Alumno set estadoid = 7, multa = @multa
+else if (@multa = 0)
+update proyecto.Alumno set estadoid = 0, multa = 0
+else if (@multa > 0 and @estadoMulta = 'Pagado')
+update proyecto.Alumno set estadoid = 7, multa = 0
 end
+
 
 --------------------------------------------------------------------Procedimiento para buscar un retorno---------------------------------------------------------------------
 create procedure buscarRetorno 
