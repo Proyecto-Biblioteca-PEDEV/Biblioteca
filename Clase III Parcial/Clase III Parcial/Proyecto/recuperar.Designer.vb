@@ -36,39 +36,40 @@ Partial Class recuperar
         '
         'btnRecuperar
         '
-        Me.btnRecuperar.Location = New System.Drawing.Point(195, 67)
+        Me.btnRecuperar.Location = New System.Drawing.Point(205, 74)
         Me.btnRecuperar.Name = "btnRecuperar"
         Me.btnRecuperar.Size = New System.Drawing.Size(79, 34)
-        Me.btnRecuperar.TabIndex = 629
+        Me.btnRecuperar.TabIndex = 634
         Me.btnRecuperar.Text = "Recuperar"
         Me.btnRecuperar.UseVisualStyleBackColor = True
         '
         'rtxHtml
         '
-        Me.rtxHtml.Location = New System.Drawing.Point(26, 52)
+        Me.rtxHtml.Location = New System.Drawing.Point(36, 59)
         Me.rtxHtml.Margin = New System.Windows.Forms.Padding(2)
         Me.rtxHtml.Name = "rtxHtml"
         Me.rtxHtml.Size = New System.Drawing.Size(164, 114)
-        Me.rtxHtml.TabIndex = 628
+        Me.rtxHtml.TabIndex = 633
         Me.rtxHtml.Text = resources.GetString("rtxHtml.Text")
         Me.rtxHtml.Visible = False
         '
         'txtNombreusuario
         '
-        Me.txtNombreusuario.Location = New System.Drawing.Point(173, 27)
+        Me.txtNombreusuario.Location = New System.Drawing.Point(194, 34)
         Me.txtNombreusuario.Name = "txtNombreusuario"
         Me.txtNombreusuario.Size = New System.Drawing.Size(185, 20)
-        Me.txtNombreusuario.TabIndex = 627
+        Me.txtNombreusuario.TabIndex = 632
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(80, 30)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(45, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 13)
-        Me.Label1.TabIndex = 626
+        Me.Label1.Size = New System.Drawing.Size(143, 20)
+        Me.Label1.TabIndex = 631
         Me.Label1.Text = "Nombre Usuario:"
         '
         'ErrorProvider1
@@ -84,11 +85,11 @@ Partial Class recuperar
         Me.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegresar.Location = New System.Drawing.Point(396, 10)
+        Me.btnRegresar.Location = New System.Drawing.Point(406, 17)
         Me.btnRegresar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegresar.Name = "btnRegresar"
         Me.btnRegresar.Size = New System.Drawing.Size(49, 53)
-        Me.btnRegresar.TabIndex = 630
+        Me.btnRegresar.TabIndex = 635
         Me.btnRegresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnRegresar.UseVisualStyleBackColor = False
         '

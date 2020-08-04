@@ -477,7 +477,7 @@
 
                     &lt;table role="presentation" class="main"&gt;
                         &lt;div align="center"&gt;
-                            &lt;img src="imagen" alt="logo" border="0"&gt;
+                            &lt;img src="imagen" alt="https://drive.google.com/drive/folders/1-0HbugLC-kqdGxicB_AYgP8jJV5CIGuQ?usp=sharing" border="0"&gt;
                         &lt;/div&gt;
 
                         &lt;tr&gt;
@@ -507,12 +507,12 @@
                         &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0"&gt;
                             &lt;tr&gt;
                                 &lt;td class="content-block"&gt;
-                                    &lt;span class="apple-link"&gt;Biblioteca-PEDEV, Siguatepeque&lt;/span&gt;
+                                    &lt;span class="apple-link"&gt;Biblioteca-Cervantes, Siguatepeque&lt;/span&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
                             &lt;tr&gt;
                                 &lt;td class="content-block powered-by"&gt;
-                                    &lt;a&gt;Powered by Biblioteca-PEDEV&lt;/a&gt;
+                                    &lt;a&gt;Powered by Biblioteca-Cervantes&lt;/a&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
                         &lt;/table&gt;
@@ -528,7 +528,7 @@
 &lt;/html&gt;</value>
   </data>
   <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>475, 17</value>
+    <value>704, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
@@ -1211,6 +1211,6 @@
 </value>
   </data>
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>605, 17</value>
+    <value>834, 17</value>
   </metadata>
 </root>

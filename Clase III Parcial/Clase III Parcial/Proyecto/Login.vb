@@ -15,13 +15,13 @@ Public Class Login
         usuario = txtUsuario.Text
         contrasena = txtContrasena.Text
 
-        ' If conexion.inicioSesion(usuario, contrasena) = True Then
-        'ChargeScreen.Show()
-        'Me.Hide()
-        ' Else
-        'MessageBox.Show("Usuario o Contraseña incorrectos!", "Error de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If conexion.comprobarUsuario(usuario, contrasena) = True Then
+            ChargeScreen.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Usuario o Contraseña incorrectos!", "Error de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-        ' End If
+        End If
 
     End Sub
 
@@ -58,13 +58,13 @@ Public Class Login
     End Sub
 
     Private Sub txtUsuario_MouseHover(sender As Object, e As EventArgs) Handles txtUsuario.MouseHover
-        ToolTip1.SetToolTip(txtUsuario, "Introduzca el numero de identidad")
+        ToolTip1.SetToolTip(txtUsuario, "Introduzca el Nombre de Usuario")
         ToolTip1.ToolTipTitle = "Ingrese Valores"
         ToolTip1.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
     Private Sub txtContrasena_MouseHover(sender As Object, e As EventArgs) Handles txtContrasena.MouseHover
-        ToolTip1.SetToolTip(txtContrasena, "Introduzca su contrasña")
+        ToolTip1.SetToolTip(txtContrasena, "Introduzca su Contraseña")
         ToolTip1.ToolTipTitle = "Ingrese Valores"
         ToolTip1.ToolTipIcon = ToolTipIcon.Info
     End Sub
@@ -74,5 +74,7 @@ Public Class Login
 
     End Sub
 
+    Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
 
+    End Sub
 End Class
