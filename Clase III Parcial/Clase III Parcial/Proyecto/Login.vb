@@ -77,4 +77,8 @@ Public Class Login
     Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
 
     End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        End
+    End Sub
 End Class

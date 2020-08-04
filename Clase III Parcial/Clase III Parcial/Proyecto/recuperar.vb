@@ -89,4 +89,8 @@ Public Class recuperar
     Private Sub rtxHtml_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub btnRegresar_Click_1(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        Me.Close()
+    End Sub
 End Class

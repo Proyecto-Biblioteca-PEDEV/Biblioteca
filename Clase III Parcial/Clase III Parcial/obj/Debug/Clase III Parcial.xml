@@ -8,198 +8,208 @@ Clase III Parcial
 <members>
 <member name="T:Clase_III_Parcial.My.Resources.Resources">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources._2849806_copy_interface_multimedia_print_printer_107972">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.agregar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.agregar1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.backleftarrowcurvesymbol_79785">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.buscar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.buscar1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.categorias">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.editar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.editar1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.eliminar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.fondo_gui">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.FONDO_MAIN">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.ic_ad_97607">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_cerrar_FN">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_Maximizar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_Minimizar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_Restaurar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.libro">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.limpiar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.logo_blanco">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.logo_negro">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.LogoBiblioteca">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.prestatarios">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.registro">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.registro2">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.retorno">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.salir">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.seo_report">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.seo_report1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_1280">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_12801">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_465577f9eabff154b858945c4f4796de_cce4b558_640">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_619bffaeff48dcaec1f90141532ea4ac_7ee4dae5_500">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.usuario">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.vencidos">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Clase_III_Parcial.My.Resources.Resources.WhatsApp_Image_2020_08_04_at_4_47_55_AM">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Clase_III_Parcial.My.Resources.Resources.WhatsApp_Image_2020_08_04_at_4_48_12_AM">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="T:Clase_III_Parcial.BibliotecaDataSet">

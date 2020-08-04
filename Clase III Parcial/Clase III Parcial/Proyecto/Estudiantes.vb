@@ -275,17 +275,22 @@ Public Class Estudiantes
 
 
     Private Sub DTGAlumno_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DTGAlumno.CellContentClick
-        Dim dataAlumnos As DataGridViewRow = DTGAlumno.Rows(e.RowIndex)
+        Try
+            Dim dataAlumnos As DataGridViewRow = DTGAlumno.Rows(e.RowIndex)
 
-        txtIdAlumno.Text = dataAlumnos.Cells(0).Value.ToString()
-        txtNombre.Text = dataAlumnos.Cells(1).Value.ToString()
-        txtApellido.Text = dataAlumnos.Cells(2).Value.ToString()
-        txtEdad.Text = dataAlumnos.Cells(3).Value.ToString()
-        cmbFacultad.SelectedIndex = dataAlumnos.Cells(4).Value.ToString()
-        btnEditar.Enabled = True
-        btnEliminar.Enabled = True
-        txtIdAlumno.Enabled = False
-        btnIngresar.Enabled = False
+            txtIdAlumno.Text = dataAlumnos.Cells(0).Value.ToString()
+            txtNombre.Text = dataAlumnos.Cells(1).Value.ToString()
+            txtApellido.Text = dataAlumnos.Cells(2).Value.ToString()
+            txtEdad.Text = dataAlumnos.Cells(3).Value.ToString()
+            cmbFacultad.SelectedIndex = dataAlumnos.Cells(4).Value.ToString()
+            btnEditar.Enabled = True
+            btnEliminar.Enabled = True
+            txtIdAlumno.Enabled = False
+            btnIngresar.Enabled = False
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub btnIngresar_MouseHover(sender As Object, e As EventArgs) Handles btnIngresar.MouseHover

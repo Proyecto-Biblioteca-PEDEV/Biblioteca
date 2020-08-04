@@ -160,7 +160,20 @@ Public Class Usuarios
 
 
     Private Sub DGUsuarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGUsuarios.CellContentClick
+        Try
+            Dim data As DataGridViewRow = DGUsuarios.Rows(e.RowIndex)
+            txtIdUsuario.Text = data.Cells(0).Value.ToString()
+            txtNombreUsuario.Text = data.Cells(1).Value.ToString()
+            txtApellido.Text = data.Cells(2).Value.ToString()
+            txtEdad.Text = data.Cells(3).Value.ToString()
+            cbPuesto.Text = data.Cells(4).Value.ToString()
+            txtCorreo.Text = data.Cells(5).Value.ToString()
+            txtContrasena.Text = conexion.Desencriptar(data.Cells(6).Value.ToString())
+            txtUsername.Text = data.Cells(7).Value.ToString()
 
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+        End Try
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
