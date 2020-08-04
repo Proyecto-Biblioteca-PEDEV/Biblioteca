@@ -23,37 +23,51 @@ Partial Class Reporte
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource9 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource8 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource7 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.librosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BibliotecaDataSet = New Clase_III_Parcial.BibliotecaDataSet()
+        Me.RetornosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrestamoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ReporteLibros = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.librosTableAdapter = New Clase_III_Parcial.BibliotecaDataSetTableAdapters.librosTableAdapter()
+        Me.PrestamoTableAdapter = New Clase_III_Parcial.BibliotecaDataSetTableAdapters.PrestamoTableAdapter()
+        Me.RetornosTableAdapter = New Clase_III_Parcial.BibliotecaDataSetTableAdapters.RetornosTableAdapter()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnPrestamos = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.ReporteLibros = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.ReportePrestamos = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.ReporteRetornos = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.librosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BibliotecaDataSet = New Clase_III_Parcial.BibliotecaDataSet()
-        Me.PrestamoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.librosTableAdapter = New Clase_III_Parcial.BibliotecaDataSetTableAdapters.librosTableAdapter()
-        Me.PrestamoTableAdapter = New Clase_III_Parcial.BibliotecaDataSetTableAdapters.PrestamoTableAdapter()
-        Me.RetornosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RetornosTableAdapter = New Clase_III_Parcial.BibliotecaDataSetTableAdapters.RetornosTableAdapter()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.librosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BibliotecaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrestamoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RetornosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrestamoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'librosBindingSource
+        '
+        Me.librosBindingSource.DataMember = "libros"
+        Me.librosBindingSource.DataSource = Me.BibliotecaDataSet
+        '
+        'BibliotecaDataSet
+        '
+        Me.BibliotecaDataSet.DataSetName = "BibliotecaDataSet"
+        Me.BibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RetornosBindingSource
+        '
+        Me.RetornosBindingSource.DataMember = "Retornos"
+        Me.RetornosBindingSource.DataSource = Me.BibliotecaDataSet
+        '
+        'PrestamoBindingSource
+        '
+        Me.PrestamoBindingSource.DataMember = "Prestamo"
+        Me.PrestamoBindingSource.DataSource = Me.BibliotecaDataSet
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.GroupBox2.Controls.Add(Me.ReporteRetornos)
-        Me.GroupBox2.Controls.Add(Me.ReportePrestamos)
         Me.GroupBox2.Controls.Add(Me.ReporteLibros)
         Me.GroupBox2.Location = New System.Drawing.Point(341, 13)
         Me.GroupBox2.Name = "GroupBox2"
@@ -61,6 +75,20 @@ Partial Class Reporte
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos"
+        '
+        'ReporteLibros
+        '
+        Me.ReporteLibros.Enabled = False
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.librosBindingSource
+        Me.ReporteLibros.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReporteLibros.LocalReport.ReportEmbeddedResource = "Clase_III_Parcial.Prueba.rdlc"
+        Me.ReporteLibros.Location = New System.Drawing.Point(12, 29)
+        Me.ReporteLibros.Name = "ReporteLibros"
+        Me.ReporteLibros.ServerReport.BearerToken = Nothing
+        Me.ReporteLibros.Size = New System.Drawing.Size(836, 335)
+        Me.ReporteLibros.TabIndex = 7
+        Me.ReporteLibros.Visible = False
         '
         'GroupBox1
         '
@@ -76,6 +104,18 @@ Partial Class Reporte
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Reporte"
+        '
+        'librosTableAdapter
+        '
+        Me.librosTableAdapter.ClearBeforeFill = True
+        '
+        'PrestamoTableAdapter
+        '
+        Me.PrestamoTableAdapter.ClearBeforeFill = True
+        '
+        'RetornosTableAdapter
+        '
+        Me.RetornosTableAdapter.ClearBeforeFill = True
         '
         'Button2
         '
@@ -119,80 +159,6 @@ Partial Class Reporte
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'ReporteLibros
-        '
-        Me.ReporteLibros.Enabled = False
-        ReportDataSource9.Name = "Libros"
-        ReportDataSource9.Value = Me.librosBindingSource
-        Me.ReporteLibros.LocalReport.DataSources.Add(ReportDataSource9)
-        Me.ReporteLibros.LocalReport.ReportEmbeddedResource = "Clase_III_Parcial.ReportLibros.rdlc"
-        Me.ReporteLibros.Location = New System.Drawing.Point(6, 28)
-        Me.ReporteLibros.Name = "ReporteLibros"
-        Me.ReporteLibros.ServerReport.BearerToken = Nothing
-        Me.ReporteLibros.Size = New System.Drawing.Size(836, 335)
-        Me.ReporteLibros.TabIndex = 7
-        Me.ReporteLibros.Visible = False
-        '
-        'ReportePrestamos
-        '
-        Me.ReportePrestamos.Enabled = False
-        ReportDataSource8.Name = "prestamos"
-        ReportDataSource8.Value = Me.PrestamoBindingSource
-        Me.ReportePrestamos.LocalReport.DataSources.Add(ReportDataSource8)
-        Me.ReportePrestamos.LocalReport.ReportEmbeddedResource = "Clase_III_Parcial.ReportPrestamos.rdlc"
-        Me.ReportePrestamos.Location = New System.Drawing.Point(6, 29)
-        Me.ReportePrestamos.Name = "ReportePrestamos"
-        Me.ReportePrestamos.ServerReport.BearerToken = Nothing
-        Me.ReportePrestamos.Size = New System.Drawing.Size(836, 335)
-        Me.ReportePrestamos.TabIndex = 8
-        Me.ReportePrestamos.Visible = False
-        '
-        'ReporteRetornos
-        '
-        Me.ReporteRetornos.Enabled = False
-        ReportDataSource7.Name = "Libros"
-        ReportDataSource7.Value = Me.librosBindingSource
-        Me.ReporteRetornos.LocalReport.DataSources.Add(ReportDataSource7)
-        Me.ReporteRetornos.LocalReport.ReportEmbeddedResource = "Clase_III_Parcial.ReportLibros.rdlc"
-        Me.ReporteRetornos.Location = New System.Drawing.Point(6, 28)
-        Me.ReporteRetornos.Name = "ReporteRetornos"
-        Me.ReporteRetornos.ServerReport.BearerToken = Nothing
-        Me.ReporteRetornos.Size = New System.Drawing.Size(836, 335)
-        Me.ReporteRetornos.TabIndex = 10
-        Me.ReporteRetornos.Visible = False
-        '
-        'librosBindingSource
-        '
-        Me.librosBindingSource.DataMember = "libros"
-        Me.librosBindingSource.DataSource = Me.BibliotecaDataSet
-        '
-        'BibliotecaDataSet
-        '
-        Me.BibliotecaDataSet.DataSetName = "BibliotecaDataSet"
-        Me.BibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PrestamoBindingSource
-        '
-        Me.PrestamoBindingSource.DataMember = "Prestamo"
-        Me.PrestamoBindingSource.DataSource = Me.BibliotecaDataSet
-        '
-        'librosTableAdapter
-        '
-        Me.librosTableAdapter.ClearBeforeFill = True
-        '
-        'PrestamoTableAdapter
-        '
-        Me.PrestamoTableAdapter.ClearBeforeFill = True
-        '
-        'RetornosBindingSource
-        '
-        Me.RetornosBindingSource.DataMember = "Retornos"
-        Me.RetornosBindingSource.DataSource = Me.BibliotecaDataSet
-        '
-        'RetornosTableAdapter
-        '
-        Me.RetornosTableAdapter.ClearBeforeFill = True
-        '
         'Reporte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 23.0!)
@@ -205,12 +171,12 @@ Partial Class Reporte
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "Reporte"
         Me.Text = "Reporte"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.librosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BibliotecaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrestamoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RetornosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrestamoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -218,16 +184,14 @@ Partial Class Reporte
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents btnPrestamos As Button
     Friend WithEvents librosBindingSource As BindingSource
     Friend WithEvents BibliotecaDataSet As BibliotecaDataSet
     Friend WithEvents librosTableAdapter As BibliotecaDataSetTableAdapters.librosTableAdapter
     Friend WithEvents ReporteLibros As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents ReportePrestamos As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents PrestamoBindingSource As BindingSource
     Friend WithEvents PrestamoTableAdapter As BibliotecaDataSetTableAdapters.PrestamoTableAdapter
     Friend WithEvents RetornosBindingSource As BindingSource
     Friend WithEvents RetornosTableAdapter As BibliotecaDataSetTableAdapters.RetornosTableAdapter
-    Friend WithEvents ReporteRetornos As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents Button2 As Button
+    Friend WithEvents btnPrestamos As Button
 End Class

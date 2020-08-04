@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Clase III Parcial.vbproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\App.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\packages.config" />
+  <event action="Analyze" type="Success" name="ChargeScreen.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\ChargeScreen.resx" />
+  <event action="Analyze" type="Success" name="Estudiantes.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Estudiantes.resx" />
+  <event action="Analyze" type="Success" name="factura.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\factura.resx" />
+  <event action="Analyze" type="Success" name="Libros.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Libros.resx" />
+  <event action="Analyze" type="Success" name="LibrosPrestados.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\LibrosPrestados.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Login.resx" />
+  <event action="Analyze" type="Success" name="Main.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Main.resx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\mensajeCorreo.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\mensajeCorreo.html" />
+  <event action="Analyze" type="Success" name="mensajeCorreo.html" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\mensajeCorreo.html" />
+  <event action="Analyze" type="Success" name="Prestatarios.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Prestatarios.resx" />
+  <event action="Analyze" type="Success" name="recuperar.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\recuperar.resx" />
+  <event action="Analyze" type="Success" name="Reporte.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Reporte.resx" />
+  <event action="Analyze" type="Success" name="Retornos.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Retornos.resx" />
+  <event action="Analyze" type="Success" name="Usuarios.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Usuarios.resx" />
+  <event action="Analyze" type="Success" name="Vencidos.resx" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Proyecto\Vencidos.resx" />
+  <event action="Analyze" type="Success" name="Clase III Parcial" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Clase III Parcial.vbproj" />
+  <event action="Analyze" type="Success" name="Clase III Parcial" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial.sln" />
+  <event action="Backup" type="Success" name="Clase III Parcial" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Clase III Parcial.vbproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Clase III Parcial.vbproj" />
+  <event action="Upgrade" type="Success" name="Clase III Parcial" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial\Clase III Parcial.vbproj" />
+  <event action="Upgrade" type="Success" name="Clase III Parcial" path="C:\Users\Dell Inspiron 5535\Source\Repos\Biblioteca3\Clase III Parcial\Clase III Parcial.sln" />
+</log>

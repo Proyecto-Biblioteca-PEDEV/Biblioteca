@@ -16,204 +16,6 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.OnCloseUp(System.EventArgs)">
-            <summary>
-            This member overrides <see cref="M:System.Windows.Forms.DateTimePicker.OnCloseUp(System.EventArgs)"/>.
-            </summary>
-            <param name="e"></param>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
-            <summary>
-            This member overrides <see cref="M:System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs)"/>.
-            </summary>
-            <param name="e"></param>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.Format">
-            <summary>
-            Gets or sets the format of the date and time displayed in the control.
-            </summary>
-            <value>One of the <see cref="T:System.Windows.Forms.DateTimePickerFormat"/> values. The default is 
-            <see cref="F:System.Windows.Forms.DateTimePickerFormat.Long"/>.</value>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.CustomFormat">
-            <summary>
-            Gets or sets the custom date/time format string.
-            <value>A string that represents the custom date/time format. The default is a null
-            reference (<b>Nothing</b> in Visual Basic).</value>
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.NoValueString">
-            <summary>
-            Gets or sets the string value that is assigned to the control as null value. 
-            </summary>
-            <value>The string value assigned to the control as null value.</value>
-            <remarks>
-            If the <see cref="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.Value"/> is <b>null</b>, <b>NoValueString</b> is
-            shown in the <b>NullableDateTimePicker</b> control.
-            </remarks>
-        </member>
-        <member name="T:Telerik.ReportViewer.WinForms.ParamsUI.ParameterModel">
-            <summary>
-            Represents the report parameter model to associate the parameter editor UI with.
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.ParameterModel">
-            <summary>
-            Represents the report parameter model to associate the parameter editor UI with.
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.ObservableObject">
-            <summary>
-            Represents an observable object.
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.Common.ObservableObject.OnPropertyChanged(System.String)">
-            <summary>
-            Raises the PropertyChanged event.
-            </summary>
-            <param name="propertyName"></param>
-        </member>
-        <member name="E:Telerik.ReportViewer.Common.ObservableObject.PropertyChanged">
-            <summary>
-            Occurs when a property value changes.
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.Common.ParameterModel.Validate(Telerik.Reporting.Processing.Parameter)">
-            <summary>
-            Returns localized error message if validation fails. Otherwise returns null
-            </summary>
-            <param name="parameter"></param>
-            <param name="textResources"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AvailableValues">
-            <summary>
-            Gets a list of the available <see cref="T:Telerik.ReportViewer.Common.ParameterValueModel"/>s.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.SafeValue">
-            <summary>
-            Prevent user input to be considered as expression
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.ID">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.ID"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Name">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Name"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.TypeName">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Type"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Type">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Type"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Text">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Text"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AllowNull">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AllowNull"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AllowBlank">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AllowNull"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.IsNull">
-            <summary>
-            Specifies whether the 'null' value is selected.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Multivalue">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Multivalue"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AutoRefresh">
-            <summary>
-            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AutoRefresh"/>.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.ParameterModel.SelectedSingleValue">
-            <summary>
-            Gets or sets a single selected value.
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.ViewModel_SearchStarted(System.Object,System.EventArgs)">
-            <summary>
-            As all ViewModel_ methods, this method is called from another thread
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.ViewModel_MatchItemAdded(Telerik.ReportViewer.Common.Search.MatchItemEventArgs)">
-            <summary>
-            As all ViewModel_ methods, this method is called from another thread
-            </summary>
-            <param name="args"></param>        
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.EnsureUIThreadRefresh">
-            <summary>
-            slows a bit the search thread so the UI thread can catch up.
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.ViewModel_SearchCompleted(Telerik.ReportViewer.Common.Search.SearchCompletedEventArgs)">
-            <summary>
-            As all ViewModel_ methods, this method is called from another thread
-            </summary>
-            <param name="args"></param>
-        </member>
-        <member name="F:Telerik.ReportViewer.WinForms.Search.SearchDialog.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.Common.Search.SearchDialogControllerBase.ViewerStateChanged(System.Object,System.EventArgs)">
-            <summary>
-            When the viewer state is changed (refreshed or ViewMode/ReportSource changed), the dialog must be closed so when opened, it will be reinitialized with the new search data
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="F:Telerik.ReportViewer.WinForms.DrawablePageBase.pageSize">
-            <summary>
-            Page size in device pixels
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.DrawablePageBase.Size">
-            <summary>
-            Size in device pixels
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.WinForms.ExportDialog">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:Telerik.ReportViewer.WinForms.ExportEventHandler">
             <summary>
             Represents the method that will handle the <see cref="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Export"/> event.
@@ -221,8 +23,17 @@
             <param name="sender"></param>
             <param name="args"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:Telerik.ReportViewer.WinForms.ExportEventArgs" -->
-        <!-- Badly formed XML comment ignored for member "P:Telerik.ReportViewer.WinForms.ExportEventArgs.DeviceInfo" -->
+        <member name="T:Telerik.ReportViewer.WinForms.ExportEventArgs">
+            <summary>
+            Represents the method that will handle the <see cref="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Export"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ExportEventArgs.DeviceInfo">
+            <summary>
+            Gets the device info.
+            </summary>
+            <returns>The device info collection. Add your device information settings to the collection.</returns>
+        </member>
         <member name="P:Telerik.ReportViewer.WinForms.ExportEventArgs.Format">
             <summary>
             Gets the export format.
@@ -233,20 +44,37 @@
             Gets the export format.
             </summary>
         </member>
-        <member name="M:Telerik.ReportViewer.WinForms.HistoryModel.NavigateBack">
+        <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.PrintReport">
             <summary>
-            Navigates the viewer back one step in the navigation history.
+            Opens the print dialog for the report
+            </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsPrintReportSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsPrintReportSnippet" />
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageSetupDialog">
+            <summary>
+            Opens the page setup dialog
             </summary>
         </member>
-        <member name="M:Telerik.ReportViewer.WinForms.HistoryModel.NavigateForward">
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.NavigateBackEnabled">
             <summary>
-            Navigates the viewer forward one step in the navigation history.
+            Determines if navigate back in report viewer history operation is enabled
             </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateBackSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateBackSnippet" />
+            </example>
         </member>
-        <member name="M:Telerik.ReportViewer.WinForms.HistoryModel.ClearHistory">
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.NavigateForwardEnabled">
             <summary>
-            Clears the report viewer navigation history
+            Determines if navigate forward in report viewer history operation is enabled
             </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateForwardSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateForwardSnippet" />
+            </example>
         </member>
         <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.ClearHistory">
             <summary>
@@ -276,8 +104,8 @@
             currently shown report.
             </remarks>
             <example>
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateBackSnippet"/>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateBackSnippet"/>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateBackSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateBackSnippet" />
             </example>
         </member>
         <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.NavigateForward">
@@ -291,15 +119,388 @@
             currently shown report.
             </remarks>
             <example>
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateForwardSnippet"/>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateForwardSnippet"/>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateForwardSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateForwardSnippet" />
             </example>
         </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ParametersAreaColumnCount">
+            <summary>
+            Determines in how many columns to be rendered the parameter editors in the ParameterArea
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.WinForms.ReportViewerBase.UIState">
+            <summary>
+            Represents all the of for controlling the UI of
+            the ReportViewer: ReportToolbar and ReportViewerAreaBase
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Print">
+            <summary>
+            Occurs when the report in the viewer control is printed. 
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.PrintBegin">
+            <summary>
+            Occurs when the report in the viewer control starts printing. 
+            </summary>
+            <example>
+            This example illustrates how to wire the PrintBegin event and
+            how to cancel it if needed.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsPrintBeginEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsPrintBeginEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.PrintEnd">
+            <summary>
+            Occurs when the report printing in the viewer control is finished. 
+            </summary>
+            <example>
+            This example illustrates how to wire the PrintEnd event.
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsPrintEndEventSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsPrintEndEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.RenderingBegin">
+            <summary>
+            Occurs when the report in the viewer control starts rendering. 
+            </summary>
+            <example>
+            This example illustrates how to wire the RenderingBegin event and
+            how to cancel it if needed.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsRenderingBeginEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsRenderingBeginEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.RenderingEnd">
+            <summary>
+            Occurs when the report rendering in the viewer control is finished. 
+            </summary>
+            <example>
+            This example illustrates how to wire the RenderingEnd event.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsRenderingEndEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsRenderingEndEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Export">
+            <summary>
+            Occurs when the report in the viewer control is exported. 
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ExportBegin">
+            <summary>
+            Occurs when the report in the viewer control starts exporting. 
+            </summary>
+            <example>
+            This example illustrates how to wire the ExportBegin event, cancel it if needed and 
+            perform some logic based on the export format.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsExportBeginEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsExportBeginEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ExportEnd">
+            <summary>
+            Occurs when the report exporting in the viewer control is finished. 
+            </summary>
+            <example>
+            This example illustrates how to wire the ExportEnd event.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsExportEndEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsExportEndEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.UpdateUI">
+            <summary>
+            Occurs when the UI of the report viewer control is updated. 
+            </summary>
+            <example>
+            This example illustrates how to wire the UpdateUI event.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsUpdateUIEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsUpdateUIEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Error">
+            <summary>
+            Occurs when there is an error in the report viewer control. 
+            </summary>
+            <example>
+            This example illustrates how to wire the Error event and
+            use the event arguments to check the exception.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsErrorEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsErrorEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Refreshed">
+            <summary>
+            Occurs when the report in the viewer is refreshed.
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.InteractiveActionExecuting">
+            <summary>
+            Occurs when an action is being executed. Execution can be canceled.
+            </summary>
+            <example>
+            This example illustrates how to wire the event and use the event arguments.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsCustomInteractiveActionExecutingEventSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsCancelingInteractiveActionExecutingEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsCustomInteractiveActionExecutingEventSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsCancelingInteractiveActionExecutingEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.InteractiveActionEnter">
+            <summary>
+            Occurs when the mouse cursor enters the area of a report item's action.
+            </summary>
+            <example>
+            This example illustrates how to wire the event and use the event arguments
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsInteractiveActionEnterEventSnippet" />        
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsInteractiveActionEnterEventSnippet" />        
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.InteractiveActionLeave">
+            <summary>
+            Occurs when the mouse cursor leaves the area of a report item's action.
+            </summary>        
+            <example>
+            This example illustrates how to wire the event and use the event arguments
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsInteractiveActionLeaveEventSnippet" />        
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsInteractiveActionLeaveEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ViewerToolTipOpening">
+            <summary>
+            Occurs when the tooltip, associated with a report item, is being opened
+            </summary>
+            <example>
+            This example illustrates how to wire the event, cancel tooltip showing and change tooltip's title and text.
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsViewerToolTipOpeningEventSnippet" />        
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsViewerToolTipOpeningEventSnippet" />        
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ViewerAreaPaint">
+            <summary>
+            Occurs when the viewer's area is painted.
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.AccessibilityChanged">
+            <summary>
+            Occurs when the EnableAccessibility property is changed.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.Toolbar">
+            <summary>
+            Internal for test purposes only
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.Report">
+            <summary>
+            Gets or sets the report displayed in the viewer. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ReportEngineConnection">
+            <summary>
+            The connection string used to configure the reporting engine that will process and render the reports.
+            </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsEmbeddedReportEngineConnectionSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsEmbeddedReportEngineConnectionSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsReportServerReportEngineConnectionSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsReportServerReportEngineConnectionSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsRestServiceReportEngineConnectionSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsRestServiceReportEngineConnectionSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ReportSource">
+            <summary>
+            Gets or sets the <see cref="T:Telerik.Reporting.ReportSource"/> 
+            for the report displayed in the viewer.
+            </summary>
+            <remarks>
+            Set this property in order to change the report shown in the viewer.
+            The <see cref="M:Telerik.ReportViewer.WinForms.ReportViewerBase.RefreshReport"/> method must be called in order to
+            invoke the actual report change in the viewer.
+            </remarks>
+            <seealso cref="T:Telerik.Reporting.ReportSource"/>
+            <seealso cref="T:Telerik.Reporting.UriReportSource"/>
+            <seealso cref="T:Telerik.Reporting.TypeReportSource"/>
+            <seealso cref="T:Telerik.Reporting.InstanceReportSource"/>
+            <seealso cref="T:Telerik.Reporting.XmlReportSource"/>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.CurrentPage">
+            <summary>
+            Gets or sets the current page in the viewer.
+            </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsCanMoveToPageCurrentPageSnippet" />
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsCanMoveToPageCurrentPageSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.TotalPages">
+            <summary>
+            Gets the count of the available pages in the viewer.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsTotalPagesSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsTotalPagesSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ZoomMode">
+            <summary>
+            Gets or sets the zoom mode of the viewer.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsZoomModeSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsZoomModeSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ZoomPercent">
+            <summary>
+            Gets or sets the percentage of zoom used for the report display.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsZoomPercentSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsZoomPercentSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ViewMode">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsViewModeSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsViewModeSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.RenderingExtensions">
+            <summary>
+            Gets the available rendering extensions list.
+            </summary>                
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowProgress">
+            <summary>
+            Indicates whether progress animation should be displayed while the report is rendered. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageNavigationControls">
+            <summary>
+            Indicates whether the page navigation controls are visible.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowRefreshButton">
+            <summary>
+            Indicates whether the <strong>Refresh</strong> button should be visible.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowZoom">
+            <summary>
+            Indicates whether the <strong>Zoom</strong> input box should be visible.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageSetup">
+            <summary>
+            Indicates whether <strong>PageSetup</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageSetupButton">
+            <summary>
+            Indicates whether <strong>PageSetup</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowExportButton">
+            <summary>
+            Indicates whether <strong>Export</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPrintPreviewButton">
+            <summary>
+            Indicates whether <strong>PrintPreview</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPrintButton">
+            <summary>
+            Indicates whether <strong>Print</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowParametersButton">
+            <summary>
+            Indicates whether <strong>Parameters</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowDocumentMapButton">
+            <summary>
+            Indicates whether <strong>DocumentMap</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowSearchButton">
+            <summary>
+            Indicates whether <strong>Search</strong> button should be visible. 
+            </summary>
+            <remarks>If the button is visible, it will set the viewer's EnableSearch property to true, when pressed.</remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ParametersAreaVisible">
+            <summary>
+            Gets or sets a value that indicates whether the parameters area is displayed if any parameter editor exists.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsParametersAreaSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsParametersAreaSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.DocumentMapVisible">
+            <summary>
+            Gets or sets a value that indicates whether the document map is displayed if any bookmark is defined.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsDocumentMapSnippet" />
+            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsDocumentMapSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowHistoryButtons">
+            <summary>
+            Indicates whether the history (<strong>Back</strong>, <strong>Forward</strong>) 
+            buttons should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowStopButton">
+            <summary>
+            Indicates whether the <strong>Stop</strong> button should be visible. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ToolbarVisible">
+            <summary>
+            Indicates whether the toolbar should be visible on the viewer. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ProcessingState">
+            <summary>
+            Gets the current processing state of the viewer
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.EnableAccessibility">
+            <summary>
+            Gets or sets a value that indicates whether the accessibility features of the report viewer and its contents should be enabled.
+            </summary>
+            <remarks>
+            Default value: false
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.AccessibilityKeyMap">
+            <summary>
+            Gets or sets the accessibility key shortcuts map, used when the report viewer is in accessible mode.
+            Returns null reference if the viewer's accessibility is not enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.SearchMetadataOnDemand">
+            <summary>
+            Gets or sets a value that indicates whether the search metadata will be delivered on demand or by default.
+            </summary>
+            <remarks>
+            Enabling search will notify the report engine to produce search metadata while rendering the report. 
+            This metadata is used by the report viewer in search dialog and in the report viewer area for highlighting the found and selected items.
+            Default value: false
+            </remarks>
+        </member>
         <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.#ctor(Telerik.ReportViewer.WinForms.ReportViewerAreaBase)">
+            <summary>Contains common report viewers functionality.</summary>
             <param name="viewerArea">
-            This object will be disposed by the ReportViewerBase.Dispose() method.
-            </param>
-            <param name="fileManager">
             This object will be disposed by the ReportViewerBase.Dispose() method.
             </param>
         </member>
@@ -579,404 +780,121 @@
             to generate the search metadata and then opens the dialog.
             </summary>
         </member>
-        <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.PrintReport">
-            <summary>
-            Opens the print dialog for the report
-            </summary>
-            <example>
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsPrintReportSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsPrintReportSnippet" />
-            </example>
-        </member>
-        <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageSetupDialog">
-            <summary>
-            Opens the page setup dialog
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.NavigateBackEnabled">
-            <summary>
-            Determines if navigate back in report viewer history operation is enabled
-            </summary>
-            <example>
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateBackSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateBackSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.NavigateForwardEnabled">
-            <summary>
-            Determines if navigate forward in report viewer history operation is enabled
-            </summary>
-            <example>
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsNavigateForwardSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsNavigateForwardSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ParametersAreaColumnCount">
-            <summary>
-            Determines in how many columns to be rendered the parameter editors in the ParameterArea
-            </summary>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Print">
-            <summary>
-            Occurs when the report in the viewer control is printed. 
-            </summary>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.PrintBegin">
-            <summary>
-            Occurs when the report in the viewer control starts printing. 
-            </summary>
-            <example>
-            This example illustrates how to wire the PrintBegin event and
-            how to cancel it if needed.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsPrintBeginEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsPrintBeginEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.PrintEnd">
-            <summary>
-            Occurs when the report printing in the viewer control is finished. 
-            </summary>
-            <example>
-            This example illustrates how to wire the PrintEnd event.
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsPrintEndEventSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsPrintEndEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.RenderingBegin">
-            <summary>
-            Occurs when the report in the viewer control starts rendering. 
-            </summary>
-            <example>
-            This example illustrates how to wire the RenderingBegin event and
-            how to cancel it if needed.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsRenderingBeginEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsRenderingBeginEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.RenderingEnd">
-            <summary>
-            Occurs when the report rendering in the viewer control is finished. 
-            </summary>
-            <example>
-            This example illustrates how to wire the RenderingEnd event.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsRenderingEndEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsRenderingEndEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Export">
-            <summary>
-            Occurs when the report in the viewer control is exported. 
-            </summary>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ExportBegin">
-            <summary>
-            Occurs when the report in the viewer control starts exporting. 
-            </summary>
-            <example>
-            This example illustrates how to wire the ExportBegin event, cancel it if needed and 
-            perform some logic based on the export format.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsExportBeginEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsExportBeginEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ExportEnd">
-            <summary>
-            Occurs when the report exporting in the viewer control is finished. 
-            </summary>
-            <example>
-            This example illustrates how to wire the ExportEnd event.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsExportEndEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsExportEndEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.UpdateUI">
-            <summary>
-            Occurs when the UI of the report viewer control is updated. 
-            </summary>
-            <example>
-            This example illustrates how to wire the UpdateUI event.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsUpdateUIEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsUpdateUIEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Error">
-            <summary>
-            Occurs when there is an error in the report viewer control. 
-            </summary>
-            <example>
-            This example illustrates how to wire the Error event and
-            use the event arguments to check the exception.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsErrorEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsErrorEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.Refreshed">
-            <summary>
-            Occurs when the report in the viewer is refreshed.
-            </summary>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.InteractiveActionExecuting">
-            <summary>
-            Occurs when an action is being executed. Execution can be canceled.
-            </summary>
-            <example>
-            This example illustrates how to wire the event and use the event arguments.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsCustomInteractiveActionExecutingEventSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsCancelingInteractiveActionExecutingEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsCustomInteractiveActionExecutingEventSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsCancelingInteractiveActionExecutingEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.InteractiveActionEnter">
-            <summary>
-            Occurs when the mouse cursor enters the area of a report item's action.
-            </summary>
-            <example>
-            This example illustrates how to wire the event and use the event arguments
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsInteractiveActionEnterEventSnippet" />        
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsInteractiveActionEnterEventSnippet" />        
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.InteractiveActionLeave">
-            <summary>
-            Occurs when the mouse cursor leaves the area of a report item's action.
-            </summary>        
-            <example>
-            This example illustrates how to wire the event and use the event arguments
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsInteractiveActionLeaveEventSnippet" />        
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsInteractiveActionLeaveEventSnippet" />
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ViewerToolTipOpening">
-            <summary>
-            Occurs when the tooltip, associated with a report item, is being opened
-            </summary>
-            <example>
-            This example illustrates how to wire the event, cancel tooltip showing and change tooltip's title and text.
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsViewerToolTipOpeningEventSnippet" />        
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsViewerToolTipOpeningEventSnippet" />        
-            </example>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.ViewerAreaPaint">
-            <summary>
-            Occurs when the viewer's area is painted.
-            </summary>
-        </member>
-        <member name="E:Telerik.ReportViewer.WinForms.ReportViewerBase.AccessibilityChanged">
-            <summary>
-            Occurs when the EnableAccessibility property is changed.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.Toolbar">
-            <summary>
-            Internal for test purposes only
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.Report">
-            <summary>
-            Gets or sets the report displayed in the viewer. 
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "P:Telerik.ReportViewer.WinForms.ReportViewerBase.ReportEngineConnection" -->
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ReportSource">
-            <summary>
-            Gets or sets the <see cref="T:Telerik.Reporting.ReportSource"/> 
-            for the report displayed in the viewer.
-            </summary>
-            <remarks>
-            Set this property in order to change the report shown in the viewer.
-            The <see cref="M:Telerik.ReportViewer.WinForms.ReportViewerBase.RefreshReport"/> method must be called in order to
-            invoke the actual report change in the viewer.
-            </remarks>
-            <seealso cref="T:Telerik.Reporting.ReportSource"/>
-            <seealso cref="T:Telerik.Reporting.UriReportSource"/>
-            <seealso cref="T:Telerik.Reporting.TypeReportSource"/>
-            <seealso cref="T:Telerik.Reporting.InstanceReportSource"/>
-            <seealso cref="T:Telerik.Reporting.XmlReportSource"/>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.CurrentPage">
-            <summary>
-            Gets or sets the current page in the viewer.
-            </summary>
-            <example>
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsCanMoveToPageCurrentPageSnippet" />
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsCanMoveToPageCurrentPageSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.TotalPages">
-            <summary>
-            Gets the count of the available pages in the viewer.
-            </summary>
-            <example>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsTotalPagesSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsTotalPagesSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ZoomMode">
-            <summary>
-            Gets or sets the zoom mode of the viewer.
-            </summary>
-            <example>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsZoomModeSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsZoomModeSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ZoomPercent">
-            <summary>
-            Gets or sets the percentage of zoom used for the report display.
-            </summary>
-            <example>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsZoomPercentSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsZoomPercentSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ViewMode">
-            <summary>
-            Specifies whether the viewer is in interactive or print preview mode.
-            </summary>
-            <example>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsViewModeSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsViewModeSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.RenderingExtensions">
-            <summary>
-            Gets the available rendering extensions list.
-            </summary>                
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowProgress">
-            <summary>
-            Indicates whether progress animation should be displayed while the report is rendered. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageNavigationControls">
-            <summary>
-            Indicates whether the page navigation controls are visible.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowRefreshButton">
-            <summary>
-            Indicates whether the <strong>Refresh</strong> button should be visible.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowZoom">
-            <summary>
-            Indicates whether the <strong>Zoom</strong> input box should be visible.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageSetup">
-            <summary>
-            Indicates whether <strong>PageSetup</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPageSetupButton">
-            <summary>
-            Indicates whether <strong>PageSetup</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowExportButton">
-            <summary>
-            Indicates whether <strong>Export</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPrintPreviewButton">
-            <summary>
-            Indicates whether <strong>PrintPreview</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowPrintButton">
-            <summary>
-            Indicates whether <strong>Print</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowParametersButton">
-            <summary>
-            Indicates whether <strong>Parameters</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowDocumentMapButton">
-            <summary>
-            Indicates whether <strong>DocumentMap</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowSearchButton">
-            <summary>
-            Indicates whether <strong>Search</strong> button should be visible. 
-            </summary>
-            <remarks>If the button is visible, it will set the viewer's EnableSearch property to true, when pressed.</remarks>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ParametersAreaVisible">
-            <summary>
-            Gets or sets a value that indicates whether the parameters area is displayed if any parameter editor exists.
-            </summary>
-            <example>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsParametersAreaSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsParametersAreaSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.DocumentMapVisible">
-            <summary>
-            Gets or sets a value that indicates whether the document map is displayed if any bookmark is defined.
-            </summary>
-            <example>
-            <code lang="VB" source="CodeSnippets\VB\API\Telerik\ReportViewer\WinForms\Form1.vb" region="WinFormsDocumentMapSnippet" />
-            <code lang="C#" source="CodeSnippets\CS\API\Telerik\ReportViewer\WinForms\Form1.cs" region="WinFormsDocumentMapSnippet" />
-            </example>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowHistoryButtons">
-            <summary>
-            Indicates whether the history (<strong>Back</strong>, <strong>Forward</strong>) 
-            buttons should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ShowStopButton">
-            <summary>
-            Indicates whether the <strong>Stop</strong> button should be visible. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ToolbarVisible">
-            <summary>
-            Indicates whether the toolbar should be visible on the viewer. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.ProcessingState">
-            <summary>
-            Gets the current processing state of the viewer
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.EnableAccessibility">
-            <summary>
-            Gets or sets a value that indicates whether the accessibility features of the report viewer and its contents should be enabled.
-            </summary>
-            <remarks>
-            Default value: false
-            </remarks>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.AccessibilityKeyMap">
-            <summary>
-            Gets or sets the accessibility key shortcuts map, used when the report viewer is in accessible mode.
-            Returns null reference if the viewer's accessibility is not enabled.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.WinForms.ReportViewerBase.SearchMetadataOnDemand">
-            <summary>
-            Gets or sets a value that indicates whether the search metadata will be delivered on demand or by default.
-            </summary>
-            <remarks>
-            Enabling search will notify the report engine to produce search metadata while rendering the report. 
-            This metadata is used by the report viewer in search dialog and in the report viewer area for highlighting the found and selected items.
-            Default value: false
-            </remarks>
-        </member>
         <member name="M:Telerik.ReportViewer.WinForms.ReportViewerBase.TreeNodeFactory.ExpandTreeNodes">
             <summary>
             Expand all tree nodes that should be expanded
             </summary>
         </member>
-        <member name="T:Telerik.ReportViewer.WinForms.ReportViewerBase.UIState">
+        <member name="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.Format">
             <summary>
-            Represents all the of for controlling the UI of
-            the ReportViewer: ReportToolbar and ReportViewerAreaBase
+            Gets or sets the format of the date and time displayed in the control.
+            </summary>
+            <value>One of the <see cref="T:System.Windows.Forms.DateTimePickerFormat"/> values. The default is 
+            <see cref="F:System.Windows.Forms.DateTimePickerFormat.Long"/>.</value>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.CustomFormat">
+            <summary>
+            Gets or sets the custom date/time format string.
+            <value>A string that represents the custom date/time format. The default is a null
+            reference (<b>Nothing</b> in Visual Basic).</value>
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.NoValueString">
+            <summary>
+            Gets or sets the string value that is assigned to the control as null value. 
+            </summary>
+            <value>The string value assigned to the control as null value.</value>
+            <remarks>
+            If the <see cref="P:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.Value"/> is <b>null</b>, <b>NoValueString</b> is
+            shown in the <b>NullableDateTimePicker</b> control.
+            </remarks>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.OnCloseUp(System.EventArgs)">
+            <summary>
+            This member overrides <see cref="M:System.Windows.Forms.DateTimePicker.OnCloseUp(System.EventArgs)"/>.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.ParamsUI.NullableDateTimePicker.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            This member overrides <see cref="M:System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs)"/>.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Telerik.ReportViewer.WinForms.ParamsUI.ParameterModel">
+            <summary>
+            Represents the report parameter model to associate the parameter editor UI with.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.HistoryModel.NavigateBack">
+            <summary>
+            Navigates the viewer back one step in the navigation history.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.HistoryModel.NavigateForward">
+            <summary>
+            Navigates the viewer forward one step in the navigation history.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.HistoryModel.ClearHistory">
+            <summary>
+            Clears the report viewer navigation history
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.WinForms.DrawablePageBase.pageSize">
+            <summary>
+            Page size in device pixels
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.WinForms.DrawablePageBase.Size">
+            <summary>
+            Size in device pixels
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.WinForms.ExportDialog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.ViewModel_SearchStarted(System.Object,System.EventArgs)">
+            <summary>
+            As all ViewModel_ methods, this method is called from another thread
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.ViewModel_MatchItemAdded(Telerik.ReportViewer.Common.Search.MatchItemEventArgs)">
+            <summary>
+            As all ViewModel_ methods, this method is called from another thread
+            </summary>
+            <param name="args"></param>        
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.EnsureUIThreadRefresh">
+            <summary>
+            slows a bit the search thread so the UI thread can catch up.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.ViewModel_SearchCompleted(Telerik.ReportViewer.Common.Search.SearchCompletedEventArgs)">
+            <summary>
+            As all ViewModel_ methods, this method is called from another thread
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="F:Telerik.ReportViewer.WinForms.Search.SearchDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.WinForms.Search.SearchDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="M:Telerik.ReportViewer.WinForms.ParametersArea.RefreshParameterEditors(System.Collections.Generic.IEnumerable{System.Windows.Forms.Control})">
@@ -1445,7 +1363,7 @@
             <summary>
             Checks if the current action is a ToolTip action and sets it to the current control
             </summary>
-            <param name="actionInfo"></param>
+            <param name="toolTipInfo">Tooltip position</param>
             <param name="args"></param>
             <returns>true if the current action is a ToolTip action, otherwise - false</returns>
         </member>
@@ -1504,6 +1422,65 @@
             Key for navigating to the parameters area. Used with Ctrl+Alt.
             </summary>
         </member>
+        <member name="T:Telerik.ReportViewer.Common.InteractiveActionExecutingEventHandler">
+            <summary>
+            Represents the method that will handle the InteractiveActionExecuting event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An <see cref="T:Telerik.ReportViewer.Common.InteractiveActionCancelEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.InteractiveActionEnterEventHandler">
+            <summary>
+            Represents the method that will handle the InteractiveActionEnter event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An <see cref="T:Telerik.ReportViewer.Common.InteractiveActionEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.InteractiveActionLeaveEventHandler">
+            <summary>
+            Represents the method that will handle the InteractiveActionLeave event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An <see cref="T:Telerik.ReportViewer.Common.InteractiveActionEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.InteractiveActionEventArgs">
+            <summary>
+            Provides data for interactive actions related events on the <see cref="T:Telerik.ReportViewer.WinForms.ReportViewer"/>
+            and on the <see cref="!:Telerik.ReportViewer.Wpf.ReportViewer"/> controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.InteractiveActionEventArgs.Action">
+            <summary>
+            Gets the action instance
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.InteractiveActionEventArgs.CursorPos">
+            <summary>
+            Gets the relative coordinates in pixels of the mouse cursor according to the report item that triggered the action.
+            Returns an empty Point instance when used in InteractiveActionLeave event handler.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.InteractiveActionEventArgs.Bounds">
+            <summary>
+            Gets the client bounds in pixels of the element that triggered the action
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.InteractiveActionCancelEventArgs">
+            <summary>
+            /// Provides data for interactive actions related event on the <see cref="T:Telerik.ReportViewer.WinForms.ReportViewer"/>
+            and on the <see cref="!:Telerik.ReportViewer.Wpf.ReportViewer"/> controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.InteractiveActionCancelEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the event should be canceled.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.FileOutputProcessor">
+            <summary>
+            Used when exporting/rendering to a non-interactive format
+            </summary>
+        </member>
         <member name="T:Telerik.ReportViewer.Common.AccessibilityChangedEventHandler">
             <summary>
             Represents the method that will handle the AccessibilityChanged event.
@@ -1533,18 +1510,6 @@
             Provides data for the ExportBegin event of both WinForms and WPF report viewers. 
             </summary>
         </member>
-        <member name="T:Telerik.ReportViewer.Common.RenderingBeginEventArgs">
-            <summary>
-            Provides data for the RenderingBegin event of both WinForms and WPF report viewers. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.RenderingBeginEventArgs.DeviceInfo">
-            <summary>
-            Gets the device info that will be used for the beginning export operation.
-            </summary>
-            <returns>The device info collection. 
-            Add your device information settings to the collection.</returns>
-        </member>
         <member name="P:Telerik.ReportViewer.Common.ExportBeginEventArgs.Format">
             <summary>
             Gets the export format that will be used for the beginning export operation.
@@ -1560,16 +1525,6 @@
         <member name="T:Telerik.ReportViewer.Common.ExportEndEventArgs">
             <summary>
             Provides data for the ExportEnd event of both WinForms and WPF report viewers. 
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.RenderingEndEventArgs">
-            <summary>
-            Provides data for the RenderingEnd event of both WinForms and WPF report viewers. 
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.RenderingEndEventArgs.Exception">
-            <summary>
-            Gets an exception if such has occurred during the report processing.
             </summary>
         </member>
         <member name="P:Telerik.ReportViewer.Common.ExportEndEventArgs.Handled">
@@ -1632,6 +1587,11 @@
             Provides data for the PrintEnd event of both WinForms and WPF report viewers. 
             </summary>
         </member>
+        <member name="P:Telerik.ReportViewer.Common.PrintEndEventArgs.PrinterSettings">
+            <summary>
+            Gets the printer settings used to print the report document.
+            </summary>
+        </member>
         <member name="P:Telerik.ReportViewer.Common.PrintEndEventArgs.Exception">
             <summary>
             Gets an exception that has occurred during the report processing.
@@ -1644,6 +1604,18 @@
             <param name="sender">The source of the event.</param>
             <param name="args">An <see cref="T:Telerik.ReportViewer.Common.RenderingBeginEventArgs"/> object that contains the event data.</param>
         </member>
+        <member name="T:Telerik.ReportViewer.Common.RenderingBeginEventArgs">
+            <summary>
+            Provides data for the RenderingBegin event of both WinForms and WPF report viewers. 
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.RenderingBeginEventArgs.DeviceInfo">
+            <summary>
+            Gets the device info that will be used for the beginning export operation.
+            </summary>
+            <returns>The device info collection. 
+            Add your device information settings to the collection.</returns>
+        </member>
         <member name="T:Telerik.ReportViewer.Common.RenderingEndEventHandler">
             <summary>
             Represents the method that will handle the RenderingEnd event of both WinForms and WPF report viewers.
@@ -1651,12 +1623,15 @@
             <param name="sender">The source of the event.</param>
             <param name="args">An <see cref="T:Telerik.ReportViewer.Common.RenderingEndEventArgs"/> object that contains the event data.</param>
         </member>
-        <member name="M:Telerik.ReportViewer.Common.PollRenderer.WaitForDocument(System.Int32)">
+        <member name="T:Telerik.ReportViewer.Common.RenderingEndEventArgs">
             <summary>
-            Polls the document by the specified interval
+            Provides data for the RenderingEnd event of both WinForms and WPF report viewers. 
             </summary>
-            <param name="timeoutInSeconds">Determines how many seconds to wait for the document to be ready. 0 means infinite.</param>
-            <returns></returns>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.RenderingEndEventArgs.Exception">
+            <summary>
+            Gets an exception if such has occurred during the report processing.
+            </summary>
         </member>
         <member name="M:Telerik.ReportViewer.Common.IRenderingController.GetParameters(Telerik.Reporting.ParameterCollection)">
             <summary>
@@ -1666,90 +1641,104 @@
             Null must be passed for the initial parameter resolution.</param>
             <returns></returns>
         </member>
-        <member name="M:Telerik.ReportViewer.Common.RenderingControllerBase.StartTask(Telerik.ReportViewer.Common.RenderingThreadArgs)">
-            <summary>
-            Cancels the current rendering task and starts a new one.
-            </summary>
-            <param name="args"></param>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.RenderingControllerBase.RenderingThreadArgs">
-            <summary>
-            Internal for test purposes
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.Common.ReportEngineRenderingController.GetReportEngine(Telerik.ReportViewer.Common.ReportViewerEngineServerContext)">
-            <summary>
-            Internal for test purposes
-            </summary>
-        </member>
-        <member name="M:Telerik.ReportViewer.Common.Search.SearchViewModel.StartSearchOverride">
-            <summary>
-            This method is called from a timer thread and will not be executed in UI thread!
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.InteractiveActionExecutingEventHandler">
-            <summary>
-            Represents the method that will handle the InteractiveActionExecuting event.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="args">An <see cref="T:Telerik.ReportViewer.Common.InteractiveActionCancelEventArgs"/> object that contains the event data.</param>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.InteractiveActionEnterEventHandler">
-            <summary>
-            Represents the method that will handle the InteractiveActionEnter event.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="args">An <see cref="T:Telerik.ReportViewer.Common.InteractiveActionEventArgs"/> object that contains the event data.</param>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.InteractiveActionLeaveEventHandler">
-            <summary>
-            Represents the method that will handle the InteractiveActionLeave event.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="args">An <see cref="T:Telerik.ReportViewer.Common.InteractiveActionEventArgs"/> object that contains the event data.</param>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.InteractiveActionEventArgs">
-            <summary>
-            Provides data for interactive actions related events on the <see cref="T:Telerik.ReportViewer.WinForms.ReportViewer"/>
-            and on the <see cref="!:Telerik.ReportViewer.Wpf.ReportViewer"/> controls.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.InteractiveActionEventArgs.Action">
-            <summary>
-            Gets the action instance
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.InteractiveActionEventArgs.CursorPos">
-            <summary>
-            Gets the relative coordinates in pixels of the mouse cursor according to the report item that triggered the action.
-            Returns an empty Point instance when used in InteractiveActionLeave event handler.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.InteractiveActionEventArgs.Bounds">
-            <summary>
-            Gets the client bounds in pixels of the element that triggered the action
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.InteractiveActionCancelEventArgs">
-            <summary>
-            /// Provides data for interactive actions related event on the <see cref="T:Telerik.ReportViewer.WinForms.ReportViewer"/>
-            and on the <see cref="!:Telerik.ReportViewer.Wpf.ReportViewer"/> controls.
-            </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.InteractiveActionCancelEventArgs.Cancel">
-            <summary>
-            Gets or sets a value indicating whether the event should be canceled.
-            </summary>
-        </member>
-        <member name="T:Telerik.ReportViewer.Common.FileOutputProcessor">
-            <summary>
-            Used when exporting/rendering to a non-interactive format
-            </summary>
-        </member>
         <member name="T:Telerik.ReportViewer.Common.MissingReportSourceException">
             <summary>
             
             </summary>	
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.ObservableObject">
+            <summary>
+            Represents an observable object.
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.Common.ObservableObject.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.ObservableObject.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the PropertyChanged event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.ParameterModel">
+            <summary>
+            Represents the report parameter model to associate the parameter editor UI with.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AvailableValues">
+            <summary>
+            Gets a list of the available <see cref="T:Telerik.ReportViewer.Common.ParameterValueModel"/>s.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.SafeValue">
+            <summary>
+            Prevent user input to be considered as expression
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.ID">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.ID"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Name">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Name"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.TypeName">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Type"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Type">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Type"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Text">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Text"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AllowNull">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AllowNull"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AllowBlank">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AllowNull"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.IsNull">
+            <summary>
+            Specifies whether the 'null' value is selected.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.Multivalue">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Multivalue"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.AutoRefresh">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AutoRefresh"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ParameterModel.SelectedSingleValue">
+            <summary>
+            Gets or sets a single selected value.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.ParameterModel.Validate(Telerik.Reporting.Processing.Parameter)">
+            <summary>
+            Returns localized error message if validation fails. Otherwise returns null
+            </summary>
+            <param name="parameter"></param>
+            <param name="textResources"></param>
+            <returns></returns>
         </member>
         <member name="T:Telerik.ReportViewer.Common.ParameterModelCollection`1">
             <summary>
@@ -1795,6 +1784,29 @@
             <summary>
             Gets the owner parameter model.
             </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.PollRenderer.WaitForDocument(System.Int32)">
+            <summary>
+            Polls the document by the specified interval
+            </summary>
+            <param name="timeoutInSeconds">Determines how many seconds to wait for the document to be ready. 0 means infinite.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.ReportEngineRenderingController.GetReportEngine(Telerik.ReportViewer.Common.ReportViewerEngineServerContext)">
+            <summary>
+            Internal for test purposes
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.RenderingControllerBase.RenderingThreadArgs">
+            <summary>
+            Internal for test purposes
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.RenderingControllerBase.StartTask(Telerik.ReportViewer.Common.RenderingThreadArgs)">
+            <summary>
+            Cancels the current rendering task and starts a new one.
+            </summary>
+            <param name="args"></param>
         </member>
         <member name="T:Telerik.ReportViewer.Common.RenderingExtension">
             <summary>
@@ -2024,6 +2036,27 @@
             </summary>
             <param name="newConnectionString"></param>
         </member>
+        <member name="M:Telerik.ReportViewer.Common.ReportViewerUtils.TrySetViewerAccessibilityInDeviceInfo(System.String,System.Collections.Hashtable,System.Boolean)">
+            <summary>
+            Adds the viewer's EnableAccessibility setting to deviceInfo only if it differs from the default value.
+            The default value check is to avoid overriding the values from the configuration.
+            </summary>
+            <param name="format">rendering format</param>
+            <param name="deviceInfo"></param>
+            <param name="value">The actual value of viewer's EnableAccessibility</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.Search.SearchDialogControllerBase.ViewerStateChanged(System.Object,System.EventArgs)">
+            <summary>
+            When the viewer state is changed (refreshed or ViewMode/ReportSource changed), the dialog must be closed so when opened, it will be reinitialized with the new search data
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.Search.SearchViewModel.StartSearchOverride">
+            <summary>
+            This method is called from a timer thread and will not be executed in UI thread!
+            </summary>
+        </member>
         <member name="F:Telerik.ReportViewer.Common.StaTaskScheduler.tasks">
             <summary>Stores the queued tasks to be executed by our pool of STA threads.</summary>
         </member>
@@ -2048,14 +2081,14 @@
             <param name="taskWasPreviouslyQueued">Whether the task was previously queued.</param>
             <returns>true if the task was successfully inlined; otherwise, false.</returns>
         </member>
+        <member name="P:Telerik.ReportViewer.Common.StaTaskScheduler.MaximumConcurrencyLevel">
+            <summary>Gets the maximum concurrency level supported by this scheduler.</summary>
+        </member>
         <member name="M:Telerik.ReportViewer.Common.StaTaskScheduler.Dispose">
             <summary>
             Cleans up the scheduler by indicating that no more tasks will be queued.
             This method blocks until all threads successfully shutdown.
             </summary>
-        </member>
-        <member name="P:Telerik.ReportViewer.Common.StaTaskScheduler.MaximumConcurrencyLevel">
-            <summary>Gets the maximum concurrency level supported by this scheduler.</summary>
         </member>
         <member name="T:Telerik.ReportViewer.Common.ToolTipOpeningEventHandler">
             <summary>
