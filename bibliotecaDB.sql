@@ -84,6 +84,7 @@ create table proyecto.Prestamo(
 	libroid int foreign key references proyecto.libros(idLibro),
 	fechaPrestamo date not null,
 	fechaVencimiento date not null,
+	idEstado int foreign key references proyecto.EstadoLibro(idEstado),
 )
 
 insert into proyecto.Prestamo(idPrestamo, alumnoid,libroid,fechaPrestamo,fechaVencimiento) values ('1001','0313-2001-00279','123','09-09-2020','01-08-2020')
@@ -549,4 +550,59 @@ select @alumnoid = r.alumnoid from proyecto.Retornos as r where r.idretorno = @i
 select @montoFactura = r.multa from proyecto.Retornos as r where r.idretorno = @idretorno
 insert into proyecto.Facturas values (@idretorno, @alumnoid, @montoFactura, @fecha, 'Pago de Multa')
 end
--------------------------------------------------------------------- FINAL RETORNOS -------------------------------------------------------------------------------------------
+-------------------------------------------------------------------- INICIOS PROCEDIMIENTOS DE PRESTAMOS -------------------------------------------------------------------------------------------
+-------------------------------------------------------------------- AGREGAR EN PRETAMOS -------------------------------------------------------------------------------------------
+create procedure InsertarPrestamo 
+	@idPrestamo int, @idAlumno varchar (25), @idLibro int, @FechaPrestamo varchar(12) , @fechaVencimiento varchar(12), @idEstado int
+	as begin 
+		if exists (select idPrestamo from proyecto.Prestamo where idPrestamo = @idPrestamo and alumnoid = @idAlumno and libroid = @idLibro and fechaPrestamo = @FechaPrestamo and fechaVencimiento = @fechaVencimiento) 
+			raiserror('Ya existe un registro identico',16,1)
+		else 
+			insert into proyecto.Prestamo values (@idPrestamo, @idAlumno, @idLibro, @FechaPrestamo, @fechaVencimiento, @idEstado) 
+			update proyecto.libros set estadoId = @idEstado	where idLibro = @idLibro
+
+	end
+-------------------------------------------------------------------- EDITAR EN PRESTAMOS -------------------------------------------------------------------------------------------
+	create procedure EditarPrestamo 
+	@idPrestamo int, @idAlumno varchar (15), @idLibro int, @FechaPrestamo varchar(12) , @fechaVencimiento varchar(12) 
+	as begin 
+		if exists (select alumnoid from proyecto.Prestamo where alumnoid = @idAlumno)
+			update proyecto.Prestamo set alumnoid = @idAlumno, libroid = @idLibro, fechaPrestamo = @FechaPrestamo, fechaVencimiento = @fechaVencimiento
+			where idPrestamo = @idPrestamo
+		else
+			raiserror ('Alumno no registrado, intentelo nuevamente',16,1)
+	end
+
+
+create procedure EditarlibroEditado 
+	@idLibro int, @estadoLibro int
+	as begin
+		if exists (select idLibro from proyecto.libros where idLibro = @idLibro)
+			update proyecto.libros set estadoId = @estadoLibro 
+			where idLibro = @idLibro
+		else
+			raiserror ('Libro no encontrado, intente de nuevo', 16,1)
+	end
+
+create procedure EditarLibroViejo
+	@idLibro int, @estadoLibro int
+	as begin
+		if exists (select idLibro from proyecto.libros where idLibro = @idLibro)
+			update proyecto.libros set estadoId = @estadoLibro 
+			where idLibro = @idLibro
+		else
+			raiserror ('Libro no encontrado, intente de nuevo', 16,1)
+	end
+
+-------------------------------------------------------------------- INNER JOIN DE PRESTAMO -------------------------------------------------------------------------------------------
+select pres.idPrestamo as IdPrestado, concat(alu.nombre, ' ', alu.apellido) as NombreCompleto, lib.nombre as Nombre, pres.fechaVencimiento from proyecto.Prestamo as pres
+inner join proyecto.Alumno as alu on alu.idAlumno = pres.alumnoid
+inner join proyecto.libros as lib on lib.idLibro = pres.libroid
+-------------------------------------------------------------------- FINAL DE PRESTAMOS -------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
