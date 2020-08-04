@@ -20,6 +20,9 @@ create table proyecto.EstadoLibro(
 	estado varchar(30) not null
 )
 
+insert into proyecto.EstadoLibro (idEstado,estado) values (7,'Vencido')
+select * from proyecto.EstadoLibro 
+
 -------------- Estado alumnos ---------------------
 -- drop table proyecto.EstadoAlumnos
 create table proyecto.EstadoAlumnos(
@@ -63,7 +66,6 @@ create table proyecto.libros(
 -------- Registro alumnos --------------------
 -- drop table proyecto.Alumno
 create table proyecto.Alumno(
-	-- id int primary key identity not null,
 	idAlumno varchar(15) primary key not null,
 	nombre varchar(25) not null,
 	apellido varchar(25) not null,
@@ -85,6 +87,8 @@ create table proyecto.Prestamo(
 )
 
 insert into proyecto.Prestamo(idPrestamo, alumnoid,libroid,fechaPrestamo,fechaVencimiento) values ('1001','0313-2001-00279','123','09-09-2020','01-08-2020')
+insert into proyecto.Prestamo(idPrestamo, alumnoid,libroid,fechaPrestamo,fechaVencimiento) values ('2001','0313-2001-00279','124','09-09-2020','01-08-2020')
+
 select * from proyecto.Prestamo
 ------------ Retornos ----------------------------
 --  drop table proyecto.Retornos
@@ -95,6 +99,11 @@ create table proyecto.Retornos(
 	prestamoid int foreign key references proyecto.Prestamo(idPrestamo),
 	fechaRetorno date not null,
 )
+
+insert into proyecto.Retornos (idretorno, alumnoid, libroid, prestamoid, fechaRetorno) values (1, '0313-2001-00279','123','1001','02-08-2020')
+insert into proyecto.Retornos (idretorno, alumnoid, libroid, prestamoid, fechaRetorno) values (2, '0313-2001-00279','124','2001','01-08-2020')
+
+select * from proyecto.Retornos 
 
 ----- inserciones estado libro ------
 insert into proyecto.EstadoLibro (idEstado, estado) values (0,'Retornado'),(1,'No Retornado'),(2,'Extraviado'),(3,'Libre'),(4,'Ocupado'),(5,'Dañado'),(6,'Elimado')
@@ -183,6 +192,10 @@ Create procedure ModificarLibros
 	end
 	execute ModificarLibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2002,'EE.UU','Español','4'
 	execute ModificarLibros 126,'Hush Hush','Becca Fitzpatrick','Ediciones B','3',2009,'España',Español,3
+
+execute Modificarlibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2003,'EE.UU','Español',7
+execute ModificarLibros 124,'Calculo I','Jenny Yasmin Andonie','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','Español', 0
+
 ------------------------------------------------------------------------- ELIMINAR o cambiar de estado -----------------------------------------------------------------------
 create procedure eliminarLibro(
 @idLibro int)
@@ -300,18 +313,39 @@ execute buscarAlumno '0313-2001-00279'
 
 ------------------------------------------------------------------------- Libros Vencidos Inicio --------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------  Sandra Jackelin calderon --------------------------------------------------------------------------------------------------
-Create procedure BuscarLibrosVencidos
-as begin 
-select li.idLibro as Codigo, li.nombre as NombreLibro, li.autor as Autor, li.editorial as Editorial, ge.nombre as Genero, li.publicacion as Publicacion, li.pais as Pais, li.idioma as Idioma, es.estado as Estado from proyecto.libros as li
-inner join proyecto.genero as ge on ge.idGenero = li.generoId
-inner join proyecto.EstadoLibro as es on es.idEstado = li.estadoId
-where estadoId = 
-end
-execute BuscarLibros
+ create procedure mostrarLibrosVencidos
+    as begin
+        select alu.idAlumno,concat(alu.nombre,' ', alu.apellido) as Nombrecompleto, pre.fechaVencimiento as FechaPrestamo, 
+           re.fechaRetorno as fechaRetorno, li.nombre as NombreLibro, es.estado as EstadoLibro from proyecto.Retornos as re
+           inner join proyecto.Prestamo as pre on re.prestamoid=pre.idPrestamo
+           inner join proyecto.Alumno as alu on  alu.idAlumno=pre.alumnoid
+           inner join proyecto.libros as li on li.idLibro=pre.libroid
+           inner join proyecto.EstadoLibro as es on es.idEstado=li.estadoId
+           where li.estadoId=7
+    end
 
+    execute mostrarLibrosVencidos
 
+alter procedure buscarLibrosVencidos
+	@idAlumno as varchar(15) 
+    as begin
+	if exists (select alumnoid from proyecto.Retornos as re
+		   inner join proyecto.libros as li on li.idLibro=re.libroid
+           inner join proyecto.EstadoLibro as es on es.idEstado=li.estadoId
+		   where li.estadoId=7 and re.alumnoid = @idAlumno )	 
 
+        select alu.idAlumno,concat(alu.nombre,' ', alu.apellido) as Nombrecompleto, pre.fechaVencimiento as FechaPrestamo, 
+           re.fechaRetorno as fechaRetorno, li.nombre as NombreLibro, es.estado as EstadoLibro from proyecto.Retornos as re
+           inner join proyecto.Prestamo as pre on re.prestamoid=pre.idPrestamo
+           inner join proyecto.Alumno as alu on  alu.idAlumno=pre.alumnoid
+           inner join proyecto.libros as li on li.idLibro=pre.libroid
+           inner join proyecto.EstadoLibro as es on es.idEstado=li.estadoId
+           where li.estadoId=7 and alu.idAlumno = @idAlumno  
 
+	else raiserror ('Este IDAlumno no existe, Accion Denegada',16,1)
+    end
+
+	execute buscarLibrosVencidos '0313-2001-00279'
 
 ------------------------------------------------------------------------- Libros Prestados Final --------------------------------------------------------------------------------------------------
 
@@ -400,16 +434,18 @@ execute eliminarUsuarios 8, 'Pasante'
 
 --------------------------------------------------------------------------------- LIBROS PRESTADOS --------------------------------------------------------------------------------
 --------------------------------------------------------------------------   OLMAN JOSUE GARCIA CABRERA  -----------------------------------------------------------------------------
-create procedure BuscarLibrosPrestados
+alter procedure BuscarLibrosPrestados
 @idPrestamo as int
 as begin
+	if exists (Select idPrestamo from proyecto.Prestamo where idPrestamo = @idPrestamo)
 	select pre.idprestamo as CodigoPrestamo, pre.alumnoid as IDAlumno, CONCAT(alu.nombre, ' ', alu.apellido) as NombreAlumno, lib.nombre as NombreLibro, pre.fechaPrestamo as FechaPrestamo, pre.fechaVencimiento as FechaVencimiento from proyecto.prestamo as pre 
-inner join proyecto.alumno as alu on alu.idAlumno=pre.alumnoid
-inner join proyecto.libros as lib on lib.idLibro=pre.libroid
+	inner join proyecto.alumno as alu on alu.idAlumno=pre.alumnoid
+	inner join proyecto.libros as lib on lib.idLibro=pre.libroid
 	where idPrestamo like @idPrestamo 
+	else raiserror ('Este ID Prestamo no existe, Accion Denegada', 16,1)
 end
 
-execute BuscarLibrosPrestados 1
+execute BuscarLibrosPrestados 1001
 
 create procedure MostrarLibrosPrestados
 as begin
