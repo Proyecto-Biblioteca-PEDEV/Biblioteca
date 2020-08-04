@@ -90,15 +90,28 @@ insert into proyecto.Prestamo(idPrestamo, alumnoid,libroid,fechaPrestamo,fechaVe
 insert into proyecto.Prestamo(idPrestamo, alumnoid,libroid,fechaPrestamo,fechaVencimiento) values ('2001','0313-2001-00279','124','09-09-2020','01-08-2020')
 
 select * from proyecto.Prestamo
------------- Retornos ----------------------------
---  drop table proyecto.Retornos
+
+--------------- Retornos ----------------------
 create table proyecto.Retornos(
 	idretorno int primary key not null,
 	alumnoid varchar(15) foreign key references proyecto.Alumno(idAlumno),
 	libroid int foreign key references proyecto.libros(idLibro),
 	prestamoid int foreign key references proyecto.Prestamo(idPrestamo),
 	fechaRetorno date not null,
+	multa float not null,
+	estadoMulta varchar(45) not null
 )
+
+--------------- Facturas -------------------------
+create table proyecto.Facturas(
+idFactura int identity primary key not null,
+idretorno int foreign key references proyecto.Retornos(idretorno),
+alumnoid varchar(15) foreign key references proyecto.Alumno(idAlumno),
+montoFactura float not null,
+fecha date not null,
+descripcion varchar(45) not null
+)
+
 
 insert into proyecto.Retornos (idretorno, alumnoid, libroid, prestamoid, fechaRetorno) values (1, '0313-2001-00279','123','1001','02-08-2020')
 insert into proyecto.Retornos (idretorno, alumnoid, libroid, prestamoid, fechaRetorno) values (2, '0313-2001-00279','124','2001','01-08-2020')
@@ -106,7 +119,7 @@ insert into proyecto.Retornos (idretorno, alumnoid, libroid, prestamoid, fechaRe
 select * from proyecto.Retornos 
 
 ----- inserciones estado libro ------
-insert into proyecto.EstadoLibro (idEstado, estado) values (0,'Retornado'),(1,'No Retornado'),(2,'Extraviado'),(3,'Libre'),(4,'Ocupado'),(5,'DaÒado'),(6,'Elimado')
+insert into proyecto.EstadoLibro (idEstado, estado) values (0,'Retornado'),(1,'No Retornado'),(2,'Extraviado'),(3,'Libre'),(4,'Ocupado'),(5,'Da√±ado'),(6,'Elimado')
 select * from proyecto.EstadoLibro
 
 
@@ -154,17 +167,17 @@ create procedure insertarLibros(
 	insert into proyecto.libros values(@idlibro,@nombre,@autor,@editorial,@generoId,@publicacion,@pais,@idioma,@estadoId)
 end
 
-execute insertarLibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2003,'EE.UU','EspaÒol',3
-execute insertarLibros 124,'Calculo I','Jenny Yasmin Andonie','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','EspaÒol',3
-execute insertarLibros 125,'…tica desde la UNICAH hacia el mundo','Claudia Guity','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','EspaÒol',3
-execute insertarLibros 126,'Hush Hush','Becca Fitzpatrick','Ediciones B','3',2009,'EspaÒa','EspaÒol',3
-execute insertarLibros 127,'Bajo la misma estrella','John Green','Dutton Books','3',2012,'Estados Unidos','EspaÒol',3
-execute insertarLibros 128,'El amor en los tiempos de cÛlera','Gabriel Garcia Marquez','Penguin Random House','3',1985,'Colombia','EspaÒol',3
-execute insertarLibros 129,'Orgullo y Perjuicio','Jane Austen','Thomas Egerton','3',1813,'Reino de Gran BretaÒa','Ingles',3
-execute insertarLibros 130,'La sociedad desescolarizada','Iv·n Illich','Godot','4',2001,'Argentina','EspaÒol',3
-execute insertarLibros 131,'Ser Maestro','Ra˙l Bermejo','Plataforma Testimonio','4',2008,'Mexico','EspaÒol',3
-execute insertarLibros 132,'La pedagogÌa de la LiberaciÛn','Ana MarÌa Freire','GraÛ','4',2011,'Chile','EspaÒol',3
-execute insertarLibros 133,'Calculo II','Ana MarÌa Freire','McGRAW-HILL INTERAMERICANA EDITORES','4',2020,'Mexico','EspaÒol',3
+execute insertarLibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2003,'EE.UU','Espa√±ol',3
+execute insertarLibros 124,'Calculo I','Jenny Yasmin Andonie','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','Espa√±ol',3
+execute insertarLibros 125,'√âtica desde la UNICAH hacia el mundo','Claudia Guity','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','Espa√±ol',3
+execute insertarLibros 126,'Hush Hush','Becca Fitzpatrick','Ediciones B','3',2009,'Espa√±a','Espa√±ol',3
+execute insertarLibros 127,'Bajo la misma estrella','John Green','Dutton Books','3',2012,'Estados Unidos','Espa√±ol',3
+execute insertarLibros 128,'El amor en los tiempos de c√≥lera','Gabriel Garcia Marquez','Penguin Random House','3',1985,'Colombia','Espa√±ol',3
+execute insertarLibros 129,'Orgullo y Perjuicio','Jane Austen','Thomas Egerton','3',1813,'Reino de Gran Breta√±a','Ingles',3
+execute insertarLibros 130,'La sociedad desescolarizada','Iv√°n Illich','Godot','4',2001,'Argentina','Espa√±ol',3
+execute insertarLibros 131,'Ser Maestro','Ra√∫l Bermejo','Plataforma Testimonio','4',2008,'Mexico','Espa√±ol',3
+execute insertarLibros 132,'La pedagog√≠a de la Liberaci√≥n','Ana Mar√≠a Freire','Gra√≥','4',2011,'Chile','Espa√±ol',3
+execute insertarLibros 133,'Calculo II','Ana Mar√≠a Freire','McGRAW-HILL INTERAMERICANA EDITORES','4',2020,'Mexico','Espa√±ol',3
 execute insertarLibros 134,'Top Notch 3','Joan Saslow/Allen Ascher','Pearson','4',2015,'Estados Unidos','Ingles',3
 select * from proyecto.libros
 
@@ -190,11 +203,11 @@ Create procedure ModificarLibros
 		 else
 		 raiserror('Este codigo No existe,Accion denegada',16,1) 
 	end
-	execute ModificarLibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2002,'EE.UU','EspaÒol','4'
-	execute ModificarLibros 126,'Hush Hush','Becca Fitzpatrick','Ediciones B','3',2009,'EspaÒa',EspaÒol,3
+	execute ModificarLibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2002,'EE.UU','Espa√±ol','4'
+	execute ModificarLibros 126,'Hush Hush','Becca Fitzpatrick','Ediciones B','3',2009,'Espa√±a',Espa√±ol,3
 
-execute Modificarlibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2003,'EE.UU','EspaÒol',7
-execute ModificarLibros 124,'Calculo I','Jenny Yasmin Andonie','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','EspaÒol', 0
+execute Modificarlibros 123,'Harry Potter y la Orden del Fenix','J.K Rowling','Ediciones Salamandra','1',2003,'EE.UU','Espa√±ol',7
+execute ModificarLibros 124,'Calculo I','Jenny Yasmin Andonie','McGRAW-HILL INTERAMERICANA EDITORES','4',2019,'Mexico','Espa√±ol', 0
 
 ------------------------------------------------------------------------- ELIMINAR o cambiar de estado -----------------------------------------------------------------------
 create procedure eliminarLibro(
@@ -223,7 +236,7 @@ create procedure BuscarLibrouno(
 ) 
 as begin 
 if exists(select idLibro from proyecto.libros where idLibro=@idLibro)
-select idLibro as Codigo, nombre as NombreLibro, autor as NombreAutor, editorial as Editorial, generoId as Genero, publicacion as AÒoPublicacion, pais as Pais, idioma as Idioma, estadoId as Estado from proyecto.libros where idLibro=@idLibro
+select idLibro as Codigo, nombre as NombreLibro, autor as NombreAutor, editorial as Editorial, generoId as Genero, publicacion as A√±oPublicacion, pais as Pais, idioma as Idioma, estadoId as Estado from proyecto.libros where idLibro=@idLibro
 else
   raiserror('Este codigo No existe,Accion denegada',16,1)
 end
@@ -395,19 +408,19 @@ create procedure buscarUsuarios
 @UserName varchar(30)
 as begin
     if exists (select UserName from proyecto.Usuarios where UserName=@UserName)
-	select id as Idusuario,Nombre, Apellido,edad as Edad,Puesto as 'Puesto', Correo as 'Correo',contrasena as ContraseÒa, UserName as 'NombreUsuario'
+	select id as Idusuario,Nombre, Apellido,edad as Edad,Puesto as 'Puesto', Correo as 'Correo',contrasena as Contrase√±a, UserName as 'NombreUsuario'
 	from proyecto.Usuarios
 	where UserName=@UserName
 	else
 	raiserror('El usuario No existe!!!, Accion Denegada', 16,1)
 end
 ------------------------------------------------------------------------------ Mostrar --------------------------------------------------------------------------------------
--- select CONCAT(Nombre, ' ', Apellido) as 'Nombre Completo', UserName as 'UserName', Puesto as 'Puesto', Correo as 'Correo', contrasena as ContraseÒa
+-- select CONCAT(Nombre, ' ', Apellido) as 'Nombre Completo', UserName as 'UserName', Puesto as 'Puesto', Correo as 'Correo', contrasena as Contrase√±a
 	--from proyecto.Usuarios
 create procedure mostrarUsuario
 as begin
 	
-	select id as Idusuario,Nombre, Apellido,edad as Edad,Puesto as 'Puesto', Correo as 'Correo',contrasena as ContraseÒa, UserName as 'NombreUsuario'
+	select id as Idusuario,Nombre, Apellido,edad as Edad,Puesto as 'Puesto', Correo as 'Correo',contrasena as Contrase√±a, UserName as 'NombreUsuario'
 	from proyecto.Usuarios
 end
 
@@ -459,3 +472,78 @@ end
 
 
 -------------------------------------------------------------------------------------- FINAL --------------------------------------------------------------------------------
+--------------------------------------------------------------------- RETORNOS INICIO ---------------------------------------------------------------------------------------
+---------------------------------------------------------------- SVEN ALESSANDRO RODRIGUEZ MEZA -----------------------------------------------------------------------------
+--Procedimiento para mostrar la tabla de Pr√©stamos--
+alter procedure mostrarPrestamos
+as begin
+select idPrestamo as 'ID Pr√©stamo', alumnoid as 'ID Alumno', concat(a.nombre,' ',a.apellido) as 'Nombre Alumno', 
+libroid as 'ID Libro', l.nombre as 'Nombre Libro', fechaPrestamo as 'Fecha Pr√©stamo', fechaVencimiento as 'Fecha de Vencimiento' 
+from proyecto.Prestamo as p inner join proyecto.Alumno as a on a.idAlumno = p.alumnoid inner join proyecto.libros as l on
+l.idLibro = p.libroid
+end
+
+--------------------------------------------------------------------Procedimiento para mostrar la tabla de Retornos----------------------------------------------------------
+alter procedure mostrarRetornos
+as begin
+select idretorno as 'ID Retorno', alumnoid as 'ID Alumno', concat(a.nombre, ' ', a.apellido) as 'Nombre Alumno', libroid as 'ID Libro',
+l.nombre as 'Nombre Libro', prestamoid as 'ID Pr√©stamo', fechaRetorno as 'Fecha Retorno', r.multa as 'Multa', estadoMulta as 'Estado Multa'
+from proyecto.Retornos as r inner join proyecto.Alumno as a on a.idAlumno = r.alumnoid inner join proyecto.libros as l on l.idLibro = r.libroid
+end
+
+-------------------------------------------------------Procedimiento para insertar un retorno--------------------------------------------------------------------------------
+alter procedure insertarRetorno 
+@idretorno int, @alumnoid varchar(15), @libroid int, @prestamoid int, @fechaRetorno date, @multa float, @estadoMulta varchar(45)
+as begin
+if exists (select idretorno, prestamoid from proyecto.Retornos where idretorno = @idretorno or prestamoid = @prestamoid)
+		raiserror ('ID retorno o ID Pr√©stamo ya existe. Ingrese un ID diferente',16,1)
+		else
+insert into proyecto.Retornos values (@idretorno, @alumnoid, @libroid, @prestamoid, @fechaRetorno, @multa, @estadoMulta)
+update proyecto.libros set estadoId = 1 where idLibro = @libroid
+if (@multa > 0 and @estadoMulta = 'No Pagado')
+update proyecto.Alumno set estadoid = 2, multa = @multa
+else if (@multa = 0 or @estadoMulta = 'Pagado')
+update proyecto.Alumno set estadoid = 1, multa = 0
+end
+
+--------------------------------------------------------------------Procedimiento para buscar un retorno---------------------------------------------------------------------
+alter procedure buscarRetorno 
+@idretorno int
+as begin
+select idretorno as 'ID Retorno', alumnoid as 'ID Alumno', concat(a.nombre, ' ', a.apellido) as 'Nombre Alumno', libroid as 'ID Libro', 
+l.nombre as 'Nombre Libro', prestamoid as 'ID Pr√©stamo', fechaRetorno as 'Fecha de Retorno', r.multa as 'Multa', estadoMulta as 'Estado Multa' 
+from proyecto.Retornos as r inner join proyecto.Alumno as a on a.idAlumno = r.alumnoid inner join proyecto.libros as l on l.idLibro = r.libroid
+where idretorno like @idretorno
+end
+
+-----------------------------------------------------------------Procedimiento para editar un retorno------------------------------------------------------------------------
+alter procedure editarRetorno
+@idretorno int, @estadoMulta varchar(45) 
+as begin
+if exists (select idretorno, estadoMulta from proyecto.Retornos where estadoMulta = 'Pagado' and idretorno = @idretorno)
+raiserror ('La multa ya fue pagada',16,1)
+else
+update proyecto.Retornos set estadoMulta = @estadoMulta where idretorno = @idretorno
+update proyecto.Alumno set multa = 0
+end
+
+---------------------------------------------------------------------Procedimiento para insertar una factura -----------------------------------------------------------------
+alter procedure insertarFactura
+@idretorno int, @alumnoid varchar(15), @montoFactura float, @fecha date
+as begin
+insert into proyecto.Facturas values (@idretorno, @alumnoid, @montoFactura, @fecha, 'Pago de Multa')
+end 
+
+------------------------------------------------------------ Procedimiento para almacenar una factura desde el bot√≥n editar -------------------------------------------------
+alter procedure insertarFacturaEditar
+@idretorno int, @fecha date
+as begin
+if exists (select idretorno from proyecto.Facturas as f where f.idretorno = @idretorno)
+raiserror ('Factura ya existente',16,1)
+else
+declare @alumnoid varchar(15), @montoFactura float
+select @alumnoid = r.alumnoid from proyecto.Retornos as r where r.idretorno = @idretorno
+select @montoFactura = r.multa from proyecto.Retornos as r where r.idretorno = @idretorno
+insert into proyecto.Facturas values (@idretorno, @alumnoid, @montoFactura, @fecha, 'Pago de Multa')
+end
+-------------------------------------------------------------------- FINAL RETORNOS -------------------------------------------------------------------------------------------
