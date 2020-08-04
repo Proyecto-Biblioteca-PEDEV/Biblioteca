@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Data
+Imports System.Windows.Forms
 Public Class conexion
     Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-HD05D0Q;Initial Catalog=Biblioteca;Integrated Security=True")
     'Private cmb As SqlCommandBuilder
@@ -480,6 +482,188 @@ Public Class conexion
         End Try
     End Function
     '------------------------------ Final Formulario Retornos ------------------------------------------'
+
+    '--------------------------------------------- FORMULARIO PRESTAMOS -------------------------------
+    '------------------------------------------------- ERNESTO JOSE FLORES -----------------------------------
+
+    Public cmbB As SqlCommand
+    Public scmb As SqlCommandBuilder
+    Public cn As SqlConnection
+    Public adaptador As SqlDataAdapter
+    Public comando As SqlCommand
+    Public cmbP As SqlCommandBuilder
+
+
+    Public Sub Consulta(ByVal sql As String, ByVal tabla As String)
+        Try
+            ds.Tables.Clear()
+            da = New SqlDataAdapter(sql, conexion)
+            cmbP = New SqlCommandBuilder(da)
+            da.Fill(ds, tabla)
+        Catch ex As Exception
+            'MessageBox.Show("no se lleno por: " + ex.ToString)
+        End Try
+
+    End Sub
+
+    Public Function insertarUsuarioPrestamo(idPrestamo As Integer, idAlumno As String, idLibro As Integer, fechaPrestamo As String, fechaVencimiento As String)
+        Try
+            conexion.Open()
+            cmbB = New SqlCommand("InsertarPrestamo", conexion)
+            cmbB.CommandType = CommandType.StoredProcedure
+            Dim estado As Integer
+            estado = 4
+
+            cmbB.Parameters.AddWithValue("@idPrestamo", idPrestamo)
+            cmbB.Parameters.AddWithValue("@idAlumno", idAlumno)
+            cmbB.Parameters.AddWithValue("@idLibro", idLibro)
+            cmbB.Parameters.AddWithValue("@FechaPrestamo", fechaPrestamo)
+            cmbB.Parameters.AddWithValue("@fechaVencimiento", fechaVencimiento)
+            cmbB.Parameters.AddWithValue("@idEstado", estado)
+            If cmbB.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            ' MessageBox.Show("no se lleno por: " + ex.ToString)
+            Return False
+        End Try
+        conexion.Close()
+    End Function
+
+    Public Function editarUsuarioPrestamo(idPrestamo As Integer, idAlumno As String, idLibro As Integer, fechaPrestamo As String, fechaVencimiento As String)
+        Try
+            conexion.Open()
+            cmbB = New SqlCommand("EditarPrestamo", conexion)
+            cmbB.CommandType = CommandType.StoredProcedure
+
+
+            cmbB.Parameters.AddWithValue("@idPrestamo", idPrestamo)
+            cmbB.Parameters.AddWithValue("@idAlumno", idAlumno)
+            cmbB.Parameters.AddWithValue("@idLibro", idLibro)
+            cmbB.Parameters.AddWithValue("@FechaPrestamo", fechaPrestamo)
+            cmbB.Parameters.AddWithValue("@fechaVencimiento", fechaVencimiento)
+            If cmbB.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            ' MessageBox.Show("no se lleno por: " + ex.ToString)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function editarUsuarioPrestamoLibrouevo(idLibro As Integer)
+        Try
+            conexion.Open()
+            cmbB = New SqlCommand("EditarlibroEditado ", conexion)
+            cmbB.CommandType = CommandType.StoredProcedure
+            Dim estadoLibro As Integer
+            estadoLibro = 3
+
+            cmbB.Parameters.AddWithValue("@estadoLibro", estadoLibro)
+            cmbB.Parameters.AddWithValue("@idLibro", idLibro)
+
+            If cmbB.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            ' MessageBox.Show("no se lleno por: " + ex.ToString)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function editarUsuarioPrestamoLibroViejo(idLibro As Integer)
+        Try
+            conexion.Open()
+            cmbB = New SqlCommand("EditarLibroViejo", conexion)
+            cmbB.CommandType = CommandType.StoredProcedure
+            Dim estadoLibro As Integer
+            estadoLibro = 4
+
+            cmbB.Parameters.AddWithValue("@estadoLibro", estadoLibro)
+            cmbB.Parameters.AddWithValue("@idLibro", idLibro)
+
+            If cmbB.ExecuteNonQuery <> 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            ' MessageBox.Show("no se lleno por: " + ex.ToString)
+            Return False
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+
+    Function validarEmpleadosPrestamo(ByVal id As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select pres.idPrestamo as IdPrestado, concat(alu.nombre, ' ', alu.apellido) as NombreCompleto, alu.idAlumno as IdAlumno,alu.estadoid as EstadoAlumno,lib.nombre as NombreLibro,lib.idLibro as IdLibro,pres.fechaPrestamo as FechaPrestamo ,pres.fechaVencimiento from proyecto.Prestamo as pres
+inner join proyecto.Alumno as alu on alu.idAlumno = pres.alumnoid
+inner join proyecto.libros as lib on lib.idLibro = pres.libroid where idPrestamo = '" + id + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Return respuesta
+    End Function
+
+    Function validarEmpleadosPrestamoDeLibros(ByVal id As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select * from proyecto.libros where idLibro = '" + id + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+
+        Catch ex As Exception
+            ' MessageBox.Show("no se lleno por: " + ex.ToString)
+        End Try
+
+        Return respuesta
+    End Function
+
+    Function validarIngresoPrestamos(ByVal codigo As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select idLibro, nombre, estadoId from proyecto.libros where idLibro = '" + codigo + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        End Try
+
+        Return respuesta
+        conexion.Close()
+    End Function
 End Class
-
-
+'------------------------------ FINAL FORMULARIO PRESTAMOS ------------------------------------------'

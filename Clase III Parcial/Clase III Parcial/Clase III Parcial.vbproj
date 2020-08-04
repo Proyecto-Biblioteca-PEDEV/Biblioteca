@@ -315,6 +315,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Proyecto\mensajeCorreo.html" />
+    <None Include="Resources\buscar1.png" />
+    <None Include="Resources\editar1.png" />
+    <None Include="Resources\agregar1.png" />
     <None Include="Resources\backleftarrowcurvesymbol_79785.ico" />
     <None Include="Resources\2849806-copy-interface-multimedia-print-printer_107972.ico" />
     <None Include="Resources\LogoBiblioteca.png" />
