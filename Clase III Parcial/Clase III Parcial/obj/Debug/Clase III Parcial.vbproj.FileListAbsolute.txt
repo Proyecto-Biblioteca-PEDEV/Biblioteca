@@ -169,3 +169,93 @@ C:\Users\pcpf\Desktop\PROGRAMACION EN ENTORNOS VISUALES\Biblioteca\Clase III Par
 C:\Users\pcpf\Desktop\PROGRAMACION EN ENTORNOS VISUALES\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.exe
 C:\Users\pcpf\Desktop\PROGRAMACION EN ENTORNOS VISUALES\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.xml
 C:\Users\pcpf\Desktop\PROGRAMACION EN ENTORNOS VISUALES\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.pdb
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbprojAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Resources.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.ChargeScreen.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Estudiantes.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.factura.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Libros.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.LibrosPrestados.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Login.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Main.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Prestatarios.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.recuperar.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Reporte.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Retornos.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Usuarios.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase_III_Parcial.Vencidos.resources
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.exe.licenses
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\RdlCompile.cache
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\RdlCompile.compiled
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.exe
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.xml
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.pdb
+C:\Users\Usuario\Source\Repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe.config
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.exe
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.pdb
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Clase III Parcial.xml
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\EnvDTE.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\stdole.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.Reporting.pdb
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.Reporting.xml
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\obj\Debug\Clase III Parcial.vbproj.CopyComplete
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Usuario\source\repos\Biblioteca\Clase III Parcial\Clase III Parcial\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll

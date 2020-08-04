@@ -8,188 +8,708 @@ Clase III Parcial
 <members>
 <member name="T:Clase_III_Parcial.My.Resources.Resources">
 <summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.ResourceManager">
 <summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+  Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Culture">
 <summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources._2849806_copy_interface_multimedia_print_printer_107972">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.agregar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.agregar1">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.backleftarrowcurvesymbol_79785">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.buscar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.buscar1">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.categorias">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.editar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.editar1">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.eliminar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.fondo_gui">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.FONDO_MAIN">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.ic_ad_97607">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_cerrar_FN">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_Maximizar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_Minimizar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.Icono_Restaurar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.libro">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.limpiar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.logo_blanco">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.logo_negro">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.logo_negro_png_super_ultra">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.LogoBiblioteca">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.prestatarios">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.registro">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.registro2">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.retorno">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.salir">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Clase_III_Parcial.My.Resources.Resources.seo_report">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Clase_III_Parcial.My.Resources.Resources.seo_report1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_1280">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_08b0f3632f0683de49d9a1c02e12556a_2f6777ce_12801">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_465577f9eabff154b858945c4f4796de_cce4b558_640">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.tumblr_619bffaeff48dcaec1f90141532ea4ac_7ee4dae5_500">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.usuario">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Clase_III_Parcial.My.Resources.Resources.vencidos">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.AlumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.EstadoAlumnosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.EstadoLibroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.FacturasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.FacultadDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.generoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.librosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.PrestamoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.RetornosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.UsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarAlumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrosPrestadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarLibrosVencidosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrounoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarRetornoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarUsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.llenarAlumnoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.MostrarLibrosPrestadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarLibrosVencidosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarPrestamosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarRetornosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarUsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.AlumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.EstadoAlumnosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.EstadoLibroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.FacturasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.FacultadRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.generoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.librosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.PrestamoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.RetornosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.UsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarAlumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrosPrestadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarLibrosVencidosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrounoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarRetornoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarUsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.llenarAlumnoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.MostrarLibrosPrestadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarLibrosVencidosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarPrestamosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarRetornosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarUsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.AlumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.EstadoAlumnosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.EstadoLibroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.FacturasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.FacultadRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.generoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.librosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.PrestamoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.RetornosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.UsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarAlumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrosPrestadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarLibrosVencidosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.BuscarLibrounoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarRetornoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.buscarUsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.llenarAlumnoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.MostrarLibrosPrestadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarLibrosVencidosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarPrestamosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarRetornosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSet.mostrarUsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.AlumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.EstadoAlumnosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.EstadoLibroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.FacturasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.FacultadTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.generoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.librosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.PrestamoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.RetornosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.UsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.buscarAlumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.BuscarLibrosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.BuscarLibrosPrestadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.buscarLibrosVencidosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.BuscarLibrounoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.buscarRetornoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.buscarUsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.llenarAlumnoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.MostrarLibrosPrestadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.mostrarLibrosVencidosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.mostrarPrestamosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.mostrarRetornosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.mostrarUsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Clase_III_Parcial.BibliotecaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Clase_III_Parcial.BibliotecaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Clase_III_Parcial.BibliotecaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.UpdateAll(Clase_III_Parcial.BibliotecaDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Clase_III_Parcial.BibliotecaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
 </summary>
 </member>
 </members>

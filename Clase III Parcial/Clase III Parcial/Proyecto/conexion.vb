@@ -2,7 +2,7 @@
 Imports System.Data
 Imports System.Windows.Forms
 Public Class conexion
-    Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-HD05D0Q;Initial Catalog=Biblioteca;Integrated Security=True")
+    Public conexion As SqlConnection = New SqlConnection("Data Source=RK800\SQLEXPRESS;Initial Catalog=Biblioteca;Integrated Security=True")
     'Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet()
     Public dt As DataTable

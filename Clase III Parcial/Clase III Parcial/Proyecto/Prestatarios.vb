@@ -9,7 +9,7 @@ Public Class Prestatarios
     Dim conexion As conexion = New conexion
     Sub abrirConexion()
         Try
-            cn = New SqlConnection("Data Source=DESKTOP-L87VDHJ;Initial Catalog=Biblioteca;Integrated Security=True")
+            cn = New SqlConnection("Data Source=RK800\SQLEXPRESS;Initial Catalog=Biblioteca;Integrated Security=True")
             cn.Open()
         Catch ex As Exception
             MessageBox.Show("Nose pudo abrir" + ex.ToString)
