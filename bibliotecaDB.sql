@@ -340,7 +340,7 @@ execute buscarAlumno '0313-2001-00279'
 
     execute mostrarLibrosVencidos
 
-alter procedure buscarLibrosVencidos
+create procedure buscarLibrosVencidos
 	@idAlumno as varchar(15) 
     as begin
 	if exists (select alumnoid from proyecto.Retornos as re
@@ -377,7 +377,7 @@ as begin
 		insert into proyecto.Usuarios values(@id, @UserName, @contrasena, @Nombre, @Apellido, @Edad, @Puesto, @Correo, @estado) 
 end
 
-drop procedure insertarUsuarios
+--drop procedure insertarUsuarios
 
 execute insertarUsuarios 3, 'gMurillo', '7575', 'Gloria', 'Murillo', '19', 'Admin', 'gMurillo@gmail.com', 'activo'
 execute insertarUsuarios 4, 'oRivera', '2828', 'Oscar', 'Rivera', '19', 'Admin', 'oRivera@gmail.com', 'activo'
@@ -448,7 +448,7 @@ execute eliminarUsuarios 8, 'Pasante'
 
 --------------------------------------------------------------------------------- LIBROS PRESTADOS --------------------------------------------------------------------------------
 --------------------------------------------------------------------------   OLMAN JOSUE GARCIA CABRERA  -----------------------------------------------------------------------------
-alter procedure BuscarLibrosPrestados
+create procedure BuscarLibrosPrestados
 @idPrestamo as int
 as begin
 	if exists (Select idPrestamo from proyecto.Prestamo where idPrestamo = @idPrestamo)
@@ -476,7 +476,7 @@ end
 --------------------------------------------------------------------- RETORNOS INICIO ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------- SVEN ALESSANDRO RODRIGUEZ MEZA -----------------------------------------------------------------------------
 --Procedimiento para mostrar la tabla de Préstamos--
-alter procedure mostrarPrestamos
+create procedure mostrarPrestamos
 as begin
 select idPrestamo as 'ID Préstamo', alumnoid as 'ID Alumno', concat(a.nombre,' ',a.apellido) as 'Nombre Alumno', 
 libroid as 'ID Libro', l.nombre as 'Nombre Libro', fechaPrestamo as 'Fecha Préstamo', fechaVencimiento as 'Fecha de Vencimiento' 
@@ -485,7 +485,7 @@ l.idLibro = p.libroid
 end
 
 --------------------------------------------------------------------Procedimiento para mostrar la tabla de Retornos----------------------------------------------------------
-alter procedure mostrarRetornos
+create procedure mostrarRetornos
 as begin
 select idretorno as 'ID Retorno', alumnoid as 'ID Alumno', concat(a.nombre, ' ', a.apellido) as 'Nombre Alumno', libroid as 'ID Libro',
 l.nombre as 'Nombre Libro', prestamoid as 'ID Préstamo', fechaRetorno as 'Fecha Retorno', r.multa as 'Multa', estadoMulta as 'Estado Multa'
@@ -493,7 +493,7 @@ from proyecto.Retornos as r inner join proyecto.Alumno as a on a.idAlumno = r.al
 end
 
 -------------------------------------------------------Procedimiento para insertar un retorno--------------------------------------------------------------------------------
-alter procedure insertarRetorno 
+create procedure insertarRetorno 
 @idretorno int, @alumnoid varchar(15), @libroid int, @prestamoid int, @fechaRetorno date, @multa float, @estadoMulta varchar(45)
 as begin
 if exists (select idretorno, prestamoid from proyecto.Retornos where idretorno = @idretorno or prestamoid = @prestamoid)
@@ -508,7 +508,7 @@ update proyecto.Alumno set estadoid = 1, multa = 0
 end
 
 --------------------------------------------------------------------Procedimiento para buscar un retorno---------------------------------------------------------------------
-alter procedure buscarRetorno 
+create procedure buscarRetorno 
 @idretorno int
 as begin
 select idretorno as 'ID Retorno', alumnoid as 'ID Alumno', concat(a.nombre, ' ', a.apellido) as 'Nombre Alumno', libroid as 'ID Libro', 
@@ -518,7 +518,7 @@ where idretorno like @idretorno
 end
 
 -----------------------------------------------------------------Procedimiento para editar un retorno------------------------------------------------------------------------
-alter procedure editarRetorno
+create procedure editarRetorno
 @idretorno int, @estadoMulta varchar(45) 
 as begin
 if exists (select idretorno, estadoMulta from proyecto.Retornos where estadoMulta = 'Pagado' and idretorno = @idretorno)
@@ -529,7 +529,7 @@ update proyecto.Alumno set multa = 0
 end
 
 ---------------------------------------------------------------------Procedimiento para insertar una factura -----------------------------------------------------------------
-alter procedure insertarFactura
+create procedure insertarFactura
 @idretorno int, @alumnoid varchar(15), @montoFactura float, @fecha date
 as begin
 if exists (select idretorno from proyecto.Facturas as f where f.idretorno = @idretorno)
@@ -539,7 +539,7 @@ insert into proyecto.Facturas values (@idretorno, @alumnoid, @montoFactura, @fec
 end 
 
 ------------------------------------------------------------ Procedimiento para almacenar una factura desde el botón editar -------------------------------------------------
-alter procedure insertarFacturaEditar
+create procedure insertarFacturaEditar
 @idretorno int, @fecha date
 as begin
 if exists (select idretorno from proyecto.Facturas as f where f.idretorno = @idretorno)
@@ -598,6 +598,29 @@ create procedure EditarLibroViejo
 select pres.idPrestamo as IdPrestado, concat(alu.nombre, ' ', alu.apellido) as NombreCompleto, lib.nombre as Nombre, pres.fechaVencimiento from proyecto.Prestamo as pres
 inner join proyecto.Alumno as alu on alu.idAlumno = pres.alumnoid
 inner join proyecto.libros as lib on lib.idLibro = pres.libroid
+
+-------------------------------------------------------------------- INSERCIONES PRESTAMO -------------------------------------------------------------------------------------------
+execute InsertarPrestamo 1,'1011-2002-01234',127,'26/07/2020','12/06/2020',4
+execute InsertarPrestamo 2,'1012-2001-05234',129,'26/07/2020','15/06/2020',4
+execute InsertarPrestamo 3,'1016-2003-01764',125,'26/07/2020','18/06/2020',4
+execute InsertarPrestamo 4,'0313-2001-02345',129,'26/07/2020','19/06/2020',4
+execute InsertarPrestamo 5,'0216-1998-03456',128,'26/07/2020','20/06/2020',4
+execute InsertarPrestamo 6,'0011-1999-04321',128,'26/07/2020','22/06/2020',4
+execute InsertarPrestamo 7,'1201-2000-08567',124,'26/07/2020','25/06/2020',4
+execute InsertarPrestamo 8,'1002-2001-01243',133,'26/07/2020','30/06/2020',4
+execute InsertarPrestamo 9,'0412-2002-03421',132,'26/07/2020','01/07/2020',4
+execute InsertarPrestamo 10,'1001-1998-01243',134,'26/07/2020','06/07/2020',4
+execute InsertarPrestamo 11,'0021-1999-07658',125,'26/07/2020','07/07/2020',4
+execute InsertarPrestamo 12,'1031-2000-01432',123,'26/07/2020','09/07/2020',4
+execute InsertarPrestamo 13,'0754-2001-01693',124,'26/07/2020','11/07/2020',4
+execute InsertarPrestamo 14,'1065-2002-09867',127,'26/07/2020','12/07/2020',4
+execute InsertarPrestamo 15,'0031-2003-01052',130,'26/07/2020','18/07/2020',4
+execute InsertarPrestamo 16,'0201-1998-01431',131,'26/07/2020','20/07/2020',4
+execute InsertarPrestamo 17,'0102-1999-01938',130,'26/07/2020','26/07/2020',4
+execute InsertarPrestamo 18,'0010-2001-01532',126,'26/07/2020','27/07/2020',4
+execute InsertarPrestamo 19,'1037-2003-00671',126,'26/07/2020','30/07/2020',4
+execute InsertarPrestamo 20,'0002-2002-01423',123,'26/07/2020','30/07/2020',4
+
 -------------------------------------------------------------------- FINAL DE PRESTAMOS -------------------------------------------------------------------------------------------
 
 
